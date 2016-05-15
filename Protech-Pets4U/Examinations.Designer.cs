@@ -39,6 +39,13 @@
             this.panelinsertExam = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
+            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBoxResults = new System.Windows.Forms.TextBox();
@@ -62,26 +69,19 @@
             this.buttonGo = new System.Windows.Forms.Button();
             this.comboBoxHisPetName = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelinsertExam.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             this.panelHistExam.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -208,6 +208,79 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonInsert
+            // 
+            this.radioButtonInsert.AutoSize = true;
+            this.radioButtonInsert.Checked = true;
+            this.radioButtonInsert.Location = new System.Drawing.Point(152, 264);
+            this.radioButtonInsert.Name = "radioButtonInsert";
+            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonInsert.TabIndex = 133;
+            this.radioButtonInsert.TabStop = true;
+            this.radioButtonInsert.Text = "Insert";
+            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(152, 221);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox7.TabIndex = 132;
+            this.pictureBox7.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male ",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(22, 287);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(186, 21);
+            this.comboBox1.TabIndex = 131;
+            // 
+            // radioButtonDelete
+            // 
+            this.radioButtonDelete.AutoSize = true;
+            this.radioButtonDelete.Location = new System.Drawing.Point(88, 264);
+            this.radioButtonDelete.Name = "radioButtonDelete";
+            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonDelete.TabIndex = 130;
+            this.radioButtonDelete.Text = "Delete";
+            this.radioButtonDelete.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonUpdate
+            // 
+            this.radioButtonUpdate.AutoSize = true;
+            this.radioButtonUpdate.Location = new System.Drawing.Point(22, 263);
+            this.radioButtonUpdate.Name = "radioButtonUpdate";
+            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
+            this.radioButtonUpdate.TabIndex = 129;
+            this.radioButtonUpdate.Text = "Update";
+            this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(88, 221);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.TabIndex = 128;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(22, 221);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.TabIndex = 127;
+            this.pictureBox5.TabStop = false;
             // 
             // label24
             // 
@@ -430,80 +503,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Pet";
             // 
-            // radioButtonInsert
-            // 
-            this.radioButtonInsert.AutoSize = true;
-            this.radioButtonInsert.Location = new System.Drawing.Point(152, 264);
-            this.radioButtonInsert.Name = "radioButtonInsert";
-            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
-            this.radioButtonInsert.TabIndex = 133;
-            this.radioButtonInsert.TabStop = true;
-            this.radioButtonInsert.Text = "Insert";
-            this.radioButtonInsert.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(152, 221);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox7.TabIndex = 132;
-            this.pictureBox7.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(22, 287);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 21);
-            this.comboBox1.TabIndex = 131;
-            // 
-            // radioButtonDelete
-            // 
-            this.radioButtonDelete.AutoSize = true;
-            this.radioButtonDelete.Location = new System.Drawing.Point(88, 264);
-            this.radioButtonDelete.Name = "radioButtonDelete";
-            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonDelete.TabIndex = 130;
-            this.radioButtonDelete.TabStop = true;
-            this.radioButtonDelete.Text = "Delete";
-            this.radioButtonDelete.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUpdate
-            // 
-            this.radioButtonUpdate.AutoSize = true;
-            this.radioButtonUpdate.Location = new System.Drawing.Point(22, 263);
-            this.radioButtonUpdate.Name = "radioButtonUpdate";
-            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
-            this.radioButtonUpdate.TabIndex = 129;
-            this.radioButtonUpdate.TabStop = true;
-            this.radioButtonUpdate.Text = "Update";
-            this.radioButtonUpdate.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(88, 221);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox6.TabIndex = 128;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(22, 221);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.TabIndex = 127;
-            this.pictureBox5.TabStop = false;
-            // 
             // Examinations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,14 +537,14 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             this.panelHistExam.ResumeLayout(false);
             this.panelHistExam.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
