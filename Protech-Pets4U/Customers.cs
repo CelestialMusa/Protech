@@ -167,7 +167,7 @@ namespace Protech_Pets4U
             {
                 insert_Customer(name, last, gender, dob, tel, id, clinic_id, state, city, street, zip);
             }
-            else if (radioButtonUdate.Checked)
+            else if (radioButtonUpdate.Checked)
             {
                 int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
                 //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
@@ -296,6 +296,54 @@ namespace Protech_Pets4U
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void radioButtonInsert_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+            }
+        }
+
+        private void radioButtonDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+            }
+        }
+
+        private void radioButtonUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxEmployeeToBeMaintained.Enabled = true;
             }
         }
     }

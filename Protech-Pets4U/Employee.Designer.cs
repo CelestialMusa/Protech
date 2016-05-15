@@ -47,7 +47,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.comboBoxEmployeeToBeMaintained = new System.Windows.Forms.ComboBox();
             this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.radioButtonUdate = new System.Windows.Forms.RadioButton();
+            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -288,7 +288,7 @@
             this.tabPageStep1Of3.Controls.Add(this.pictureBox7);
             this.tabPageStep1Of3.Controls.Add(this.comboBoxEmployeeToBeMaintained);
             this.tabPageStep1Of3.Controls.Add(this.radioButtonDelete);
-            this.tabPageStep1Of3.Controls.Add(this.radioButtonUdate);
+            this.tabPageStep1Of3.Controls.Add(this.radioButtonUpdate);
             this.tabPageStep1Of3.Controls.Add(this.pictureBox6);
             this.tabPageStep1Of3.Controls.Add(this.pictureBox5);
             this.tabPageStep1Of3.Controls.Add(this.label22);
@@ -324,6 +324,7 @@
             this.radioButtonInsert.TabStop = true;
             this.radioButtonInsert.Text = "Insert";
             this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
             // 
             // pictureBox7
             // 
@@ -355,16 +356,18 @@
             this.radioButtonDelete.TabIndex = 114;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
             // 
-            // radioButtonUdate
+            // radioButtonUpdate
             // 
-            this.radioButtonUdate.AutoSize = true;
-            this.radioButtonUdate.Location = new System.Drawing.Point(21, 254);
-            this.radioButtonUdate.Name = "radioButtonUdate";
-            this.radioButtonUdate.Size = new System.Drawing.Size(60, 17);
-            this.radioButtonUdate.TabIndex = 113;
-            this.radioButtonUdate.Text = "Update";
-            this.radioButtonUdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.AutoSize = true;
+            this.radioButtonUpdate.Location = new System.Drawing.Point(21, 254);
+            this.radioButtonUpdate.Name = "radioButtonUpdate";
+            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
+            this.radioButtonUpdate.TabIndex = 113;
+            this.radioButtonUpdate.Text = "Update";
+            this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.CheckedChanged += new System.EventHandler(this.radioButtonUpdate_CheckedChanged);
             // 
             // pictureBox6
             // 
@@ -1249,7 +1252,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ComboBox comboBoxEmployeeToBeMaintained;
         private System.Windows.Forms.RadioButton radioButtonDelete;
-        private System.Windows.Forms.RadioButton radioButtonUdate;
+        private System.Windows.Forms.RadioButton radioButtonUpdate;
         private System.Windows.Forms.ComboBox comboBoxJobDescription;
         private System.Windows.Forms.ComboBox comboBoxClinicID;
         private protechDataSet14 protechDataSet14;

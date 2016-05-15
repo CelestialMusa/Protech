@@ -44,7 +44,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.comboBoxEmployeeToBeMaintained = new System.Windows.Forms.ComboBox();
             this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.radioButtonUdate = new System.Windows.Forms.RadioButton();
+            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -63,6 +63,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabPageStep2Of2 = new System.Windows.Forms.TabPage();
             this.comboBoxClinicID = new System.Windows.Forms.ComboBox();
+            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet15 = new Protech_Pets4U.protechDataSet15();
             this.label4 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBoxZipCode = new System.Windows.Forms.TextBox();
@@ -117,8 +119,6 @@
             this.pictureBoxInformationDeveloperLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.list_details_of_pet_owners_between_datesTableAdapter = new Protech_Pets4U.protechDataSet1TableAdapters.list_details_of_pet_owners_between_datesTableAdapter();
-            this.protechDataSet15 = new Protech_Pets4U.protechDataSet15();
-            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet15TableAdapters.clinicTableAdapter();
             this.panelVetsInsertPetOwner.SuspendLayout();
             this.tabControlInsertEmployee.SuspendLayout();
@@ -128,6 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNext)).BeginInit();
             this.tabPageStep2Of2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDone)).BeginInit();
             this.panelViewPetOwnerWithPetDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -143,8 +145,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -245,7 +245,7 @@
             this.tabPageStep1Of2.Controls.Add(this.pictureBox7);
             this.tabPageStep1Of2.Controls.Add(this.comboBoxEmployeeToBeMaintained);
             this.tabPageStep1Of2.Controls.Add(this.radioButtonDelete);
-            this.tabPageStep1Of2.Controls.Add(this.radioButtonUdate);
+            this.tabPageStep1Of2.Controls.Add(this.radioButtonUpdate);
             this.tabPageStep1Of2.Controls.Add(this.pictureBox6);
             this.tabPageStep1Of2.Controls.Add(this.pictureBox5);
             this.tabPageStep1Of2.Controls.Add(this.label22);
@@ -281,6 +281,7 @@
             this.radioButtonInsert.TabStop = true;
             this.radioButtonInsert.Text = "Insert";
             this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
             // 
             // pictureBox7
             // 
@@ -312,16 +313,18 @@
             this.radioButtonDelete.TabIndex = 121;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
             // 
-            // radioButtonUdate
+            // radioButtonUpdate
             // 
-            this.radioButtonUdate.AutoSize = true;
-            this.radioButtonUdate.Location = new System.Drawing.Point(17, 253);
-            this.radioButtonUdate.Name = "radioButtonUdate";
-            this.radioButtonUdate.Size = new System.Drawing.Size(60, 17);
-            this.radioButtonUdate.TabIndex = 120;
-            this.radioButtonUdate.Text = "Update";
-            this.radioButtonUdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.AutoSize = true;
+            this.radioButtonUpdate.Location = new System.Drawing.Point(17, 253);
+            this.radioButtonUpdate.Name = "radioButtonUpdate";
+            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
+            this.radioButtonUpdate.TabIndex = 120;
+            this.radioButtonUpdate.Text = "Update";
+            this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.CheckedChanged += new System.EventHandler(this.radioButtonUpdate_CheckedChanged);
             // 
             // pictureBox6
             // 
@@ -499,6 +502,16 @@
             this.comboBoxClinicID.Size = new System.Drawing.Size(257, 21);
             this.comboBoxClinicID.TabIndex = 117;
             this.comboBoxClinicID.ValueMember = "clinic_num";
+            // 
+            // clinicBindingSource
+            // 
+            this.clinicBindingSource.DataMember = "clinic";
+            this.clinicBindingSource.DataSource = this.protechDataSet15;
+            // 
+            // protechDataSet15
+            // 
+            this.protechDataSet15.DataSetName = "protechDataSet15";
+            this.protechDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -970,16 +983,6 @@
             // 
             this.list_details_of_pet_owners_between_datesTableAdapter.ClearBeforeFill = true;
             // 
-            // protechDataSet15
-            // 
-            this.protechDataSet15.DataSetName = "protechDataSet15";
-            this.protechDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clinicBindingSource
-            // 
-            this.clinicBindingSource.DataMember = "clinic";
-            this.clinicBindingSource.DataSource = this.protechDataSet15;
-            // 
             // clinicTableAdapter
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
@@ -1022,6 +1025,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNext)).EndInit();
             this.tabPageStep2Of2.ResumeLayout(false);
             this.tabPageStep2Of2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDone)).EndInit();
             this.panelViewPetOwnerWithPetDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1038,8 +1043,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1130,7 +1133,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ComboBox comboBoxEmployeeToBeMaintained;
         private System.Windows.Forms.RadioButton radioButtonDelete;
-        private System.Windows.Forms.RadioButton radioButtonUdate;
+        private System.Windows.Forms.RadioButton radioButtonUpdate;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.ComboBox comboBoxClinicID;
