@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Protech_Pets4U
 {
     public partial class Pets : Form
     {
+        string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
+        MySqlConnection connection;
+        MySqlCommand command;
+        MySqlDataReader reader;
+        DataTable myDataTable;
+
         public Pets()
         {
             InitializeComponent();
+            connection = new MySqlConnection(connectionstring);
+            myDataTable = new DataTable();
+            comboBoxPetToBeUpdated.Enabled = false;
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -171,7 +181,35 @@ namespace Protech_Pets4U
 
         private void pictureBoxDone_Click_1(object sender, EventArgs e)
         {
+            string name = textBoxFirstName.Text;
+            string status;
+            if (comboBoxStatus.SelectedText == "Alive")
+            {
+                status = "1";
+            }
+            else
+            {
+                status = "0";
+            }
+            string dob = dateTimePickerDateOfBirth.Value.ToShortDateString();
+            string type = comboBoxType.SelectedText;
+            int pet_owner = (int)comboBoxPetOwner.SelectedValue;
+            string description = textBoxDescription.Text;
 
+            if (radioButtonInsert.Checked)
+            {
+                insert_Pet(name, status, dob, type, pet_owner, description);
+            }
+            else if (radioButtonUpdate.Checked)
+            {
+                int staff_num = (int)comboBoxPetToBeUpdated.SelectedValue;
+                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+            }
+            else if (radioButtonDelete.Checked)
+            {
+                int staff_num = (int)comboBoxPetToBeUpdated.SelectedValue;
+                //Delete
+            }
         }
 
         private void pictureBoxDone_MouseMove_1(object sender, MouseEventArgs e)
@@ -194,9 +232,113 @@ namespace Protech_Pets4U
 
         private void Pets_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet19.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protechDataSet19.person);
             // TODO: This line of code loads data into the 'protechDataSet11.total_number_pets_in_each_type' table. You can move, or remove it, as needed.
             this.total_number_pets_in_each_typeTableAdapter.Fill(this.protechDataSet11.total_number_pets_in_each_type);
+            comboBoxStatus.SelectedIndex = 1;
+        }
 
+        private void insert_Pet(string name, string status, string dob, string type, int pet_owner, string description)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "insert_pets";
+                command.CommandType = CommandType.StoredProcedure;
+               
+                command.Parameters.Add(new MySqlParameter("@Pet_name", MySqlDbType.VarChar)).Value = name;
+                command.Parameters.Add(new MySqlParameter("@Pet_type", MySqlDbType.VarChar)).Value = type;
+                command.Parameters.Add(new MySqlParameter("@Pet_description", MySqlDbType.VarChar)).Value = description;
+                command.Parameters.Add(new MySqlParameter("@Pet_dob", MySqlDbType.Date)).Value = dob;
+                command.Parameters.Add(new MySqlParameter("@Pet_status", MySqlDbType.Int32)).Value = status;
+                command.Parameters.Add(new MySqlParameter("@Pet_owner", MySqlDbType.Int32)).Value = pet_owner;
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The Pet has been successfuly been registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxFirstName.Text = "";
+                textBoxDescription.Text = "";                
+                comboBoxPetOwner.SelectedItem = null;
+                comboBoxStatus.SelectedItem = null;
+                comboBoxType.SelectedItem = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Pet registration has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void radioButtonInsert_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButtonInsert.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = false;
+                comboBoxPetToBeUpdated.Enabled = false;
+            }
+            else if(radioButtonDelete.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = false;
+                comboBoxPetToBeUpdated.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = true;
+                comboBoxPetToBeUpdated.Enabled = true;
+            }
+        }
+
+        private void radioButtonDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = false;
+                comboBoxPetToBeUpdated.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = false;
+                comboBoxPetToBeUpdated.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = true;
+                comboBoxPetToBeUpdated.Enabled = true;
+            }
+        }
+
+        private void radioButtonUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = false;
+                comboBoxPetToBeUpdated.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = false;
+                comboBoxPetToBeUpdated.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxStatus.SelectedIndex = 1;
+                comboBoxStatus.Enabled = true;
+                comboBoxPetToBeUpdated.Enabled = true;
+            }
         }
     }
 }

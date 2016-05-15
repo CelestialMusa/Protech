@@ -161,6 +161,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet15.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protechDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protechDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -382,6 +402,50 @@
     </None>
     <None Include="protechDataSet15.xss">
       <DependentUpon>protechDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet16.xsc">
+      <DependentUpon>protechDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet16.xss">
+      <DependentUpon>protechDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet17.xsc">
+      <DependentUpon>protechDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet17.xss">
+      <DependentUpon>protechDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet18.xsc">
+      <DependentUpon>protechDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet18.xss">
+      <DependentUpon>protechDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet19.xsc">
+      <DependentUpon>protechDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet19.xss">
+      <DependentUpon>protechDataSet19.xsd</DependentUpon>
     </None>
     <None Include="protechDataSet2.xsc">
       <DependentUpon>protechDataSet2.xsd</DependentUpon>

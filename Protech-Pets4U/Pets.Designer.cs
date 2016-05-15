@@ -49,16 +49,23 @@
             this.panelVetsInsertPet = new System.Windows.Forms.Panel();
             this.tabControlInsertEmployee = new System.Windows.Forms.TabControl();
             this.tabPageStep1Of1 = new System.Windows.Forms.TabPage();
+            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.comboBoxPetToBeUpdated = new System.Windows.Forms.ComboBox();
+            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
+            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBoxDone = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxPetOwner = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
@@ -74,13 +81,9 @@
             this.totalnumberpetsineachtypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.protechDataSet11 = new Protech_Pets4U.protechDataSet11();
             this.total_number_pets_in_each_typeTableAdapter = new Protech_Pets4U.protechDataSet11TableAdapters.total_number_pets_in_each_typeTableAdapter();
-            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.protechDataSet19 = new Protech_Pets4U.protechDataSet19();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personTableAdapter = new Protech_Pets4U.protechDataSet19TableAdapters.personTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,15 +93,17 @@
             this.panelVetsInsertPet.SuspendLayout();
             this.tabControlInsertEmployee.SuspendLayout();
             this.tabPageStep1Of1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDone)).BeginInit();
             this.panelListPetsOwnedByParticularOwner.SuspendLayout();
             this.panelViewTotalNumberPetsInEachType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalnumberpetsineachtypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -303,21 +308,21 @@
             // 
             this.tabPageStep1Of1.Controls.Add(this.radioButtonInsert);
             this.tabPageStep1Of1.Controls.Add(this.pictureBox7);
-            this.tabPageStep1Of1.Controls.Add(this.comboBox4);
+            this.tabPageStep1Of1.Controls.Add(this.comboBoxPetToBeUpdated);
             this.tabPageStep1Of1.Controls.Add(this.radioButtonDelete);
             this.tabPageStep1Of1.Controls.Add(this.radioButtonUpdate);
             this.tabPageStep1Of1.Controls.Add(this.pictureBox6);
             this.tabPageStep1Of1.Controls.Add(this.pictureBox5);
             this.tabPageStep1Of1.Controls.Add(this.label4);
             this.tabPageStep1Of1.Controls.Add(this.pictureBoxDone);
-            this.tabPageStep1Of1.Controls.Add(this.comboBox2);
+            this.tabPageStep1Of1.Controls.Add(this.comboBoxPetOwner);
             this.tabPageStep1Of1.Controls.Add(this.label13);
-            this.tabPageStep1Of1.Controls.Add(this.comboBox1);
-            this.tabPageStep1Of1.Controls.Add(this.comboBoxGender);
+            this.tabPageStep1Of1.Controls.Add(this.comboBoxStatus);
+            this.tabPageStep1Of1.Controls.Add(this.comboBoxType);
             this.tabPageStep1Of1.Controls.Add(this.label12);
             this.tabPageStep1Of1.Controls.Add(this.dateTimePickerDateOfBirth);
             this.tabPageStep1Of1.Controls.Add(this.label11);
-            this.tabPageStep1Of1.Controls.Add(this.textBox1);
+            this.tabPageStep1Of1.Controls.Add(this.textBoxDescription);
             this.tabPageStep1Of1.Controls.Add(this.label10);
             this.tabPageStep1Of1.Controls.Add(this.label9);
             this.tabPageStep1Of1.Controls.Add(this.textBoxFirstName);
@@ -329,6 +334,82 @@
             this.tabPageStep1Of1.TabIndex = 0;
             this.tabPageStep1Of1.Text = "Step 1 of 1";
             this.tabPageStep1Of1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonInsert
+            // 
+            this.radioButtonInsert.AutoSize = true;
+            this.radioButtonInsert.Checked = true;
+            this.radioButtonInsert.Location = new System.Drawing.Point(153, 266);
+            this.radioButtonInsert.Name = "radioButtonInsert";
+            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonInsert.TabIndex = 137;
+            this.radioButtonInsert.TabStop = true;
+            this.radioButtonInsert.Text = "Insert";
+            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(153, 223);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox7.TabIndex = 136;
+            this.pictureBox7.TabStop = false;
+            // 
+            // comboBoxPetToBeUpdated
+            // 
+            this.comboBoxPetToBeUpdated.FormattingEnabled = true;
+            this.comboBoxPetToBeUpdated.Items.AddRange(new object[] {
+            "Male ",
+            "Female"});
+            this.comboBoxPetToBeUpdated.Location = new System.Drawing.Point(23, 289);
+            this.comboBoxPetToBeUpdated.Name = "comboBoxPetToBeUpdated";
+            this.comboBoxPetToBeUpdated.Size = new System.Drawing.Size(186, 21);
+            this.comboBoxPetToBeUpdated.TabIndex = 135;
+            // 
+            // radioButtonDelete
+            // 
+            this.radioButtonDelete.AutoSize = true;
+            this.radioButtonDelete.Location = new System.Drawing.Point(89, 266);
+            this.radioButtonDelete.Name = "radioButtonDelete";
+            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonDelete.TabIndex = 134;
+            this.radioButtonDelete.Text = "Delete";
+            this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
+            // 
+            // radioButtonUpdate
+            // 
+            this.radioButtonUpdate.AutoSize = true;
+            this.radioButtonUpdate.Location = new System.Drawing.Point(23, 265);
+            this.radioButtonUpdate.Name = "radioButtonUpdate";
+            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
+            this.radioButtonUpdate.TabIndex = 133;
+            this.radioButtonUpdate.Text = "Update";
+            this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.CheckedChanged += new System.EventHandler(this.radioButtonUpdate_CheckedChanged);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(89, 223);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.TabIndex = 132;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(23, 223);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.TabIndex = 131;
+            this.pictureBox5.TabStop = false;
             // 
             // label4
             // 
@@ -354,13 +435,16 @@
             this.pictureBoxDone.MouseLeave += new System.EventHandler(this.pictureBoxDone_MouseLeave_1);
             this.pictureBoxDone.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxDone_MouseMove_1);
             // 
-            // comboBox2
+            // comboBoxPetOwner
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(255, 289);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 113;
+            this.comboBoxPetOwner.DataSource = this.personBindingSource;
+            this.comboBoxPetOwner.DisplayMember = "first_name";
+            this.comboBoxPetOwner.FormattingEnabled = true;
+            this.comboBoxPetOwner.Location = new System.Drawing.Point(255, 289);
+            this.comboBoxPetOwner.Name = "comboBoxPetOwner";
+            this.comboBoxPetOwner.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPetOwner.TabIndex = 113;
+            this.comboBoxPetOwner.ValueMember = "person_id";
             // 
             // label13
             // 
@@ -371,39 +455,39 @@
             this.label13.TabIndex = 112;
             this.label13.Text = "Select pet owner";
             // 
-            // comboBox1
+            // comboBoxStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "dead",
-            "alive"});
-            this.comboBox1.Location = new System.Drawing.Point(255, 187);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 111;
+            this.comboBoxStatus.Enabled = false;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
+            "Deceased",
+            "Alive"});
+            this.comboBoxStatus.Location = new System.Drawing.Point(255, 187);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStatus.TabIndex = 111;
             // 
-            // comboBoxGender
+            // comboBoxType
             // 
-            this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Items.AddRange(new object[] {
-            "dog",
-            "cat",
-            "snake",
-            "fish",
-            "bird",
-            "hamster",
-            "pig",
-            "rabbit",
-            "pony",
-            "horse",
-            "lizard",
-            "chameleon",
-            "other",
-            ""});
-            this.comboBoxGender.Location = new System.Drawing.Point(255, 138);
-            this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxGender.TabIndex = 9;
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Dog",
+            "Cat",
+            "Snake",
+            "Fish",
+            "Bird",
+            "Hamster",
+            "Pig",
+            "Rabbit",
+            "Pony",
+            "Horse",
+            "Lizard",
+            "Chameleon",
+            "Other"});
+            this.comboBoxType.Location = new System.Drawing.Point(255, 138);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxType.TabIndex = 9;
             // 
             // label12
             // 
@@ -430,12 +514,12 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Status";
             // 
-            // textBox1
+            // textBoxDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 238);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxDescription.Location = new System.Drawing.Point(255, 238);
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(257, 20);
+            this.textBoxDescription.TabIndex = 5;
             // 
             // label10
             // 
@@ -561,79 +645,19 @@
             // 
             this.total_number_pets_in_each_typeTableAdapter.ClearBeforeFill = true;
             // 
-            // radioButtonInsert
+            // protechDataSet19
             // 
-            this.radioButtonInsert.AutoSize = true;
-            this.radioButtonInsert.Location = new System.Drawing.Point(153, 266);
-            this.radioButtonInsert.Name = "radioButtonInsert";
-            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
-            this.radioButtonInsert.TabIndex = 137;
-            this.radioButtonInsert.TabStop = true;
-            this.radioButtonInsert.Text = "Insert";
-            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.protechDataSet19.DataSetName = "protechDataSet19";
+            this.protechDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pictureBox7
+            // personBindingSource
             // 
-            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(153, 223);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox7.TabIndex = 136;
-            this.pictureBox7.TabStop = false;
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.protechDataSet19;
             // 
-            // comboBox4
+            // personTableAdapter
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
-            this.comboBox4.Location = new System.Drawing.Point(23, 289);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(186, 21);
-            this.comboBox4.TabIndex = 135;
-            // 
-            // radioButtonDelete
-            // 
-            this.radioButtonDelete.AutoSize = true;
-            this.radioButtonDelete.Location = new System.Drawing.Point(89, 266);
-            this.radioButtonDelete.Name = "radioButtonDelete";
-            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonDelete.TabIndex = 134;
-            this.radioButtonDelete.TabStop = true;
-            this.radioButtonDelete.Text = "Delete";
-            this.radioButtonDelete.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUpdate
-            // 
-            this.radioButtonUpdate.AutoSize = true;
-            this.radioButtonUpdate.Location = new System.Drawing.Point(23, 265);
-            this.radioButtonUpdate.Name = "radioButtonUpdate";
-            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
-            this.radioButtonUpdate.TabIndex = 133;
-            this.radioButtonUpdate.TabStop = true;
-            this.radioButtonUpdate.Text = "Update";
-            this.radioButtonUpdate.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(89, 223);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox6.TabIndex = 132;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(23, 223);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.TabIndex = 131;
-            this.pictureBox5.TabStop = false;
+            this.personTableAdapter.ClearBeforeFill = true;
             // 
             // Pets
             // 
@@ -676,6 +700,9 @@
             this.tabControlInsertEmployee.ResumeLayout(false);
             this.tabPageStep1Of1.ResumeLayout(false);
             this.tabPageStep1Of1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDone)).EndInit();
             this.panelListPetsOwnedByParticularOwner.ResumeLayout(false);
             this.panelListPetsOwnedByParticularOwner.PerformLayout();
@@ -683,9 +710,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalnumberpetsineachtypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -712,11 +738,11 @@
         private System.Windows.Forms.Panel panelVetsInsertPet;
         private System.Windows.Forms.TabControl tabControlInsertEmployee;
         private System.Windows.Forms.TabPage tabPageStep1Of1;
-        private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxFirstName;
@@ -725,9 +751,9 @@
         private System.Windows.Forms.Panel panelViewTotalNumberPetsInEachType;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBoxDone;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxPetOwner;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.DataGridView dataGridView1;
         private protechDataSet11 protechDataSet11;
         private System.Windows.Forms.BindingSource totalnumberpetsineachtypeBindingSource;
@@ -739,10 +765,13 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton radioButtonInsert;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxPetToBeUpdated;
         private System.Windows.Forms.RadioButton radioButtonDelete;
         private System.Windows.Forms.RadioButton radioButtonUpdate;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private protechDataSet19 protechDataSet19;
+        private System.Windows.Forms.BindingSource personBindingSource;
+        private protechDataSet19TableAdapters.personTableAdapter personTableAdapter;
     }
 }
