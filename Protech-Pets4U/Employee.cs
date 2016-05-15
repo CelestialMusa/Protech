@@ -14,7 +14,7 @@ namespace Protech_Pets4U
 {
     public partial class Employee : Form
     {
-        string connectionstring = @"server=196.253.61.51;user id=root;password=inteltechs;persistsecurityinfo=True;database=protech";
+        string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
         MySqlConnection connection;
         MySqlCommand command;
         MySqlDataReader reader;
@@ -259,7 +259,7 @@ namespace Protech_Pets4U
             
 
             string salary = textBoxSalary.Text;
-            int clinic_id = 2;//(int)comboBoxClinicID.SelectedItem;
+            int clinic_id = (int)comboBoxClinicID.SelectedValue;
             string state = textBoxState.Text;
             string city = textBoxCity.Text;
             string street = textBoxStreet.Text;
@@ -284,6 +284,8 @@ namespace Protech_Pets4U
 
         private void Employee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet14.clinic' table. You can move, or remove it, as needed.
+            this.clinicTableAdapter.Fill(this.protechDataSet14.clinic);
             // TODO: This line of code loads data into the 'protechDataSet7.list_names_staff_numbers_for_vets_nurses_over_50_years' table. You can move, or remove it, as needed.
             this.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter.Fill(this.protechDataSet7.list_names_staff_numbers_for_vets_nurses_over_50_years);
             // TODO: This line of code loads data into the 'protechDataSet6.view_clinic_managers' table. You can move, or remove it, as needed.
@@ -322,7 +324,20 @@ namespace Protech_Pets4U
                 
 
                 reader = command.ExecuteReader();
-                MessageBox.Show("The employee has been successfuly been registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);               
+                MessageBox.Show("The employee has been successfuly been registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxFirstName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxIDNumber.Text = "";
+                textBoxSalary.Text = "";
+                textBoxState.Text = "";
+                textBoxStreet.Text = "";
+                textBoxTelNum.Text = "";
+                textBoxCity.Text = "";
+                textBoxZipCode.Text = "";
+                comboBoxClinicID.SelectedItem = null;
+                comboBoxGender.SelectedItem = null;
+                comboBoxJobDescription.SelectedItem = null;                
             }
             catch (Exception ex)
             {

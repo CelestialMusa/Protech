@@ -43,7 +43,15 @@
             this.panelClinicInsertEmployee = new System.Windows.Forms.Panel();
             this.tabControlInsertEmployee = new System.Windows.Forms.TabControl();
             this.tabPageStep1Of3 = new System.Windows.Forms.TabPage();
+            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.comboBoxEmployeeToBeMaintained = new System.Windows.Forms.ComboBox();
+            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
+            this.radioButtonUdate = new System.Windows.Forms.RadioButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxTelNum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
@@ -66,13 +74,17 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage3Of3 = new System.Windows.Forms.TabPage();
+            this.comboBoxClinicID = new System.Windows.Forms.ComboBox();
+            this.comboBoxJobDescription = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxSalary = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelClinicsActivePanel = new System.Windows.Forms.Label();
             this.panelVetsNursesOver50 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -111,23 +123,20 @@
             this.pictureBoxTotMonthSal = new System.Windows.Forms.PictureBox();
             this.pictureBoxInformationDeveloperLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.radioButtonUdate = new System.Windows.Forms.RadioButton();
-            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.comboBoxEmployeeToBeMaintained = new System.Windows.Forms.ComboBox();
-            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.comboBoxJobDescription = new System.Windows.Forms.ComboBox();
-            this.comboBoxClinicID = new System.Windows.Forms.ComboBox();
+            this.protechDataSet14 = new Protech_Pets4U.protechDataSet14();
+            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clinicTableAdapter = new Protech_Pets4U.protechDataSet14TableAdapters.clinicTableAdapter();
             this.panelClinicInsertEmployee.SuspendLayout();
             this.tabControlInsertEmployee.SuspendLayout();
             this.tabPageStep1Of3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPageStep2Of3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage3Of3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelVetsNursesOver50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource)).BeginInit();
@@ -147,12 +156,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -308,6 +313,79 @@
             this.tabPageStep1Of3.Text = "Step 1 of 3";
             this.tabPageStep1Of3.UseVisualStyleBackColor = true;
             // 
+            // radioButtonInsert
+            // 
+            this.radioButtonInsert.AutoSize = true;
+            this.radioButtonInsert.Checked = true;
+            this.radioButtonInsert.Location = new System.Drawing.Point(151, 255);
+            this.radioButtonInsert.Name = "radioButtonInsert";
+            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonInsert.TabIndex = 117;
+            this.radioButtonInsert.TabStop = true;
+            this.radioButtonInsert.Text = "Insert";
+            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(151, 212);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox7.TabIndex = 116;
+            this.pictureBox7.TabStop = false;
+            // 
+            // comboBoxEmployeeToBeMaintained
+            // 
+            this.comboBoxEmployeeToBeMaintained.FormattingEnabled = true;
+            this.comboBoxEmployeeToBeMaintained.Items.AddRange(new object[] {
+            "Male ",
+            "Female"});
+            this.comboBoxEmployeeToBeMaintained.Location = new System.Drawing.Point(21, 278);
+            this.comboBoxEmployeeToBeMaintained.Name = "comboBoxEmployeeToBeMaintained";
+            this.comboBoxEmployeeToBeMaintained.Size = new System.Drawing.Size(186, 21);
+            this.comboBoxEmployeeToBeMaintained.TabIndex = 115;
+            // 
+            // radioButtonDelete
+            // 
+            this.radioButtonDelete.AutoSize = true;
+            this.radioButtonDelete.Location = new System.Drawing.Point(87, 255);
+            this.radioButtonDelete.Name = "radioButtonDelete";
+            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonDelete.TabIndex = 114;
+            this.radioButtonDelete.Text = "Delete";
+            this.radioButtonDelete.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonUdate
+            // 
+            this.radioButtonUdate.AutoSize = true;
+            this.radioButtonUdate.Location = new System.Drawing.Point(21, 254);
+            this.radioButtonUdate.Name = "radioButtonUdate";
+            this.radioButtonUdate.Size = new System.Drawing.Size(60, 17);
+            this.radioButtonUdate.TabIndex = 113;
+            this.radioButtonUdate.Text = "Update";
+            this.radioButtonUdate.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(87, 212);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.TabIndex = 112;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(21, 212);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.TabIndex = 111;
+            this.pictureBox5.TabStop = false;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -317,6 +395,20 @@
             this.label22.Size = new System.Drawing.Size(39, 16);
             this.label22.TabIndex = 110;
             this.label22.Text = "Next";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f0da_0__256;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(559, 260);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 54);
+            this.pictureBox2.TabIndex = 109;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
             // 
             // textBoxTelNum
             // 
@@ -512,6 +604,20 @@
             this.label19.TabIndex = 12;
             this.label19.Text = "Street ";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f0da_0__256;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(559, 260);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(67, 54);
+            this.pictureBox3.TabIndex = 111;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
+            // 
             // tabPage3Of3
             // 
             this.tabPage3Of3.Controls.Add(this.comboBoxClinicID);
@@ -531,6 +637,34 @@
             this.tabPage3Of3.Text = "Step 3 of 3";
             this.tabPage3Of3.UseVisualStyleBackColor = true;
             this.tabPage3Of3.Click += new System.EventHandler(this.tabPage3Of3_Click);
+            // 
+            // comboBoxClinicID
+            // 
+            this.comboBoxClinicID.DataSource = this.clinicBindingSource;
+            this.comboBoxClinicID.DisplayMember = "clinic_name";
+            this.comboBoxClinicID.FormattingEnabled = true;
+            this.comboBoxClinicID.Location = new System.Drawing.Point(186, 39);
+            this.comboBoxClinicID.Name = "comboBoxClinicID";
+            this.comboBoxClinicID.Size = new System.Drawing.Size(159, 21);
+            this.comboBoxClinicID.TabIndex = 114;
+            this.comboBoxClinicID.ValueMember = "clinic_num";
+            this.comboBoxClinicID.SelectedIndexChanged += new System.EventHandler(this.comboBoxClinicID_SelectedIndexChanged);
+            // 
+            // comboBoxJobDescription
+            // 
+            this.comboBoxJobDescription.FormattingEnabled = true;
+            this.comboBoxJobDescription.Items.AddRange(new object[] {
+            "Manager",
+            "Nurse",
+            "Driver",
+            "Vet",
+            "Cleaner",
+            "Receptionist",
+            "Clerk"});
+            this.comboBoxJobDescription.Location = new System.Drawing.Point(186, 89);
+            this.comboBoxJobDescription.Name = "comboBoxJobDescription";
+            this.comboBoxJobDescription.Size = new System.Drawing.Size(257, 21);
+            this.comboBoxJobDescription.TabIndex = 113;
             // 
             // label24
             // 
@@ -585,6 +719,21 @@
             this.label21.Size = new System.Drawing.Size(32, 13);
             this.label21.TabIndex = 24;
             this.label21.Text = "Clinic";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00c_0__2561;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(559, 260);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(67, 54);
+            this.pictureBox4.TabIndex = 111;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
+            this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
             // labelClinicsActivePanel
             // 
@@ -919,149 +1068,19 @@
             this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
             this.pictureBoxBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBack_MouseMove);
             // 
-            // pictureBox6
+            // protechDataSet14
             // 
-            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(87, 212);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox6.TabIndex = 112;
-            this.pictureBox6.TabStop = false;
+            this.protechDataSet14.DataSetName = "protechDataSet14";
+            this.protechDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pictureBox5
+            // clinicBindingSource
             // 
-            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(21, 212);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.TabIndex = 111;
-            this.pictureBox5.TabStop = false;
+            this.clinicBindingSource.DataMember = "clinic";
+            this.clinicBindingSource.DataSource = this.protechDataSet14;
             // 
-            // pictureBox2
+            // clinicTableAdapter
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f0da_0__256;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(559, 260);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 54);
-            this.pictureBox2.TabIndex = 109;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f0da_0__256;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(559, 260);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 54);
-            this.pictureBox3.TabIndex = 111;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00c_0__2561;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(559, 260);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(67, 54);
-            this.pictureBox4.TabIndex = 111;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
-            this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
-            // 
-            // radioButtonUdate
-            // 
-            this.radioButtonUdate.AutoSize = true;
-            this.radioButtonUdate.Location = new System.Drawing.Point(21, 254);
-            this.radioButtonUdate.Name = "radioButtonUdate";
-            this.radioButtonUdate.Size = new System.Drawing.Size(60, 17);
-            this.radioButtonUdate.TabIndex = 113;
-            this.radioButtonUdate.Text = "Update";
-            this.radioButtonUdate.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDelete
-            // 
-            this.radioButtonDelete.AutoSize = true;
-            this.radioButtonDelete.Location = new System.Drawing.Point(87, 255);
-            this.radioButtonDelete.Name = "radioButtonDelete";
-            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonDelete.TabIndex = 114;
-            this.radioButtonDelete.Text = "Delete";
-            this.radioButtonDelete.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxEmployeeToBeMaintained
-            // 
-            this.comboBoxEmployeeToBeMaintained.FormattingEnabled = true;
-            this.comboBoxEmployeeToBeMaintained.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
-            this.comboBoxEmployeeToBeMaintained.Location = new System.Drawing.Point(21, 278);
-            this.comboBoxEmployeeToBeMaintained.Name = "comboBoxEmployeeToBeMaintained";
-            this.comboBoxEmployeeToBeMaintained.Size = new System.Drawing.Size(186, 21);
-            this.comboBoxEmployeeToBeMaintained.TabIndex = 115;
-            // 
-            // radioButtonInsert
-            // 
-            this.radioButtonInsert.AutoSize = true;
-            this.radioButtonInsert.Checked = true;
-            this.radioButtonInsert.Location = new System.Drawing.Point(151, 255);
-            this.radioButtonInsert.Name = "radioButtonInsert";
-            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
-            this.radioButtonInsert.TabIndex = 117;
-            this.radioButtonInsert.TabStop = true;
-            this.radioButtonInsert.Text = "Insert";
-            this.radioButtonInsert.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(151, 212);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox7.TabIndex = 116;
-            this.pictureBox7.TabStop = false;
-            // 
-            // comboBoxJobDescription
-            // 
-            this.comboBoxJobDescription.FormattingEnabled = true;
-            this.comboBoxJobDescription.Items.AddRange(new object[] {
-            "Manager",
-            "Nurse",
-            "Driver",
-            "Vet",
-            "Cleaner",
-            "Receptionist",
-            "Clerk"});
-            this.comboBoxJobDescription.Location = new System.Drawing.Point(186, 89);
-            this.comboBoxJobDescription.Name = "comboBoxJobDescription";
-            this.comboBoxJobDescription.Size = new System.Drawing.Size(257, 21);
-            this.comboBoxJobDescription.TabIndex = 113;
-            // 
-            // comboBoxClinicID
-            // 
-            this.comboBoxClinicID.FormattingEnabled = true;
-            this.comboBoxClinicID.Items.AddRange(new object[] {
-            "2",
-            "3"});
-            this.comboBoxClinicID.Location = new System.Drawing.Point(186, 39);
-            this.comboBoxClinicID.Name = "comboBoxClinicID";
-            this.comboBoxClinicID.Size = new System.Drawing.Size(159, 21);
-            this.comboBoxClinicID.TabIndex = 114;
-            this.comboBoxClinicID.SelectedIndexChanged += new System.EventHandler(this.comboBoxClinicID_SelectedIndexChanged);
+            this.clinicTableAdapter.ClearBeforeFill = true;
             // 
             // Employee
             // 
@@ -1102,10 +1121,16 @@
             this.tabControlInsertEmployee.ResumeLayout(false);
             this.tabPageStep1Of3.ResumeLayout(false);
             this.tabPageStep1Of3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPageStep2Of3.ResumeLayout(false);
             this.tabPageStep2Of3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage3Of3.ResumeLayout(false);
             this.tabPage3Of3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelVetsNursesOver50.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource)).EndInit();
@@ -1125,12 +1150,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1231,5 +1252,8 @@
         private System.Windows.Forms.RadioButton radioButtonUdate;
         private System.Windows.Forms.ComboBox comboBoxJobDescription;
         private System.Windows.Forms.ComboBox comboBoxClinicID;
+        private protechDataSet14 protechDataSet14;
+        private System.Windows.Forms.BindingSource clinicBindingSource;
+        private protechDataSet14TableAdapters.clinicTableAdapter clinicTableAdapter;
     }
 }
