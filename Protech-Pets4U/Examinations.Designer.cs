@@ -41,7 +41,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.radioButtonInsert = new System.Windows.Forms.RadioButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxExamToUpdate = new System.Windows.Forms.ComboBox();
             this.radioButtonDelete = new System.Windows.Forms.RadioButton();
             this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -184,7 +184,7 @@
             // 
             this.tabPage1.Controls.Add(this.radioButtonInsert);
             this.tabPage1.Controls.Add(this.pictureBox7);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.comboBoxExamToUpdate);
             this.tabPage1.Controls.Add(this.radioButtonDelete);
             this.tabPage1.Controls.Add(this.radioButtonUpdate);
             this.tabPage1.Controls.Add(this.pictureBox6);
@@ -231,16 +231,16 @@
             this.pictureBox7.TabIndex = 132;
             this.pictureBox7.TabStop = false;
             // 
-            // comboBox1
+            // comboBoxExamToUpdate
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxExamToUpdate.FormattingEnabled = true;
+            this.comboBoxExamToUpdate.Items.AddRange(new object[] {
             "Male ",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(22, 287);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 21);
-            this.comboBox1.TabIndex = 131;
+            this.comboBoxExamToUpdate.Location = new System.Drawing.Point(22, 287);
+            this.comboBoxExamToUpdate.Name = "comboBoxExamToUpdate";
+            this.comboBoxExamToUpdate.Size = new System.Drawing.Size(186, 21);
+            this.comboBoxExamToUpdate.TabIndex = 131;
             // 
             // radioButtonDelete
             // 
@@ -302,6 +302,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(67, 54);
             this.pictureBox4.TabIndex = 125;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave_1);
             this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove_1);
             // 
@@ -587,7 +588,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RadioButton radioButtonInsert;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxExamToUpdate;
         private System.Windows.Forms.RadioButton radioButtonDelete;
         private System.Windows.Forms.RadioButton radioButtonUpdate;
         private System.Windows.Forms.PictureBox pictureBox6;

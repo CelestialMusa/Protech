@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace Protech_Pets4U
 {
     public partial class Examinations : Form
     {
+        string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
+        MySqlConnection connection;
+        MySqlCommand command;
+        MySqlDataReader reader;
+        DataTable myDataTable;
+
         public Examinations()
         {
             InitializeComponent();
+            connection = new MySqlConnection(connectionstring);
+            myDataTable = new DataTable();
+            comboBoxExamToUpdate.Enabled = false;
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -128,6 +139,63 @@ namespace Protech_Pets4U
             pictureBox4.Location = new Point(559, 260);
             Image image = Image.FromFile("C:\\Protech-Pets4U\\Resources\\FontAwesome_f00c(0)_2561.png");
             pictureBox4.BackgroundImage = image;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {              
+            string start_date = dateTimePickerBeginDate.Value.ToShortDateString();
+            string end_date = dateTimePickerEndDate.Value.ToShortDateString();
+            int staff = (int)comboBoxStaff.SelectedValue;
+            int pet = (int)comboBoxPet.SelectedValue;
+            string results = textBoxResults.Text;
+
+            if (radioButtonInsert.Checked)
+            {
+                insert_Examination(start_date, end_date, staff, pet, results);
+            }
+            else if (radioButtonUpdate.Checked)
+            {
+                int staff_num = (int)comboBoxExamToUpdate.SelectedValue;
+                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+            }
+            else if (radioButtonDelete.Checked)
+            {
+                int staff_num = (int)comboBoxExamToUpdate.SelectedValue;
+                //Delete
+            }
+        }
+
+        private void insert_Examination(string start_date, string end_date, int staff, int pet, string results)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "insert_pet_examination";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@start_treatment", MySqlDbType.Date)).Value = start_date;
+                command.Parameters.Add(new MySqlParameter("@end_treatment", MySqlDbType.Date)).Value = end_date;
+                command.Parameters.Add(new MySqlParameter("@staff", MySqlDbType.Int32)).Value = staff;
+                command.Parameters.Add(new MySqlParameter("@pet", MySqlDbType.Int32)).Value = pet;
+                command.Parameters.Add(new MySqlParameter("@exam_results", MySqlDbType.MediumText)).Value = results;
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The Examination has been successfuly added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxResults.Text = "";               
+                comboBoxPet.SelectedItem = null;
+                comboBoxStaff.SelectedItem = null;                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Examination has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
