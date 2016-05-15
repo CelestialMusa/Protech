@@ -15,9 +15,18 @@ namespace Protech_Pets4U
 {
     public partial class Customers : Form
     {
+        string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
+        MySqlConnection connection;
+        MySqlCommand command;
+        MySqlDataReader reader;
+        DataTable myDataTable;
+
         public Customers()
         {
             InitializeComponent();
+            connection = new MySqlConnection(connectionstring);
+            myDataTable = new DataTable();
+            comboBoxEmployeeToBeMaintained.Enabled = false;
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -133,6 +142,42 @@ namespace Protech_Pets4U
 
         private void pictureBoxDone_Click(object sender, EventArgs e)
         {
+            string name = textBoxFirstName.Text;
+            string last = textBoxLastName.Text;
+            string gender;
+            if (comboBoxGender.SelectedText == "Male")
+            {
+                gender = "Male";
+            }
+            else
+            {
+                gender = "Female";
+            }
+            string dob = dateTimePickerDateOfBirth.Value.ToShortDateString();
+            string tel = textBoxTelNum.Text;
+            string id = textBoxIDNumber.Text;
+                        
+            int clinic_id = (int)comboBoxClinicID.SelectedValue;
+            string state = textBoxState.Text;
+            string city = textBoxCity.Text;
+            string street = textBoxStreet.Text;
+            string zip = textBoxZipCode.Text;
+
+            if (radioButtonInsert.Checked)
+            {
+                insert_Customer(name, last, gender, dob, tel, id, clinic_id, state, city, street, zip);
+            }
+            else if (radioButtonUdate.Checked)
+            {
+                int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+            }
+            else if (radioButtonDelete.Checked)
+            {
+                int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+                //Delete
+            }
+
             tabControlInsertEmployee.SelectedTab = tabPageStep1Of2;
         }
 
@@ -165,6 +210,8 @@ namespace Protech_Pets4U
 
         private void Customers_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet15.clinic' table. You can move, or remove it, as needed.
+            this.clinicTableAdapter.Fill(this.protechDataSet15.clinic);
             // TODO: This line of code loads data into the 'protechDataSet.list_names_of_pet_owners_with_pet_details' table. You can move, or remove it, as needed.
             this.list_names_of_pet_owners_with_pet_detailsTableAdapter.Fill(this.protechDataSet.list_names_of_pet_owners_with_pet_details);
 
@@ -201,6 +248,55 @@ namespace Protech_Pets4U
             }
             dataGridViewBetweenDates.DataSource = dt;
             //dataGridViewBetweenDates.;*/
+        }
+
+        private void insert_Customer(string name, string last, string gender, string dob, string tel,
+                                    string id, int clinic_id, string state,
+                                    string city, string street, string zip)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "insert_pet_owner";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
+                command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
+                command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
+                command.Parameters.Add(new MySqlParameter("@zip_code", MySqlDbType.VarChar)).Value = zip;
+                command.Parameters.Add(new MySqlParameter("@id_num", MySqlDbType.VarChar)).Value = id;
+                command.Parameters.Add(new MySqlParameter("@first_name", MySqlDbType.VarChar)).Value = name;
+                command.Parameters.Add(new MySqlParameter("@last_name", MySqlDbType.VarChar)).Value = last;
+                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.VarChar)).Value = gender;
+                command.Parameters.Add(new MySqlParameter("@dob", MySqlDbType.Date)).Value = dob;
+                command.Parameters.Add(new MySqlParameter("@tel_num", MySqlDbType.VarChar)).Value = tel;
+                command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Int32)).Value = clinic_id; 
+
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The Pet owner has been successfuly been registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxFirstName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxIDNumber.Text = "";                
+                textBoxState.Text = "";
+                textBoxStreet.Text = "";
+                textBoxTelNum.Text = "";
+                textBoxCity.Text = "";
+                textBoxZipCode.Text = "";
+                comboBoxClinicID.SelectedItem = null;
+                comboBoxGender.SelectedItem = null;                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Pet owner registration has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

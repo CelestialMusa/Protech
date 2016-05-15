@@ -156,6 +156,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet14.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protechDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet15.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protechDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -366,6 +371,17 @@
     </None>
     <None Include="protechDataSet14.xss">
       <DependentUpon>protechDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet15.xsc">
+      <DependentUpon>protechDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet15.xss">
+      <DependentUpon>protechDataSet15.xsd</DependentUpon>
     </None>
     <None Include="protechDataSet2.xsc">
       <DependentUpon>protechDataSet2.xsd</DependentUpon>
