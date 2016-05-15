@@ -326,7 +326,7 @@ namespace Protech_Pets4U
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Employee registration has failed please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Employee registration has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
