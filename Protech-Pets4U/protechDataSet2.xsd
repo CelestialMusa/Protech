@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet2" targetNamespace="http://tempuri.org/protechDataSet2.xsd" xmlns:mstns="http://tempuri.org/protechDataSet2.xsd" xmlns="http://tempuri.org/protechDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_clinic_managersTableAdapter" GeneratorDataComponentClassName="view_clinic_managersTableAdapter" Name="view_clinic_managers" UserDataComponentName="view_clinic_managersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.view_clinic_managers" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `first_name`, `last_name`, `clinic_tel`, `staff_position`, `street`, `city`, `state`, `zip_code` FROM `protech`.`view_clinic_managers`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="first_name" DataSetColumn="first_name" />
+              <Mapping SourceColumn="last_name" DataSetColumn="last_name" />
+              <Mapping SourceColumn="clinic_tel" DataSetColumn="clinic_tel" />
+              <Mapping SourceColumn="staff_position" DataSetColumn="staff_position" />
+              <Mapping SourceColumn="street" DataSetColumn="street" />
+              <Mapping SourceColumn="city" DataSetColumn="city" />
+              <Mapping SourceColumn="state" DataSetColumn="state" />
+              <Mapping SourceColumn="zip_code" DataSetColumn="zip_code" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet2" msprop:Generator_UserDSName="protechDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_clinic_managers" msprop:Generator_TableClassName="view_clinic_managersDataTable" msprop:Generator_TableVarName="tableview_clinic_managers" msprop:Generator_TablePropName="view_clinic_managers" msprop:Generator_RowDeletingName="view_clinic_managersRowDeleting" msprop:Generator_RowChangingName="view_clinic_managersRowChanging" msprop:Generator_RowEvHandlerName="view_clinic_managersRowChangeEventHandler" msprop:Generator_RowDeletedName="view_clinic_managersRowDeleted" msprop:Generator_UserTableName="view_clinic_managers" msprop:Generator_RowChangedName="view_clinic_managersRowChanged" msprop:Generator_RowEvArgName="view_clinic_managersRowChangeEvent" msprop:Generator_RowClassName="view_clinic_managersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="first_name" msprop:Generator_ColumnVarNameInTable="columnfirst_name" msprop:Generator_ColumnPropNameInRow="first_name" msprop:Generator_ColumnPropNameInTable="first_nameColumn" msprop:Generator_UserColumnName="first_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="last_name" msprop:Generator_ColumnVarNameInTable="columnlast_name" msprop:Generator_ColumnPropNameInRow="last_name" msprop:Generator_ColumnPropNameInTable="last_nameColumn" msprop:Generator_UserColumnName="last_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clinic_tel" msprop:Generator_ColumnVarNameInTable="columnclinic_tel" msprop:Generator_ColumnPropNameInRow="clinic_tel" msprop:Generator_ColumnPropNameInTable="clinic_telColumn" msprop:Generator_UserColumnName="clinic_tel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="staff_position" msprop:Generator_ColumnVarNameInTable="columnstaff_position" msprop:Generator_ColumnPropNameInRow="staff_position" msprop:Generator_ColumnPropNameInTable="staff_positionColumn" msprop:Generator_UserColumnName="staff_position">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnPropNameInTable="streetColumn" msprop:Generator_UserColumnName="street">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" msprop:Generator_UserColumnName="city">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="state" msprop:Generator_ColumnVarNameInTable="columnstate" msprop:Generator_ColumnPropNameInRow="state" msprop:Generator_ColumnPropNameInTable="stateColumn" msprop:Generator_UserColumnName="state">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zip_code" msprop:Generator_ColumnVarNameInTable="columnzip_code" msprop:Generator_ColumnPropNameInRow="zip_code" msprop:Generator_ColumnPropNameInTable="zip_codeColumn" msprop:Generator_UserColumnName="zip_code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

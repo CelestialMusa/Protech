@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22B46D56-EBF9-4391-BFFA-1BD277ED547D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Protech_Pets4U</RootNamespace>
+    <AssemblyName>Protech-Pets4U</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments.Designer.cs">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassUsers.cs" />
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examinations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examinations.Designer.cs">
+      <DependentUpon>Examinations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices.Designer.cs">
+      <DependentUpon>Invoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelWindow.Designer.cs">
+      <DependentUpon>PanelWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clinics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Clinics.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pens.Designer.cs">
+      <DependentUpon>Pens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pets.Designer.cs">
+      <DependentUpon>Pets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="protechDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplies.Designer.cs">
+      <DependentUpon>Supplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettings.Designer.cs">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Treatments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Treatments.Designer.cs">
+      <DependentUpon>Treatments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webbrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Webbrowser.Designer.cs">
+      <DependentUpon>Webbrowser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Appointments.resx">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examinations.resx">
+      <DependentUpon>Examinations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices.resx">
+      <DependentUpon>Invoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelWindow.resx">
+      <DependentUpon>PanelWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clinics.resx">
+      <DependentUpon>Clinics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pens.resx">
+      <DependentUpon>Pens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pets.resx">
+      <DependentUpon>Pets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Supplies.resx">
+      <DependentUpon>Supplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettings.resx">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treatments.resx">
+      <DependentUpon>Treatments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Webbrowser.resx">
+      <DependentUpon>Webbrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="protechDataSet.xsc">
+      <DependentUpon>protechDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet.xss">
+      <DependentUpon>protechDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet1.xsc">
+      <DependentUpon>protechDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet1.xss">
+      <DependentUpon>protechDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet10.xsc">
+      <DependentUpon>protechDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet10.xss">
+      <DependentUpon>protechDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet11.xsc">
+      <DependentUpon>protechDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet11.xss">
+      <DependentUpon>protechDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet12.xsc">
+      <DependentUpon>protechDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet12.xss">
+      <DependentUpon>protechDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet13.xsc">
+      <DependentUpon>protechDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet13.xss">
+      <DependentUpon>protechDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet2.xsc">
+      <DependentUpon>protechDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet2.xss">
+      <DependentUpon>protechDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet3.xsc">
+      <DependentUpon>protechDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet3.xss">
+      <DependentUpon>protechDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet4.xsc">
+      <DependentUpon>protechDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet4.xss">
+      <DependentUpon>protechDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet5.xsc">
+      <DependentUpon>protechDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet5.xss">
+      <DependentUpon>protechDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet6.xsc">
+      <DependentUpon>protechDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet6.xss">
+      <DependentUpon>protechDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet7.xsc">
+      <DependentUpon>protechDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet7.xss">
+      <DependentUpon>protechDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet8.xsc">
+      <DependentUpon>protechDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet8.xss">
+      <DependentUpon>protechDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet9.xsc">
+      <DependentUpon>protechDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet9.xss">
+      <DependentUpon>protechDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Entypo_f336%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copyright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled_pet_project_image_2__140124195237.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f011%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog-and-cat-on-white-background-freecomputerdesktopwallpaper-1280-dog-pet-1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f040%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon_e656%281%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f037%284%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f0b2%285%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f068%283%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themify_e6dc%280%29_258.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e0d2%282%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Typicons_e062%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themify_e69b%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Icons_e548%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linecons_e00a%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_2139%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linecons_e02f%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconic_2795%281%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octicons_f0d0%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f01c%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0e8%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material Icons_e88a%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b47895705232a4fc7bb6f44777f97021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EasterCandyPhoto-300x242.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iStock_000010710301XSmall-747x470.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cats animals dogs yorkshire terrier white background 1920x1200 wallpaper_www.animalhi.com_20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0f1%282%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f132%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f155%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f0da%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f00c%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puppy-kitten-320x245.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f092%280%29_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2012_217_343-300x224.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guineapig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256718-cat-kittens-animals-baby_animals-white_background-736x459.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animals dogs pugs white background 1920x1278 wallpaper_www.animalhi.com_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animals___Dogs_Funny_puppy_on_a_white_background_041650_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rottie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_27f3%281%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f00d%280%29_2561.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet10" targetNamespace="http://tempuri.org/protechDataSet10.xsd" xmlns:mstns="http://tempuri.org/protechDataSet10.xsd" xmlns="http://tempuri.org/protechDataSet10.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="total_cost_of_surgical_non_surgical_supplies_in_stockTableAdapter" GeneratorDataComponentClassName="total_cost_of_surgical_non_surgical_supplies_in_stockTableAdapter" Name="total_cost_of_surgical_non_surgical_supplies_in_stock" UserDataComponentName="total_cost_of_surgical_non_surgical_supplies_in_stockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.total_cost_of_surgical_non_surgical_supplies_in_stock" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Clinic number`, `Total cost` FROM `protech`.`total_cost_of_surgical_non_surgical_supplies_in_stock`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Clinic number" DataSetColumn="Clinic number" />
+              <Mapping SourceColumn="Total cost" DataSetColumn="Total cost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet10" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet10" msprop:Generator_UserDSName="protechDataSet10">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="total_cost_of_surgical_non_surgical_supplies_in_stock" msprop:Generator_TableClassName="total_cost_of_surgical_non_surgical_supplies_in_stockDataTable" msprop:Generator_TableVarName="tabletotal_cost_of_surgical_non_surgical_supplies_in_stock" msprop:Generator_TablePropName="total_cost_of_surgical_non_surgical_supplies_in_stock" msprop:Generator_RowDeletingName="total_cost_of_surgical_non_surgical_supplies_in_stockRowDeleting" msprop:Generator_RowChangingName="total_cost_of_surgical_non_surgical_supplies_in_stockRowChanging" msprop:Generator_RowEvHandlerName="total_cost_of_surgical_non_surgical_supplies_in_stockRowChangeEventHandler" msprop:Generator_RowDeletedName="total_cost_of_surgical_non_surgical_supplies_in_stockRowDeleted" msprop:Generator_UserTableName="total_cost_of_surgical_non_surgical_supplies_in_stock" msprop:Generator_RowChangedName="total_cost_of_surgical_non_surgical_supplies_in_stockRowChanged" msprop:Generator_RowEvArgName="total_cost_of_surgical_non_surgical_supplies_in_stockRowChangeEvent" msprop:Generator_RowClassName="total_cost_of_surgical_non_surgical_supplies_in_stockRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Clinic_x0020_number" msprop:Generator_ColumnVarNameInTable="columnClinic_number" msprop:Generator_ColumnPropNameInRow="Clinic_number" msprop:Generator_ColumnPropNameInTable="Clinic_numberColumn" msprop:Generator_UserColumnName="Clinic number" type="xs:int" />
+              <xs:element name="Total_x0020_cost" msprop:Generator_ColumnVarNameInTable="columnTotal_cost" msprop:Generator_ColumnPropNameInRow="Total_cost" msprop:Generator_ColumnPropNameInTable="Total_costColumn" msprop:Generator_UserColumnName="Total cost" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

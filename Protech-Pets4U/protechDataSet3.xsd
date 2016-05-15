@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet3" targetNamespace="http://tempuri.org/protechDataSet3.xsd" xmlns:mstns="http://tempuri.org/protechDataSet3.xsd" xmlns="http://tempuri.org/protechDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_clinic_detailsTableAdapter" GeneratorDataComponentClassName="list_clinic_detailsTableAdapter" Name="list_clinic_details" UserDataComponentName="list_clinic_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.list_clinic_details" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Clinic number`, `Manager's name`, `Address`, `Telephone number` FROM `protech`.`list_clinic_details`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Clinic number" DataSetColumn="Clinic number" />
+              <Mapping SourceColumn="Manager's name" DataSetColumn="Manager's name" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="Telephone number" DataSetColumn="Telephone number" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet3" msprop:Generator_UserDSName="protechDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_clinic_details" msprop:Generator_TableClassName="list_clinic_detailsDataTable" msprop:Generator_TableVarName="tablelist_clinic_details" msprop:Generator_TablePropName="list_clinic_details" msprop:Generator_RowDeletingName="list_clinic_detailsRowDeleting" msprop:Generator_RowChangingName="list_clinic_detailsRowChanging" msprop:Generator_RowEvHandlerName="list_clinic_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="list_clinic_detailsRowDeleted" msprop:Generator_UserTableName="list_clinic_details" msprop:Generator_RowChangedName="list_clinic_detailsRowChanged" msprop:Generator_RowEvArgName="list_clinic_detailsRowChangeEvent" msprop:Generator_RowClassName="list_clinic_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Clinic_x0020_number" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnClinic_number" msprop:Generator_ColumnPropNameInRow="Clinic_number" msprop:Generator_ColumnPropNameInTable="Clinic_numberColumn" msprop:Generator_UserColumnName="Clinic number" type="xs:int" />
+              <xs:element name="Manager_x0027_s_x0020_name" msprop:Generator_ColumnVarNameInTable="_columnManager_s_name" msprop:Generator_ColumnPropNameInRow="_Manager_s_name" msprop:Generator_ColumnPropNameInTable="_Manager_s_nameColumn" msprop:Generator_UserColumnName="Manager's name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="186" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telephone_x0020_number" msprop:Generator_ColumnVarNameInTable="columnTelephone_number" msprop:Generator_ColumnPropNameInRow="Telephone_number" msprop:Generator_ColumnPropNameInTable="Telephone_numberColumn" msprop:Generator_UserColumnName="Telephone number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:list_clinic_details" />
+      <xs:field xpath="mstns:Clinic_x0020_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

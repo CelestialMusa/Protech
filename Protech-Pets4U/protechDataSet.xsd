@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet" targetNamespace="http://tempuri.org/protechDataSet.xsd" xmlns:mstns="http://tempuri.org/protechDataSet.xsd" xmlns="http://tempuri.org/protechDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_names_of_pet_owners_with_pet_detailsTableAdapter" GeneratorDataComponentClassName="list_names_of_pet_owners_with_pet_detailsTableAdapter" Name="list_names_of_pet_owners_with_pet_details" UserDataComponentName="list_names_of_pet_owners_with_pet_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.list_names_of_pet_owners_with_pet_details" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Owner number`, `Onwer name`, `Pet name`, `Pet type`, `Pet description`, `Pet date of birth`, `Pet Status` FROM `protech`.`list_names_of_pet_owners_with_pet_details`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Owner number" DataSetColumn="Owner number" />
+              <Mapping SourceColumn="Onwer name" DataSetColumn="Onwer name" />
+              <Mapping SourceColumn="Pet name" DataSetColumn="Pet name" />
+              <Mapping SourceColumn="Pet type" DataSetColumn="Pet type" />
+              <Mapping SourceColumn="Pet description" DataSetColumn="Pet description" />
+              <Mapping SourceColumn="Pet date of birth" DataSetColumn="Pet date of birth" />
+              <Mapping SourceColumn="Pet Status" DataSetColumn="Pet Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet" msprop:Generator_UserDSName="protechDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_names_of_pet_owners_with_pet_details" msprop:Generator_TableClassName="list_names_of_pet_owners_with_pet_detailsDataTable" msprop:Generator_TableVarName="tablelist_names_of_pet_owners_with_pet_details" msprop:Generator_TablePropName="list_names_of_pet_owners_with_pet_details" msprop:Generator_RowDeletingName="list_names_of_pet_owners_with_pet_detailsRowDeleting" msprop:Generator_RowChangingName="list_names_of_pet_owners_with_pet_detailsRowChanging" msprop:Generator_RowEvHandlerName="list_names_of_pet_owners_with_pet_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="list_names_of_pet_owners_with_pet_detailsRowDeleted" msprop:Generator_UserTableName="list_names_of_pet_owners_with_pet_details" msprop:Generator_RowChangedName="list_names_of_pet_owners_with_pet_detailsRowChanged" msprop:Generator_RowEvArgName="list_names_of_pet_owners_with_pet_detailsRowChangeEvent" msprop:Generator_RowClassName="list_names_of_pet_owners_with_pet_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Owner_x0020_number" msprop:Generator_ColumnVarNameInTable="columnOwner_number" msprop:Generator_ColumnPropNameInRow="Owner_number" msprop:Generator_ColumnPropNameInTable="Owner_numberColumn" msprop:Generator_UserColumnName="Owner number" type="xs:int" />
+              <xs:element name="Onwer_x0020_name" msprop:Generator_ColumnVarNameInTable="columnOnwer_name" msprop:Generator_ColumnPropNameInRow="Onwer_name" msprop:Generator_ColumnPropNameInTable="Onwer_nameColumn" msprop:Generator_UserColumnName="Onwer name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_name" msprop:Generator_ColumnVarNameInTable="columnPet_name" msprop:Generator_ColumnPropNameInRow="Pet_name" msprop:Generator_ColumnPropNameInTable="Pet_nameColumn" msprop:Generator_UserColumnName="Pet name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_type" msprop:Generator_ColumnVarNameInTable="columnPet_type" msprop:Generator_ColumnPropNameInRow="Pet_type" msprop:Generator_ColumnPropNameInTable="Pet_typeColumn" msprop:Generator_UserColumnName="Pet type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_description" msprop:Generator_ColumnVarNameInTable="columnPet_description" msprop:Generator_ColumnPropNameInRow="Pet_description" msprop:Generator_ColumnPropNameInTable="Pet_descriptionColumn" msprop:Generator_UserColumnName="Pet description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pet_x0020_date_x0020_of_x0020_birth" msprop:Generator_ColumnVarNameInTable="columnPet_date_of_birth" msprop:Generator_ColumnPropNameInRow="Pet_date_of_birth" msprop:Generator_ColumnPropNameInTable="Pet_date_of_birthColumn" msprop:Generator_UserColumnName="Pet date of birth" type="xs:dateTime" />
+              <xs:element name="Pet_x0020_Status" msprop:Generator_ColumnVarNameInTable="columnPet_Status" msprop:Generator_ColumnPropNameInRow="Pet_Status" msprop:Generator_ColumnPropNameInTable="Pet_StatusColumn" msprop:Generator_UserColumnName="Pet Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:list_names_of_pet_owners_with_pet_details" />
+      <xs:field xpath="mstns:Owner_x0020_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

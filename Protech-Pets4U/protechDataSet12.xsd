@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet12" targetNamespace="http://tempuri.org/protechDataSet12.xsd" xmlns:mstns="http://tempuri.org/protechDataSet12.xsd" xmlns="http://tempuri.org/protechDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_max_min_average_cost_of_treatmentsTableAdapter" GeneratorDataComponentClassName="list_max_min_average_cost_of_treatmentsTableAdapter" Name="list_max_min_average_cost_of_treatments" UserDataComponentName="list_max_min_average_cost_of_treatmentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.list_max_min_average_cost_of_treatments" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Maximum treatment cost`, `Average Treatment cost`, `Minimum Treatment Cost` FROM `protech`.`list_max_min_average_cost_of_treatments`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Maximum treatment cost" DataSetColumn="Maximum treatment cost" />
+              <Mapping SourceColumn="Average Treatment cost" DataSetColumn="Average Treatment cost" />
+              <Mapping SourceColumn="Minimum Treatment Cost" DataSetColumn="Minimum Treatment Cost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet12" msprop:Generator_UserDSName="protechDataSet12">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_max_min_average_cost_of_treatments" msprop:Generator_TableClassName="list_max_min_average_cost_of_treatmentsDataTable" msprop:Generator_TableVarName="tablelist_max_min_average_cost_of_treatments" msprop:Generator_TablePropName="list_max_min_average_cost_of_treatments" msprop:Generator_RowDeletingName="list_max_min_average_cost_of_treatmentsRowDeleting" msprop:Generator_RowChangingName="list_max_min_average_cost_of_treatmentsRowChanging" msprop:Generator_RowEvHandlerName="list_max_min_average_cost_of_treatmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="list_max_min_average_cost_of_treatmentsRowDeleted" msprop:Generator_UserTableName="list_max_min_average_cost_of_treatments" msprop:Generator_RowChangedName="list_max_min_average_cost_of_treatmentsRowChanged" msprop:Generator_RowEvArgName="list_max_min_average_cost_of_treatmentsRowChangeEvent" msprop:Generator_RowClassName="list_max_min_average_cost_of_treatmentsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Maximum_x0020_treatment_x0020_cost" msprop:Generator_ColumnVarNameInTable="columnMaximum_treatment_cost" msprop:Generator_ColumnPropNameInRow="Maximum_treatment_cost" msprop:Generator_ColumnPropNameInTable="Maximum_treatment_costColumn" msprop:Generator_UserColumnName="Maximum treatment cost" type="xs:double" minOccurs="0" />
+              <xs:element name="Average_x0020_Treatment_x0020_cost" msprop:Generator_ColumnVarNameInTable="columnAverage_Treatment_cost" msprop:Generator_ColumnPropNameInRow="Average_Treatment_cost" msprop:Generator_ColumnPropNameInTable="Average_Treatment_costColumn" msprop:Generator_UserColumnName="Average Treatment cost" type="xs:double" minOccurs="0" />
+              <xs:element name="Minimum_x0020_Treatment_x0020_Cost" msprop:Generator_ColumnVarNameInTable="columnMinimum_Treatment_Cost" msprop:Generator_ColumnPropNameInRow="Minimum_Treatment_Cost" msprop:Generator_ColumnPropNameInTable="Minimum_Treatment_CostColumn" msprop:Generator_UserColumnName="Minimum Treatment Cost" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

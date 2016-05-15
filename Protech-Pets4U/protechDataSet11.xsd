@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet11" targetNamespace="http://tempuri.org/protechDataSet11.xsd" xmlns:mstns="http://tempuri.org/protechDataSet11.xsd" xmlns="http://tempuri.org/protechDataSet11.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="total_number_pets_in_each_typeTableAdapter" GeneratorDataComponentClassName="total_number_pets_in_each_typeTableAdapter" Name="total_number_pets_in_each_type" UserDataComponentName="total_number_pets_in_each_typeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.total_number_pets_in_each_type" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Pet Type`, `Total` FROM `protech`.`total_number_pets_in_each_type`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Pet Type" DataSetColumn="Pet Type" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet11" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet11" msprop:Generator_UserDSName="protechDataSet11">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="total_number_pets_in_each_type" msprop:Generator_TableClassName="total_number_pets_in_each_typeDataTable" msprop:Generator_TableVarName="tabletotal_number_pets_in_each_type" msprop:Generator_TablePropName="total_number_pets_in_each_type" msprop:Generator_RowDeletingName="total_number_pets_in_each_typeRowDeleting" msprop:Generator_RowChangingName="total_number_pets_in_each_typeRowChanging" msprop:Generator_RowEvHandlerName="total_number_pets_in_each_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="total_number_pets_in_each_typeRowDeleted" msprop:Generator_UserTableName="total_number_pets_in_each_type" msprop:Generator_RowChangedName="total_number_pets_in_each_typeRowChanged" msprop:Generator_RowEvArgName="total_number_pets_in_each_typeRowChangeEvent" msprop:Generator_RowClassName="total_number_pets_in_each_typeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pet_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnPet_Type" msprop:Generator_ColumnPropNameInRow="Pet_Type" msprop:Generator_ColumnPropNameInTable="Pet_TypeColumn" msprop:Generator_UserColumnName="Pet Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
