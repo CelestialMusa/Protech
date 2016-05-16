@@ -186,6 +186,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protechDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet22.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protechDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -457,6 +472,39 @@
     </None>
     <None Include="protechDataSet2.xss">
       <DependentUpon>protechDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet20.xsc">
+      <DependentUpon>protechDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet20.xss">
+      <DependentUpon>protechDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet21.xsc">
+      <DependentUpon>protechDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet21.xss">
+      <DependentUpon>protechDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet22.xsc">
+      <DependentUpon>protechDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet22.xss">
+      <DependentUpon>protechDataSet22.xsd</DependentUpon>
     </None>
     <None Include="protechDataSet3.xsc">
       <DependentUpon>protechDataSet3.xsd</DependentUpon>

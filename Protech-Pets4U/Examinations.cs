@@ -197,5 +197,62 @@ namespace Protech_Pets4U
                 connection.Close();
             }
         }
+
+        private void Examinations_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'protechDataSet22.pet' table. You can move, or remove it, as needed.
+            this.petTableAdapter.Fill(this.protechDataSet22.pet);
+            // TODO: This line of code loads data into the 'protechDataSet21.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protechDataSet21.person);
+
+        }
+
+        private void radioButtonInsert_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = true;
+            }
+        }
+
+        private void radioButtonDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = true;
+            }
+        }
+
+        private void radioButtonUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxExamToUpdate.Enabled = true;
+            }
+        }
     }
 }
