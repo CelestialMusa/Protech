@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -200,6 +215,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet25.xsd</DependentUpon>
     </Compile>
     <Compile Include="protechDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -506,6 +536,39 @@
     <None Include="protechDataSet22.xss">
       <DependentUpon>protechDataSet22.xsd</DependentUpon>
     </None>
+    <None Include="protechDataSet23.xsc">
+      <DependentUpon>protechDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet23.xss">
+      <DependentUpon>protechDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet24.xsc">
+      <DependentUpon>protechDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet24.xss">
+      <DependentUpon>protechDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet25.xsc">
+      <DependentUpon>protechDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet25.xss">
+      <DependentUpon>protechDataSet25.xsd</DependentUpon>
+    </None>
     <None Include="protechDataSet3.xsc">
       <DependentUpon>protechDataSet3.xsd</DependentUpon>
     </None>
@@ -716,6 +779,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FontAwesome_f00d%280%29_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

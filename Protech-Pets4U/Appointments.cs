@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Protech_Pets4U
 {
     public partial class Appointments : Form
     {
+        string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
+        MySqlConnection connection;
+        MySqlCommand command;
+        MySqlDataReader reader;
+        DataTable myDataTable;
+
         public Appointments()
         {
             InitializeComponent();
+            connection = new MySqlConnection(connectionstring);
+            myDataTable = new DataTable();
+            comboBoxAppointmentToMaintain.Enabled = false;
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -110,6 +120,71 @@ namespace Protech_Pets4U
             pictureBox2.Location = new Point(559, 260);
             Image image = Image.FromFile("C:\\Protech-Pets4U\\Resources\\FontAwesome_f00c(0)_2561.png");
             pictureBox2.BackgroundImage = image;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            int pet = (int)comboBoxPet.SelectedValue;
+            int pet_owner = (int)comboBoxPetOwner.SelectedValue;
+            int clinic = (int)comboBoxClinic.SelectedValue;
+            string date = dateTimePickerAppDate.Value.ToShortDateString();
+
+            if (radioButtonInsert.Checked)
+            {
+                insert_appointment(pet, pet_owner, clinic, date);
+            }
+            else if (radioButtonUpdate.Checked)
+            {
+                int staff_num = (int)comboBoxAppointmentToMaintain.SelectedValue;
+                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+            }
+            else if (radioButtonDelete.Checked)
+            {
+                int staff_num = (int)comboBoxAppointmentToMaintain.SelectedValue;
+                //Delete
+            }
+        }
+
+        private void insert_appointment(int pet, int pet_owner, int clinic, string date)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "create_appointment";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@appdate", MySqlDbType.Timestamp)).Value = date;
+                command.Parameters.Add(new MySqlParameter("@pet_number", MySqlDbType.Int32)).Value = pet;
+                command.Parameters.Add(new MySqlParameter("@clinic_number", MySqlDbType.Int32)).Value = clinic;
+                command.Parameters.Add(new MySqlParameter("@owner_number", MySqlDbType.Int32)).Value = pet_owner;             
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The appointment has been successfuly been added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //comboBoxPet.SelectedIndex = null;
+                //comboBoxPetOwner.SelectedIndex = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Appointment registration has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void Appointments_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'protechDataSet25.clinic' table. You can move, or remove it, as needed.
+            this.clinicTableAdapter.Fill(this.protechDataSet25.clinic);
+            // TODO: This line of code loads data into the 'protechDataSet24.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protechDataSet24.person);
+            // TODO: This line of code loads data into the 'protechDataSet23.pet' table. You can move, or remove it, as needed.
+            this.petTableAdapter.Fill(this.protechDataSet23.pet);
+
         }
     }
 }

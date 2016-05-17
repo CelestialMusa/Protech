@@ -215,7 +215,7 @@
             // 
             this.radioButtonInsert.AutoSize = true;
             this.radioButtonInsert.Checked = true;
-            this.radioButtonInsert.Location = new System.Drawing.Point(150, 275);
+            this.radioButtonInsert.Location = new System.Drawing.Point(140, 284);
             this.radioButtonInsert.Name = "radioButtonInsert";
             this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
             this.radioButtonInsert.TabIndex = 124;
@@ -227,7 +227,7 @@
             // 
             this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(150, 232);
+            this.pictureBox7.Location = new System.Drawing.Point(140, 241);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(36, 36);
             this.pictureBox7.TabIndex = 123;
@@ -239,7 +239,7 @@
             this.comboBoxClinicToBeMaintained.Items.AddRange(new object[] {
             "Male ",
             "Female"});
-            this.comboBoxClinicToBeMaintained.Location = new System.Drawing.Point(20, 298);
+            this.comboBoxClinicToBeMaintained.Location = new System.Drawing.Point(10, 307);
             this.comboBoxClinicToBeMaintained.Name = "comboBoxClinicToBeMaintained";
             this.comboBoxClinicToBeMaintained.Size = new System.Drawing.Size(186, 21);
             this.comboBoxClinicToBeMaintained.TabIndex = 122;
@@ -247,7 +247,7 @@
             // radioButtonDelete
             // 
             this.radioButtonDelete.AutoSize = true;
-            this.radioButtonDelete.Location = new System.Drawing.Point(86, 275);
+            this.radioButtonDelete.Location = new System.Drawing.Point(76, 284);
             this.radioButtonDelete.Name = "radioButtonDelete";
             this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
             this.radioButtonDelete.TabIndex = 121;
@@ -257,7 +257,7 @@
             // radioButtonUpdate
             // 
             this.radioButtonUpdate.AutoSize = true;
-            this.radioButtonUpdate.Location = new System.Drawing.Point(20, 274);
+            this.radioButtonUpdate.Location = new System.Drawing.Point(10, 283);
             this.radioButtonUpdate.Name = "radioButtonUpdate";
             this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
             this.radioButtonUpdate.TabIndex = 120;
@@ -268,7 +268,7 @@
             // 
             this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(86, 232);
+            this.pictureBox6.Location = new System.Drawing.Point(76, 241);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.TabIndex = 119;
@@ -278,7 +278,7 @@
             // 
             this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 232);
+            this.pictureBox5.Location = new System.Drawing.Point(10, 241);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(36, 36);
             this.pictureBox5.TabIndex = 118;
