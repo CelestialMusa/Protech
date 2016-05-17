@@ -175,11 +175,11 @@ namespace Protech_Pets4U
                 command.CommandText = "insert_pet_examination";
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add(new MySqlParameter("@start_treatment", MySqlDbType.Date)).Value = start_date;
-                command.Parameters.Add(new MySqlParameter("@end_treatment", MySqlDbType.Date)).Value = end_date;
+                command.Parameters.Add(new MySqlParameter("@exam_results", MySqlDbType.MediumText)).Value = results;
                 command.Parameters.Add(new MySqlParameter("@staff", MySqlDbType.Int32)).Value = staff;
                 command.Parameters.Add(new MySqlParameter("@pet", MySqlDbType.Int32)).Value = pet;
-                command.Parameters.Add(new MySqlParameter("@exam_results", MySqlDbType.MediumText)).Value = results;
+                command.Parameters.Add(new MySqlParameter("@start_treatment", MySqlDbType.Date)).Value = start_date;
+                command.Parameters.Add(new MySqlParameter("@end_treatment", MySqlDbType.Date)).Value = end_date;                               
 
                 reader = command.ExecuteReader();
                 MessageBox.Show("The Examination has been successfuly added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
