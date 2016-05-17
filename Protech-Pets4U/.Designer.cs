@@ -37,18 +37,25 @@
             this.panelClinicInsert = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.comboBoxClinicToBeMaintained = new System.Windows.Forms.ComboBox();
+            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
+            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxZipCode = new System.Windows.Forms.TextBox();
             this.labelZipCode = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxState = new System.Windows.Forms.TextBox();
             this.labelState = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
             this.labelCity = new System.Windows.Forms.Label();
             this.labelStreet = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.labelFaxNumber = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxClinicFax = new System.Windows.Forms.TextBox();
             this.labelClinicTell = new System.Windows.Forms.Label();
             this.textBoxClinicTell = new System.Windows.Forms.TextBox();
             this.panelClinicViewClinicDetails = new System.Windows.Forms.Panel();
@@ -84,16 +91,14 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.view_clinic_managersTableAdapter = new Protech_Pets4U.protechDataSet2TableAdapters.view_clinic_managersTableAdapter();
             this.list_clinic_detailsTableAdapter = new Protech_Pets4U.protechDataSet3TableAdapters.list_clinic_detailsTableAdapter();
-            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
-            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxClinicname = new System.Windows.Forms.TextBox();
             this.panelClinicInsert.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelClinicViewClinicDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -110,9 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxViewClinicManagers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -178,25 +180,27 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.textBoxClinicname);
             this.tabPage1.Controls.Add(this.radioButtonInsert);
             this.tabPage1.Controls.Add(this.pictureBox7);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.comboBoxClinicToBeMaintained);
             this.tabPage1.Controls.Add(this.radioButtonDelete);
             this.tabPage1.Controls.Add(this.radioButtonUpdate);
             this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.pictureBox5);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.pictureBox4);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.textBoxZipCode);
             this.tabPage1.Controls.Add(this.labelZipCode);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.textBoxState);
             this.tabPage1.Controls.Add(this.labelState);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.textBoxCity);
             this.tabPage1.Controls.Add(this.labelCity);
             this.tabPage1.Controls.Add(this.labelStreet);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBoxStreet);
             this.tabPage1.Controls.Add(this.labelFaxNumber);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.textBoxClinicFax);
             this.tabPage1.Controls.Add(this.labelClinicTell);
             this.tabPage1.Controls.Add(this.textBoxClinicTell);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -206,6 +210,79 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonInsert
+            // 
+            this.radioButtonInsert.AutoSize = true;
+            this.radioButtonInsert.Checked = true;
+            this.radioButtonInsert.Location = new System.Drawing.Point(150, 275);
+            this.radioButtonInsert.Name = "radioButtonInsert";
+            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonInsert.TabIndex = 124;
+            this.radioButtonInsert.TabStop = true;
+            this.radioButtonInsert.Text = "Insert";
+            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(150, 232);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox7.TabIndex = 123;
+            this.pictureBox7.TabStop = false;
+            // 
+            // comboBoxClinicToBeMaintained
+            // 
+            this.comboBoxClinicToBeMaintained.FormattingEnabled = true;
+            this.comboBoxClinicToBeMaintained.Items.AddRange(new object[] {
+            "Male ",
+            "Female"});
+            this.comboBoxClinicToBeMaintained.Location = new System.Drawing.Point(20, 298);
+            this.comboBoxClinicToBeMaintained.Name = "comboBoxClinicToBeMaintained";
+            this.comboBoxClinicToBeMaintained.Size = new System.Drawing.Size(186, 21);
+            this.comboBoxClinicToBeMaintained.TabIndex = 122;
+            // 
+            // radioButtonDelete
+            // 
+            this.radioButtonDelete.AutoSize = true;
+            this.radioButtonDelete.Location = new System.Drawing.Point(86, 275);
+            this.radioButtonDelete.Name = "radioButtonDelete";
+            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonDelete.TabIndex = 121;
+            this.radioButtonDelete.Text = "Delete";
+            this.radioButtonDelete.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonUpdate
+            // 
+            this.radioButtonUpdate.AutoSize = true;
+            this.radioButtonUpdate.Location = new System.Drawing.Point(20, 274);
+            this.radioButtonUpdate.Name = "radioButtonUpdate";
+            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
+            this.radioButtonUpdate.TabIndex = 120;
+            this.radioButtonUpdate.Text = "Update";
+            this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(86, 232);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.TabIndex = 119;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(20, 232);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.TabIndex = 118;
+            this.pictureBox5.TabStop = false;
             // 
             // label24
             // 
@@ -227,52 +304,55 @@
             this.pictureBox4.Size = new System.Drawing.Size(67, 54);
             this.pictureBox4.TabIndex = 113;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
-            // textBox5
+            // textBoxZipCode
             // 
-            this.textBox5.Location = new System.Drawing.Point(249, 299);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(257, 20);
-            this.textBox5.TabIndex = 23;
+            this.textBoxZipCode.Location = new System.Drawing.Point(249, 308);
+            this.textBoxZipCode.Name = "textBoxZipCode";
+            this.textBoxZipCode.Size = new System.Drawing.Size(257, 20);
+            this.textBoxZipCode.TabIndex = 23;
             // 
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(246, 283);
+            this.labelZipCode.Location = new System.Drawing.Point(246, 292);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(49, 13);
             this.labelZipCode.TabIndex = 22;
             this.labelZipCode.Text = "Zip code";
             // 
-            // textBox4
+            // textBoxState
             // 
-            this.textBox4.Location = new System.Drawing.Point(249, 243);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(257, 20);
-            this.textBox4.TabIndex = 21;
+            this.textBoxState.Location = new System.Drawing.Point(249, 260);
+            this.textBoxState.Name = "textBoxState";
+            this.textBoxState.Size = new System.Drawing.Size(257, 20);
+            this.textBoxState.TabIndex = 21;
+            this.textBoxState.TextChanged += new System.EventHandler(this.textBoxState_TextChanged);
             // 
             // labelState
             // 
             this.labelState.AutoSize = true;
-            this.labelState.Location = new System.Drawing.Point(249, 227);
+            this.labelState.Location = new System.Drawing.Point(249, 244);
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(32, 13);
             this.labelState.TabIndex = 20;
             this.labelState.Text = "State";
+            this.labelState.Click += new System.EventHandler(this.labelState_Click);
             // 
-            // textBox3
+            // textBoxCity
             // 
-            this.textBox3.Location = new System.Drawing.Point(249, 188);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(257, 20);
-            this.textBox3.TabIndex = 19;
+            this.textBoxCity.Location = new System.Drawing.Point(249, 211);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.Size = new System.Drawing.Size(257, 20);
+            this.textBoxCity.TabIndex = 19;
             // 
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(246, 172);
+            this.labelCity.Location = new System.Drawing.Point(246, 195);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(24, 13);
             this.labelCity.TabIndex = 18;
@@ -281,39 +361,39 @@
             // labelStreet
             // 
             this.labelStreet.AutoSize = true;
-            this.labelStreet.Location = new System.Drawing.Point(246, 118);
+            this.labelStreet.Location = new System.Drawing.Point(246, 147);
             this.labelStreet.Name = "labelStreet";
             this.labelStreet.Size = new System.Drawing.Size(35, 13);
             this.labelStreet.TabIndex = 17;
             this.labelStreet.Text = "Street";
             // 
-            // textBox2
+            // textBoxStreet
             // 
-            this.textBox2.Location = new System.Drawing.Point(249, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(257, 20);
-            this.textBox2.TabIndex = 16;
+            this.textBoxStreet.Location = new System.Drawing.Point(249, 163);
+            this.textBoxStreet.Name = "textBoxStreet";
+            this.textBoxStreet.Size = new System.Drawing.Size(257, 20);
+            this.textBoxStreet.TabIndex = 16;
             // 
             // labelFaxNumber
             // 
             this.labelFaxNumber.AutoSize = true;
-            this.labelFaxNumber.Location = new System.Drawing.Point(246, 65);
+            this.labelFaxNumber.Location = new System.Drawing.Point(246, 98);
             this.labelFaxNumber.Name = "labelFaxNumber";
             this.labelFaxNumber.Size = new System.Drawing.Size(62, 13);
             this.labelFaxNumber.TabIndex = 15;
             this.labelFaxNumber.Text = "Fax number";
             // 
-            // textBox1
+            // textBoxClinicFax
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 20);
-            this.textBox1.TabIndex = 14;
+            this.textBoxClinicFax.Location = new System.Drawing.Point(249, 114);
+            this.textBoxClinicFax.Name = "textBoxClinicFax";
+            this.textBoxClinicFax.Size = new System.Drawing.Size(257, 20);
+            this.textBoxClinicFax.TabIndex = 14;
             // 
             // labelClinicTell
             // 
             this.labelClinicTell.AutoSize = true;
-            this.labelClinicTell.Location = new System.Drawing.Point(246, 11);
+            this.labelClinicTell.Location = new System.Drawing.Point(246, 50);
             this.labelClinicTell.Name = "labelClinicTell";
             this.labelClinicTell.Size = new System.Drawing.Size(96, 13);
             this.labelClinicTell.TabIndex = 13;
@@ -321,7 +401,7 @@
             // 
             // textBoxClinicTell
             // 
-            this.textBoxClinicTell.Location = new System.Drawing.Point(249, 27);
+            this.textBoxClinicTell.Location = new System.Drawing.Point(249, 66);
             this.textBoxClinicTell.Name = "textBoxClinicTell";
             this.textBoxClinicTell.Size = new System.Drawing.Size(257, 20);
             this.textBoxClinicTell.TabIndex = 12;
@@ -627,79 +707,21 @@
             // 
             this.list_clinic_detailsTableAdapter.ClearBeforeFill = true;
             // 
-            // radioButtonInsert
+            // label5
             // 
-            this.radioButtonInsert.AutoSize = true;
-            this.radioButtonInsert.Location = new System.Drawing.Point(150, 275);
-            this.radioButtonInsert.Name = "radioButtonInsert";
-            this.radioButtonInsert.Size = new System.Drawing.Size(51, 17);
-            this.radioButtonInsert.TabIndex = 124;
-            this.radioButtonInsert.TabStop = true;
-            this.radioButtonInsert.Text = "Insert";
-            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 126;
+            this.label5.Text = "Clinic name";
             // 
-            // pictureBox7
+            // textBoxClinicname
             // 
-            this.pictureBox7.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_d83d_0__2561;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(150, 232);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox7.TabIndex = 123;
-            this.pictureBox7.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(20, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 21);
-            this.comboBox1.TabIndex = 122;
-            // 
-            // radioButtonDelete
-            // 
-            this.radioButtonDelete.AutoSize = true;
-            this.radioButtonDelete.Location = new System.Drawing.Point(86, 275);
-            this.radioButtonDelete.Name = "radioButtonDelete";
-            this.radioButtonDelete.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonDelete.TabIndex = 121;
-            this.radioButtonDelete.TabStop = true;
-            this.radioButtonDelete.Text = "Delete";
-            this.radioButtonDelete.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUpdate
-            // 
-            this.radioButtonUpdate.AutoSize = true;
-            this.radioButtonUpdate.Location = new System.Drawing.Point(20, 274);
-            this.radioButtonUpdate.Name = "radioButtonUpdate";
-            this.radioButtonUpdate.Size = new System.Drawing.Size(60, 17);
-            this.radioButtonUpdate.TabIndex = 120;
-            this.radioButtonUpdate.TabStop = true;
-            this.radioButtonUpdate.Text = "Update";
-            this.radioButtonUpdate.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::Protech_Pets4U.Properties.Resources.FontAwesome_f00d_0__2561;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(86, 232);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox6.TabIndex = 119;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Protech_Pets4U.Properties.Resources.Entypo_27f3_1__2561;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 232);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.TabIndex = 118;
-            this.pictureBox5.TabStop = false;
+            this.textBoxClinicname.Location = new System.Drawing.Point(249, 18);
+            this.textBoxClinicname.Name = "textBoxClinicname";
+            this.textBoxClinicname.Size = new System.Drawing.Size(257, 20);
+            this.textBoxClinicname.TabIndex = 125;
             // 
             // Clinics
             // 
@@ -735,6 +757,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelClinicViewClinicDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -751,9 +776,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxViewClinicManagers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -801,26 +823,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxZipCode;
         private System.Windows.Forms.Label labelZipCode;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxState;
         private System.Windows.Forms.Label labelState;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.Label labelCity;
         private System.Windows.Forms.Label labelStreet;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxStreet;
         private System.Windows.Forms.Label labelFaxNumber;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxClinicFax;
         private System.Windows.Forms.Label labelClinicTell;
         private System.Windows.Forms.TextBox textBoxClinicTell;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.RadioButton radioButtonInsert;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxClinicToBeMaintained;
         private System.Windows.Forms.RadioButton radioButtonDelete;
         private System.Windows.Forms.RadioButton radioButtonUpdate;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxClinicname;
     }
 }

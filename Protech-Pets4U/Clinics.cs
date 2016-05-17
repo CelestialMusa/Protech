@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Protech_Pets4U
 {
     public partial class Clinics : Form
     {
+        string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
+        MySqlConnection connection;
+        MySqlCommand command;
+        MySqlDataReader reader;
+        DataTable myDataTable;
+
         public Clinics()
         {
             InitializeComponent();
+            connection = new MySqlConnection(connectionstring);
+            myDataTable = new DataTable();
+            comboBoxClinicToBeMaintained.Enabled = false;
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -171,6 +181,80 @@ namespace Protech_Pets4U
             pictureBox4.Location = new Point(559, 260);
             Image image = Image.FromFile("C:\\Protech-Pets4U\\Resources\\FontAwesome_f00c(0)_2561.png");
             pictureBox4.BackgroundImage = image;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            string tel = textBoxClinicTell.Text;
+            string fax = textBoxClinicFax.Text;            
+            string street = textBoxStreet.Text;
+            string city = textBoxCity.Text;
+            string state = textBoxState.Text;           
+            string zipCode = textBoxZipCode.Text;
+            string clinic_name = textBoxClinicname.Text;
+            
+            if (radioButtonInsert.Checked)
+            {
+                insert_Clinic(tel, fax, street, city, state, zipCode, clinic_name);
+            }
+            else if (radioButtonUpdate.Checked)
+            {
+                int staff_num = (int)comboBoxClinicToBeMaintained.SelectedValue;
+                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+            }
+            else if (radioButtonDelete.Checked)
+            {
+                int staff_num = (int)comboBoxClinicToBeMaintained.SelectedValue;
+                //Delete
+            }
+        }
+
+        private void insert_Clinic(string tel, string fax, string street, string city, string state, string zipCode, string clinic_name)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "`insert_clinic`";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@clinic_tel_num", MySqlDbType.VarChar)).Value = tel;
+                command.Parameters.Add(new MySqlParameter("@clinic_fax", MySqlDbType.VarChar)).Value = fax;
+                command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
+                command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
+                command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
+                command.Parameters.Add(new MySqlParameter("@zip_code", MySqlDbType.VarChar)).Value = zipCode;
+                command.Parameters.Add(new MySqlParameter("@clinic_name", MySqlDbType.VarChar)).Value = clinic_name;
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The clinic has been successfuly been added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxCity.Text = "";
+                textBoxClinicFax.Text = "";
+                textBoxClinicTell.Text = "";
+                textBoxState.Text = "";
+                textBoxStreet.Text = "";
+                textBoxZipCode.Text = "";                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Clinic registration has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void textBoxState_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelState_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
