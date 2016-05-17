@@ -77,6 +77,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage3Of3 = new System.Windows.Forms.TabPage();
             this.comboBoxClinicID = new System.Windows.Forms.ComboBox();
+            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet14 = new Protech_Pets4U.protechDataSet14();
             this.comboBoxJobDescription = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -123,8 +125,6 @@
             this.pictureBoxTotMonthSal = new System.Windows.Forms.PictureBox();
             this.pictureBoxInformationDeveloperLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.protechDataSet14 = new Protech_Pets4U.protechDataSet14();
-            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet14TableAdapters.clinicTableAdapter();
             this.panelClinicInsertEmployee.SuspendLayout();
             this.tabControlInsertEmployee.SuspendLayout();
@@ -136,6 +136,8 @@
             this.tabPageStep2Of3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage3Of3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelVetsNursesOver50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -156,8 +158,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -653,6 +653,16 @@
             this.comboBoxClinicID.ValueMember = "clinic_num";
             this.comboBoxClinicID.SelectedIndexChanged += new System.EventHandler(this.comboBoxClinicID_SelectedIndexChanged);
             // 
+            // clinicBindingSource
+            // 
+            this.clinicBindingSource.DataMember = "clinic";
+            this.clinicBindingSource.DataSource = this.protechDataSet14;
+            // 
+            // protechDataSet14
+            // 
+            this.protechDataSet14.DataSetName = "protechDataSet14";
+            this.protechDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBoxJobDescription
             // 
             this.comboBoxJobDescription.FormattingEnabled = true;
@@ -1071,16 +1081,6 @@
             this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
             this.pictureBoxBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBack_MouseMove);
             // 
-            // protechDataSet14
-            // 
-            this.protechDataSet14.DataSetName = "protechDataSet14";
-            this.protechDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clinicBindingSource
-            // 
-            this.clinicBindingSource.DataMember = "clinic";
-            this.clinicBindingSource.DataSource = this.protechDataSet14;
-            // 
             // clinicTableAdapter
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
@@ -1133,6 +1133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage3Of3.ResumeLayout(false);
             this.tabPage3Of3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelVetsNursesOver50.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -1153,8 +1155,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
