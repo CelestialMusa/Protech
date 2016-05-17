@@ -231,6 +231,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet25.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protechDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet26.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protechDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -568,6 +573,17 @@
     </None>
     <None Include="protechDataSet25.xss">
       <DependentUpon>protechDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet26.xsc">
+      <DependentUpon>protechDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet26.xss">
+      <DependentUpon>protechDataSet26.xsd</DependentUpon>
     </None>
     <None Include="protechDataSet3.xsc">
       <DependentUpon>protechDataSet3.xsd</DependentUpon>

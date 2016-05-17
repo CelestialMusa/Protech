@@ -148,10 +148,11 @@ namespace Protech_Pets4U
             int staff = (int)comboBoxStaff.SelectedValue;
             int pet = (int)comboBoxPet.SelectedValue;
             string results = textBoxResults.Text;
+            int clinic = (int)comboBoxClinic.SelectedValue;
 
             if (radioButtonInsert.Checked)
             {
-                insert_Examination(start_date, end_date, staff, pet, results);
+                insert_Examination(start_date, end_date, staff, pet, results, clinic);
             }
             else if (radioButtonUpdate.Checked)
             {
@@ -165,7 +166,7 @@ namespace Protech_Pets4U
             }
         }
 
-        private void insert_Examination(string start_date, string end_date, int staff, int pet, string results)
+        private void insert_Examination(string start_date, string end_date, int staff, int pet, string results, int clinic)
         {
             try
             {
@@ -179,7 +180,8 @@ namespace Protech_Pets4U
                 command.Parameters.Add(new MySqlParameter("@staff", MySqlDbType.Int32)).Value = staff;
                 command.Parameters.Add(new MySqlParameter("@pet", MySqlDbType.Int32)).Value = pet;
                 command.Parameters.Add(new MySqlParameter("@start_treatment", MySqlDbType.Date)).Value = start_date;
-                command.Parameters.Add(new MySqlParameter("@end_treatment", MySqlDbType.Date)).Value = end_date;                               
+                command.Parameters.Add(new MySqlParameter("@end_treatment", MySqlDbType.Date)).Value = end_date;
+                command.Parameters.Add(new MySqlParameter("@clinic_num", MySqlDbType.Int32)).Value = clinic;
 
                 reader = command.ExecuteReader();
                 MessageBox.Show("The Examination has been successfuly added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -200,6 +202,8 @@ namespace Protech_Pets4U
 
         private void Examinations_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet26.clinic' table. You can move, or remove it, as needed.
+            this.clinicTableAdapter.Fill(this.protechDataSet26.clinic);
             // TODO: This line of code loads data into the 'protechDataSet22.pet' table. You can move, or remove it, as needed.
             this.petTableAdapter.Fill(this.protechDataSet22.pet);
             // TODO: This line of code loads data into the 'protechDataSet21.person' table. You can move, or remove it, as needed.
