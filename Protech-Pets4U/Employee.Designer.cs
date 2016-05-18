@@ -351,6 +351,7 @@
             this.comboBoxEmployeeToBeMaintained.Size = new System.Drawing.Size(186, 21);
             this.comboBoxEmployeeToBeMaintained.TabIndex = 115;
             this.comboBoxEmployeeToBeMaintained.ValueMember = "Staff number";
+            this.comboBoxEmployeeToBeMaintained.SelectedIndexChanged += new System.EventHandler(this.comboBoxEmployeeToBeMaintained_SelectedIndexChanged);
             // 
             // radioButtonDelete
             // 

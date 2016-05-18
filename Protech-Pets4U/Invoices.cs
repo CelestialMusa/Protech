@@ -128,15 +128,23 @@ namespace Protech_Pets4U
                 myDataTable = new DataTable();
                 adapter.Fill(myDataTable);
 
-                dataGridViewPetOwner.Columns.Add("Treatment description", "Treatment description");
+                dataGridViewPetOwner.Columns.Add("Owner Address", "Owner Address");
+                dataGridViewPetOwner.Columns.Add("Pet num", "Pet num");
+                dataGridViewPetOwner.Columns.Add("Pet name", "Pet name");
+                dataGridViewPetOwner.Columns.Add("Treatment Description", "Treatment Description");
                 dataGridViewPetOwner.Columns.Add("Treatment quantity", "Treatment quantity");
-                dataGridViewPetOwner.Columns.Add("Comment", "Comment");
-                dataGridViewPetOwner.Columns.Add("Begin date", "Begin date");
-                dataGridViewPetOwner.Columns.Add("End date", "End date");
 
+                dataGridViewPetOwner.Columns.Add("Date begin", "Date begin");
+                dataGridViewPetOwner.Columns.Add("Date end", "Date end");
+                dataGridViewPetOwner.Columns.Add("Treatment Cost", "Treatment Cost");
+                dataGridViewPetOwner.Columns.Add("Invoice Total", "Invoice Total");
+                dataGridViewPetOwner.Columns.Add("Method of Payment", "Method of Payment");
+
+                dataGridViewPetOwner.Columns.Add("Payment Date", "Payment Date");
+                
                 for (int i = 0; i < myDataTable.Rows.Count; i++)
                 {
-                    String[] values = { myDataTable.Rows[i][0].ToString(), myDataTable.Rows[i][1].ToString(), myDataTable.Rows[i][2].ToString(), myDataTable.Rows[i][3].ToString(), myDataTable.Rows[i][4].ToString(), /*myDataTable.Rows[i][5].ToString()*/};
+                    String[] values = { myDataTable.Rows[i][0].ToString(), myDataTable.Rows[i][1].ToString(), myDataTable.Rows[i][2].ToString(), myDataTable.Rows[i][3].ToString(), myDataTable.Rows[i][4].ToString(), myDataTable.Rows[i][5].ToString(), myDataTable.Rows[i][6].ToString(), myDataTable.Rows[i][7].ToString(), myDataTable.Rows[i][8].ToString(), myDataTable.Rows[i][9].ToString(), myDataTable.Rows[i][10].ToString(), /*myDataTable.Rows[i][5].ToString()*/};
                     dataGridViewPetOwner.Rows.Add(values);
                 }
 

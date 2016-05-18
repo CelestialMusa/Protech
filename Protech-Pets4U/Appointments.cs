@@ -137,7 +137,7 @@ namespace Protech_Pets4U
             else if (radioButtonUpdate.Checked)
             {
                 int staff_num = (int)comboBoxAppointmentToMaintain.SelectedValue;
-                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+                //update_app()
             }
             else if (radioButtonDelete.Checked)
             {

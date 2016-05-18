@@ -18,6 +18,7 @@ namespace Protech_Pets4U
         MySqlCommand command;
         MySqlDataReader reader;
         DataTable myDataTable;
+        MySqlDataAdapter adapter;
 
         public Pets()
         {
@@ -232,6 +233,8 @@ namespace Protech_Pets4U
 
         private void Pets_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet31.list_names_of_pet_owners_with_pet_details' table. You can move, or remove it, as needed.
+            this.list_names_of_pet_owners_with_pet_detailsTableAdapter.Fill(this.protechDataSet31.list_names_of_pet_owners_with_pet_details);
             // TODO: This line of code loads data into the 'protechDataSet19.person' table. You can move, or remove it, as needed.
             this.personTableAdapter.Fill(this.protechDataSet19.person);
             // TODO: This line of code loads data into the 'protechDataSet11.total_number_pets_in_each_type' table. You can move, or remove it, as needed.
@@ -338,6 +341,44 @@ namespace Protech_Pets4U
                 comboBoxStatus.SelectedIndex = 1;
                 comboBoxStatus.Enabled = true;
                 comboBoxPetToBeUpdated.Enabled = true;
+            }
+        }
+
+        private void buttonGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int pet_owner = (int)comboBox3.SelectedValue;
+
+                String SQLQuery = "call protech.list_pets_owned_by_particular_owner(" + pet_owner + ");";
+                command = new MySqlCommand(SQLQuery, connection);
+                adapter = new MySqlDataAdapter(command);
+                connection.Open();
+
+                command.ExecuteNonQuery();
+                myDataTable = new DataTable();
+                adapter.Fill(myDataTable);
+
+                dataGridViewPetOwner.Columns.Add("Pet number", "Pet number");
+                dataGridViewPetOwner.Columns.Add("Pet name", "Pet name");
+                dataGridViewPetOwner.Columns.Add("Description", "Description");               
+
+                for (int i = 0; i < myDataTable.Rows.Count; i++)
+                {
+                    String[] values = { myDataTable.Rows[i][0].ToString(), myDataTable.Rows[i][1].ToString(), myDataTable.Rows[i][2].ToString()/*, myDataTable.Rows[i][3].ToString(), myDataTable.Rows[i][4].ToString(), myDataTable.Rows[i][5].ToString() */};
+                    dataGridViewPetOwner.Rows.Add(values);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }

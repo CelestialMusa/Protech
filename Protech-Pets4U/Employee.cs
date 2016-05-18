@@ -438,5 +438,14 @@ namespace Protech_Pets4U
                 comboBoxEmployeeToBeMaintained.Enabled = true;
             }
         }
+
+        private void comboBoxEmployeeToBeMaintained_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadCombo();
+        }
+
+        private void loadCombo()
+        {
+        }
     }
 }

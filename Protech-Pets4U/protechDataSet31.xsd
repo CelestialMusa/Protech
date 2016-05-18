@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet31" targetNamespace="http://tempuri.org/protechDataSet31.xsd" xmlns:mstns="http://tempuri.org/protechDataSet31.xsd" xmlns="http://tempuri.org/protechDataSet31.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_names_of_pet_owners_with_pet_detailsTableAdapter" GeneratorDataComponentClassName="list_names_of_pet_owners_with_pet_detailsTableAdapter" Name="list_names_of_pet_owners_with_pet_details" UserDataComponentName="list_names_of_pet_owners_with_pet_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.list_names_of_pet_owners_with_pet_details" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Owner number`, `Onwer name` FROM `protech`.`list_names_of_pet_owners_with_pet_details`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Owner number" DataSetColumn="Owner number" />
+              <Mapping SourceColumn="Onwer name" DataSetColumn="Onwer name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet31" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet31" msprop:Generator_UserDSName="protechDataSet31">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_names_of_pet_owners_with_pet_details" msprop:Generator_TableClassName="list_names_of_pet_owners_with_pet_detailsDataTable" msprop:Generator_TableVarName="tablelist_names_of_pet_owners_with_pet_details" msprop:Generator_TablePropName="list_names_of_pet_owners_with_pet_details" msprop:Generator_RowDeletingName="list_names_of_pet_owners_with_pet_detailsRowDeleting" msprop:Generator_RowChangingName="list_names_of_pet_owners_with_pet_detailsRowChanging" msprop:Generator_RowEvHandlerName="list_names_of_pet_owners_with_pet_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="list_names_of_pet_owners_with_pet_detailsRowDeleted" msprop:Generator_UserTableName="list_names_of_pet_owners_with_pet_details" msprop:Generator_RowChangedName="list_names_of_pet_owners_with_pet_detailsRowChanged" msprop:Generator_RowEvArgName="list_names_of_pet_owners_with_pet_detailsRowChangeEvent" msprop:Generator_RowClassName="list_names_of_pet_owners_with_pet_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Owner_x0020_number" msprop:Generator_ColumnVarNameInTable="columnOwner_number" msprop:Generator_ColumnPropNameInRow="Owner_number" msprop:Generator_ColumnPropNameInTable="Owner_numberColumn" msprop:Generator_UserColumnName="Owner number" type="xs:int" />
+              <xs:element name="Onwer_x0020_name" msprop:Generator_ColumnVarNameInTable="columnOnwer_name" msprop:Generator_ColumnPropNameInRow="Onwer_name" msprop:Generator_ColumnPropNameInTable="Onwer_nameColumn" msprop:Generator_UserColumnName="Onwer name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:list_names_of_pet_owners_with_pet_details" />
+      <xs:field xpath="mstns:Owner_x0020_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

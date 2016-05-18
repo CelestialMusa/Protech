@@ -59,6 +59,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBoxDone = new System.Windows.Forms.PictureBox();
             this.comboBoxPetOwner = new System.Windows.Forms.ComboBox();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet19 = new Protech_Pets4U.protechDataSet19();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
@@ -81,9 +83,14 @@
             this.totalnumberpetsineachtypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.protechDataSet11 = new Protech_Pets4U.protechDataSet11();
             this.total_number_pets_in_each_typeTableAdapter = new Protech_Pets4U.protechDataSet11TableAdapters.total_number_pets_in_each_typeTableAdapter();
-            this.protechDataSet19 = new Protech_Pets4U.protechDataSet19();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personTableAdapter = new Protech_Pets4U.protechDataSet19TableAdapters.personTableAdapter();
+            this.dataGridViewPetOwner = new System.Windows.Forms.DataGridView();
+            this.protechDataSet31 = new Protech_Pets4U.protechDataSet31();
+            this.listnamesofpetownerswithpetdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.list_names_of_pet_owners_with_pet_detailsTableAdapter = new Protech_Pets4U.protechDataSet31TableAdapters.list_names_of_pet_owners_with_pet_detailsTableAdapter();
+            this.protechDataSet32 = new Protech_Pets4U.protechDataSet32();
+            this.listpetsownedbyparticularownerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.list_pets_owned_by_particular_ownerTableAdapter = new Protech_Pets4U.protechDataSet32TableAdapters.list_pets_owned_by_particular_ownerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,13 +104,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet19)).BeginInit();
             this.panelListPetsOwnedByParticularOwner.SuspendLayout();
             this.panelViewTotalNumberPetsInEachType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalnumberpetsineachtypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listpetsownedbyparticularownerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -297,11 +309,10 @@
             // tabControlInsertEmployee
             // 
             this.tabControlInsertEmployee.Controls.Add(this.tabPageStep1Of1);
-            this.tabControlInsertEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlInsertEmployee.Location = new System.Drawing.Point(0, 0);
+            this.tabControlInsertEmployee.Location = new System.Drawing.Point(0, 33);
             this.tabControlInsertEmployee.Name = "tabControlInsertEmployee";
             this.tabControlInsertEmployee.SelectedIndex = 0;
-            this.tabControlInsertEmployee.Size = new System.Drawing.Size(640, 360);
+            this.tabControlInsertEmployee.Size = new System.Drawing.Size(640, 327);
             this.tabControlInsertEmployee.TabIndex = 1;
             // 
             // tabPageStep1Of1
@@ -330,7 +341,7 @@
             this.tabPageStep1Of1.Location = new System.Drawing.Point(4, 22);
             this.tabPageStep1Of1.Name = "tabPageStep1Of1";
             this.tabPageStep1Of1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStep1Of1.Size = new System.Drawing.Size(632, 334);
+            this.tabPageStep1Of1.Size = new System.Drawing.Size(632, 301);
             this.tabPageStep1Of1.TabIndex = 0;
             this.tabPageStep1Of1.Text = "Step 1 of 1";
             this.tabPageStep1Of1.UseVisualStyleBackColor = true;
@@ -446,6 +457,16 @@
             this.comboBoxPetOwner.TabIndex = 113;
             this.comboBoxPetOwner.ValueMember = "person_id";
             // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.protechDataSet19;
+            // 
+            // protechDataSet19
+            // 
+            this.protechDataSet19.DataSetName = "protechDataSet19";
+            this.protechDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -557,6 +578,7 @@
             // 
             // panelListPetsOwnedByParticularOwner
             // 
+            this.panelListPetsOwnedByParticularOwner.Controls.Add(this.dataGridViewPetOwner);
             this.panelListPetsOwnedByParticularOwner.Controls.Add(this.buttonGo);
             this.panelListPetsOwnedByParticularOwner.Controls.Add(this.comboBox3);
             this.panelListPetsOwnedByParticularOwner.Controls.Add(this.label14);
@@ -574,14 +596,18 @@
             this.buttonGo.TabIndex = 2;
             this.buttonGo.Text = "Go";
             this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
             // 
             // comboBox3
             // 
+            this.comboBox3.DataSource = this.listnamesofpetownerswithpetdetailsBindingSource;
+            this.comboBox3.DisplayMember = "Onwer name";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(241, 320);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(221, 21);
             this.comboBox3.TabIndex = 1;
+            this.comboBox3.ValueMember = "Owner number";
             // 
             // label14
             // 
@@ -645,19 +671,48 @@
             // 
             this.total_number_pets_in_each_typeTableAdapter.ClearBeforeFill = true;
             // 
-            // protechDataSet19
-            // 
-            this.protechDataSet19.DataSetName = "protechDataSet19";
-            this.protechDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataMember = "person";
-            this.personBindingSource.DataSource = this.protechDataSet19;
-            // 
             // personTableAdapter
             // 
             this.personTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewPetOwner
+            // 
+            this.dataGridViewPetOwner.AllowUserToAddRows = false;
+            this.dataGridViewPetOwner.AllowUserToDeleteRows = false;
+            this.dataGridViewPetOwner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPetOwner.Location = new System.Drawing.Point(157, 33);
+            this.dataGridViewPetOwner.Name = "dataGridViewPetOwner";
+            this.dataGridViewPetOwner.ReadOnly = true;
+            this.dataGridViewPetOwner.Size = new System.Drawing.Size(348, 262);
+            this.dataGridViewPetOwner.TabIndex = 3;
+            // 
+            // protechDataSet31
+            // 
+            this.protechDataSet31.DataSetName = "protechDataSet31";
+            this.protechDataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listnamesofpetownerswithpetdetailsBindingSource
+            // 
+            this.listnamesofpetownerswithpetdetailsBindingSource.DataMember = "list_names_of_pet_owners_with_pet_details";
+            this.listnamesofpetownerswithpetdetailsBindingSource.DataSource = this.protechDataSet31;
+            // 
+            // list_names_of_pet_owners_with_pet_detailsTableAdapter
+            // 
+            this.list_names_of_pet_owners_with_pet_detailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // protechDataSet32
+            // 
+            this.protechDataSet32.DataSetName = "protechDataSet32";
+            this.protechDataSet32.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listpetsownedbyparticularownerBindingSource
+            // 
+            this.listpetsownedbyparticularownerBindingSource.DataMember = "list_pets_owned_by_particular_owner";
+            this.listpetsownedbyparticularownerBindingSource.DataSource = this.protechDataSet32;
+            // 
+            // list_pets_owned_by_particular_ownerTableAdapter
+            // 
+            this.list_pets_owned_by_particular_ownerTableAdapter.ClearBeforeFill = true;
             // 
             // Pets
             // 
@@ -681,9 +736,9 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelVetsInsertPet);
             this.Controls.Add(this.panelListPetsOwnedByParticularOwner);
             this.Controls.Add(this.panelViewTotalNumberPetsInEachType);
+            this.Controls.Add(this.panelVetsInsertPet);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pets";
@@ -704,14 +759,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet19)).EndInit();
             this.panelListPetsOwnedByParticularOwner.ResumeLayout(false);
             this.panelListPetsOwnedByParticularOwner.PerformLayout();
             this.panelViewTotalNumberPetsInEachType.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalnumberpetsineachtypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listpetsownedbyparticularownerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -773,5 +833,12 @@
         private protechDataSet19 protechDataSet19;
         private System.Windows.Forms.BindingSource personBindingSource;
         private protechDataSet19TableAdapters.personTableAdapter personTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewPetOwner;
+        private protechDataSet31 protechDataSet31;
+        private System.Windows.Forms.BindingSource listnamesofpetownerswithpetdetailsBindingSource;
+        private protechDataSet31TableAdapters.list_names_of_pet_owners_with_pet_detailsTableAdapter list_names_of_pet_owners_with_pet_detailsTableAdapter;
+        private System.Windows.Forms.BindingSource listpetsownedbyparticularownerBindingSource;
+        private protechDataSet32 protechDataSet32;
+        private protechDataSet32TableAdapters.list_pets_owned_by_particular_ownerTableAdapter list_pets_owned_by_particular_ownerTableAdapter;
     }
 }
