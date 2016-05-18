@@ -193,7 +193,7 @@ namespace Protech_Pets4U
             try
             {
 
-                string date = dateTimePickerAppByGivenDate.Value.ToShortDateString();
+                string date = dateTimePickerDateOfBirth.Value.ToShortDateString();
                 int clinic = (int)comboBoxClinic.SelectedValue;
                
                 String SQLQuery = "call protech.list_appointments_for_clinic_and_date(" + date + "," + clinic + ");";

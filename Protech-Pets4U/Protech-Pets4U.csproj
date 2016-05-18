@@ -246,10 +246,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet28.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protechDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet29.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protechDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet30.xsd</DependentUpon>
     </Compile>
     <Compile Include="protechDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -617,6 +627,17 @@
     <None Include="protechDataSet28.xss">
       <DependentUpon>protechDataSet28.xsd</DependentUpon>
     </None>
+    <None Include="protechDataSet29.xsc">
+      <DependentUpon>protechDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet29.xss">
+      <DependentUpon>protechDataSet29.xsd</DependentUpon>
+    </None>
     <None Include="protechDataSet3.xsc">
       <DependentUpon>protechDataSet3.xsd</DependentUpon>
     </None>
@@ -627,6 +648,17 @@
     </None>
     <None Include="protechDataSet3.xss">
       <DependentUpon>protechDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet30.xsc">
+      <DependentUpon>protechDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet30.xss">
+      <DependentUpon>protechDataSet30.xsd</DependentUpon>
     </None>
     <None Include="protechDataSet4.xsc">
       <DependentUpon>protechDataSet4.xsd</DependentUpon>

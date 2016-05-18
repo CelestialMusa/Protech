@@ -265,6 +265,8 @@ namespace Protech_Pets4U
             string street = textBoxStreet.Text;
             string zip = textBoxZipCode.Text;
 
+            int staff = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+
             if (radioButtonInsert.Checked)
             {
                 insert_staff(name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
@@ -277,13 +279,43 @@ namespace Protech_Pets4U
             else if (radioButtonDelete.Checked)
             {
                 int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
-                //Delete
+                delete_staff(staff);
             }
             tabControlInsertEmployee.SelectedTab = tabPageStep1Of3;
         }
 
+        public void delete_staff(int staff)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "delete_staff";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@staf_num", MySqlDbType.VarChar)).Value = staff;
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The employee has been successfuly deleted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                
+                                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Employee removal has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         private void Employee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet30.list_names_staff_numbers_for_vets_nurses_over_50_years' table. You can move, or remove it, as needed.
+            this.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter1.Fill(this.protechDataSet30.list_names_staff_numbers_for_vets_nurses_over_50_years);
             // TODO: This line of code loads data into the 'protechDataSet14.clinic' table. You can move, or remove it, as needed.
             this.clinicTableAdapter.Fill(this.protechDataSet14.clinic);
             // TODO: This line of code loads data into the 'protechDataSet7.list_names_staff_numbers_for_vets_nurses_over_50_years' table. You can move, or remove it, as needed.
@@ -324,7 +356,7 @@ namespace Protech_Pets4U
                 
 
                 reader = command.ExecuteReader();
-                MessageBox.Show("The employee has been successfuly been registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("The employee has been successfuly registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 textBoxFirstName.Text = "";
                 textBoxLastName.Text = "";

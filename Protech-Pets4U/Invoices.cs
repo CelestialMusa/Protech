@@ -15,16 +15,24 @@ namespace Protech_Pets4U
     {
         string connectionstring = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
         MySqlConnection connection;
-        MySqlCommand command;
-        MySqlDataReader reader;
+        MySqlCommand command;        
         DataTable myDataTable;
         MySqlDataAdapter adapter;
+
+        string connectionstring1 = @"Data Source=196.253.61.51; Database=protech; User ID= root; Password='inteltechs'";
+        MySqlConnection connection1;
+        MySqlCommand command1;
+        DataTable myDataTable1;
+        MySqlDataAdapter adapter1;
 
         public Invoices()
         {
             InitializeComponent();
             connection = new MySqlConnection(connectionstring);
             myDataTable = new DataTable();
+
+            connection1 = new MySqlConnection(connectionstring);
+            myDataTable1 = new DataTable();
         }
 
         private void pictureBoxBack_MouseMove(object sender, MouseEventArgs e)
@@ -166,16 +174,16 @@ namespace Protech_Pets4U
 
                 MessageBox.Show(date2); 
 
-                String SQLQuery = "call protech.list_invoices_not_paid_by_given_date(" + date + ");";
-                command = new MySqlCommand(SQLQuery, connection);
-                adapter = new MySqlDataAdapter(command);
-                connection.Open();
+                String SQLQuery1 = "call protech.list_invoices_not_paid_by_given_date();";                
+                command1 = new MySqlCommand(SQLQuery1, connection1);
+                adapter1 = new MySqlDataAdapter(command1);
+                connection1.Open();
 
-                command.ExecuteNonQuery();
-                myDataTable = new DataTable();
-                adapter.Fill(myDataTable);
+                command1.ExecuteNonQuery();
+                myDataTable1 = new DataTable();
+                adapter1.Fill(myDataTable1);
 
-                dataGridViewByDate.Columns.Add("Owner address", "Owner address");
+                /*dataGridViewByDate.Columns.Add("Owner address", "Owner address");
                 dataGridViewByDate.Columns.Add("Pet number", "Pet number");
                 dataGridViewByDate.Columns.Add("Pet name", "Comment");
                 dataGridViewByDate.Columns.Add("Begin date", "Begin date");
@@ -191,11 +199,11 @@ namespace Protech_Pets4U
                 dataGridViewByDate.Columns.Add("Treatment quantity", "Treatment quantity");
                 dataGridViewByDate.Columns.Add("Comment", "Comment");
                 dataGridViewByDate.Columns.Add("Begin date", "Begin date");
-                dataGridViewByDate.Columns.Add("End date", "End date");
+                dataGridViewByDate.Columns.Add("End date", "End date");*/
 
-                for (int i = 0; i < myDataTable.Rows.Count; i++)
+                for (int i = 0; i < myDataTable1.Rows.Count; i++)
                 {
-                    String[] values = { myDataTable.Rows[i][0].ToString(), myDataTable.Rows[i][1].ToString(), myDataTable.Rows[i][2].ToString(), myDataTable.Rows[i][3].ToString(), myDataTable.Rows[i][4].ToString(), myDataTable.Rows[i][5].ToString(), myDataTable.Rows[i][6].ToString(), myDataTable.Rows[i][7].ToString(), myDataTable.Rows[i][8].ToString(), myDataTable.Rows[i][9].ToString(), myDataTable.Rows[i][10].ToString(), };
+                    String[] values = {myDataTable1.Rows[i][0].ToString(), myDataTable1.Rows[i][1].ToString(), myDataTable1.Rows[i][2].ToString(), myDataTable1.Rows[i][3].ToString(), myDataTable1.Rows[i][4].ToString(), myDataTable1.Rows[i][5].ToString(), myDataTable1.Rows[i][6].ToString(), myDataTable1.Rows[i][7].ToString(), myDataTable1.Rows[i][8].ToString(), myDataTable1.Rows[i][9].ToString(), myDataTable1.Rows[i][10].ToString()};
                     dataGridViewByDate.Rows.Add(values);
                 }
 

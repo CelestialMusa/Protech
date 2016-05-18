@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="protechDataSet30" targetNamespace="http://tempuri.org/protechDataSet30.xsd" xmlns:mstns="http://tempuri.org/protechDataSet30.xsd" xmlns="http://tempuri.org/protechDataSet30.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="protechConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="protechConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Protech_Pets4U.Properties.Settings.GlobalReference.Default.protechConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter" GeneratorDataComponentClassName="list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter" Name="list_names_staff_numbers_for_vets_nurses_over_50_years" UserDataComponentName="list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="protechConnectionString (Settings)" DbObjectName="protech.list_names_staff_numbers_for_vets_nurses_over_50_years" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Staff number`, `Staff name` FROM `protech`.`list_names_staff_numbers_for_vets_nurses_over_50_years`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Staff number" DataSetColumn="Staff number" />
+              <Mapping SourceColumn="Staff name" DataSetColumn="Staff name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="protechDataSet30" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="protechDataSet30" msprop:Generator_UserDSName="protechDataSet30">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_names_staff_numbers_for_vets_nurses_over_50_years" msprop:Generator_TableClassName="list_names_staff_numbers_for_vets_nurses_over_50_yearsDataTable" msprop:Generator_TableVarName="tablelist_names_staff_numbers_for_vets_nurses_over_50_years" msprop:Generator_TablePropName="list_names_staff_numbers_for_vets_nurses_over_50_years" msprop:Generator_RowDeletingName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRowDeleting" msprop:Generator_RowChangingName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRowChanging" msprop:Generator_RowEvHandlerName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRowChangeEventHandler" msprop:Generator_RowDeletedName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRowDeleted" msprop:Generator_UserTableName="list_names_staff_numbers_for_vets_nurses_over_50_years" msprop:Generator_RowChangedName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRowChanged" msprop:Generator_RowEvArgName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRowChangeEvent" msprop:Generator_RowClassName="list_names_staff_numbers_for_vets_nurses_over_50_yearsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Staff_x0020_number" msprop:Generator_ColumnVarNameInTable="columnStaff_number" msprop:Generator_ColumnPropNameInRow="Staff_number" msprop:Generator_ColumnPropNameInTable="Staff_numberColumn" msprop:Generator_UserColumnName="Staff number" type="xs:int" />
+              <xs:element name="Staff_x0020_name" msprop:Generator_ColumnVarNameInTable="columnStaff_name" msprop:Generator_ColumnPropNameInRow="Staff_name" msprop:Generator_ColumnPropNameInTable="Staff_nameColumn" msprop:Generator_UserColumnName="Staff name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="91" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:list_names_staff_numbers_for_vets_nurses_over_50_years" />
+      <xs:field xpath="mstns:Staff_x0020_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

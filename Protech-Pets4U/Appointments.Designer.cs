@@ -68,7 +68,6 @@
             this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             this.buttonGo = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerAppByGivenDate = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -79,6 +78,7 @@
             this.petTableAdapter = new Protech_Pets4U.protechDataSet23TableAdapters.petTableAdapter();
             this.personTableAdapter = new Protech_Pets4U.protechDataSet24TableAdapters.personTableAdapter();
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet25TableAdapters.clinicTableAdapter();
+            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.panelCreateAppointment.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -434,10 +434,10 @@
             // 
             // panelAppointmentForDate
             // 
+            this.panelAppointmentForDate.Controls.Add(this.dateTimePickerDateOfBirth);
             this.panelAppointmentForDate.Controls.Add(this.dataGridViewByDate);
             this.panelAppointmentForDate.Controls.Add(this.buttonGo);
             this.panelAppointmentForDate.Controls.Add(this.comboBox1);
-            this.panelAppointmentForDate.Controls.Add(this.dateTimePickerAppByGivenDate);
             this.panelAppointmentForDate.Controls.Add(this.label10);
             this.panelAppointmentForDate.Controls.Add(this.label9);
             this.panelAppointmentForDate.Location = new System.Drawing.Point(358, 100);
@@ -474,13 +474,6 @@
             this.comboBox1.Size = new System.Drawing.Size(167, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.ValueMember = "clinic_num";
-            // 
-            // dateTimePickerAppByGivenDate
-            // 
-            this.dateTimePickerAppByGivenDate.Location = new System.Drawing.Point(120, 323);
-            this.dateTimePickerAppByGivenDate.Name = "dateTimePickerAppByGivenDate";
-            this.dateTimePickerAppByGivenDate.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerAppByGivenDate.TabIndex = 2;
             // 
             // label10
             // 
@@ -575,6 +568,13 @@
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
             // 
+            // dateTimePickerDateOfBirth
+            // 
+            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(120, 323);
+            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
+            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDateOfBirth.TabIndex = 8;
+            // 
             // Appointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,7 +659,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerAppByGivenDate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonGo;
@@ -680,5 +679,6 @@
         private System.Windows.Forms.BindingSource clinicBindingSource;
         private protechDataSet25TableAdapters.clinicTableAdapter clinicTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewByDate;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
     }
 }

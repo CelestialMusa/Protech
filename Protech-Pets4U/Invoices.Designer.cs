@@ -43,31 +43,51 @@
             this.pictureBoxClinicDetails = new System.Windows.Forms.PictureBox();
             this.pictureBoxTotMonthSal = new System.Windows.Forms.PictureBox();
             this.panelInvoicesNotPaidByGivenDate = new System.Windows.Forms.Panel();
+            this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             this.buttonGoInvBydate = new System.Windows.Forms.Button();
             this.dateTimePickerInvoiceDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panelDetailsOfUnpaidInvoiceForPetOwner = new System.Windows.Forms.Panel();
+            this.dataGridViewPetOwner = new System.Windows.Forms.DataGridView();
             this.comboBoxPetOwner = new System.Windows.Forms.ComboBox();
+            this.listnamesofpetownerswithpetdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet28 = new Protech_Pets4U.protechDataSet28();
             this.buttonGoInvByPetOwner = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.labelClinicsActivePanel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.protechDataSet28 = new Protech_Pets4U.protechDataSet28();
-            this.listnamesofpetownerswithpetdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.list_names_of_pet_owners_with_pet_detailsTableAdapter = new Protech_Pets4U.protechDataSet28TableAdapters.list_names_of_pet_owners_with_pet_detailsTableAdapter();
-            this.dataGridViewPetOwner = new System.Windows.Forms.DataGridView();
-            this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
+            this.protechDataSet29 = new Protech_Pets4U.protechDataSet29();
+            this.listinvoicesnotpaidbygivendateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.list_invoices_not_paid_by_given_dateTableAdapter = new Protech_Pets4U.protechDataSet29TableAdapters.list_invoices_not_paid_by_given_dateTableAdapter();
+            this.invoiceNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.petNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.petNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateBeginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateEndDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.methodOfPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             this.panelInvoicesNotPaidByGivenDate.SuspendLayout();
-            this.panelDetailsOfUnpaidInvoiceForPetOwner.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).BeginInit();
+            this.panelDetailsOfUnpaidInvoiceForPetOwner.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listinvoicesnotpaidbygivendateBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -216,6 +236,35 @@
             this.panelInvoicesNotPaidByGivenDate.TabIndex = 161;
             this.panelInvoicesNotPaidByGivenDate.Visible = false;
             // 
+            // dataGridViewByDate
+            // 
+            this.dataGridViewByDate.AllowUserToAddRows = false;
+            this.dataGridViewByDate.AllowUserToDeleteRows = false;
+            this.dataGridViewByDate.AutoGenerateColumns = false;
+            this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewByDate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.invoiceNumberDataGridViewTextBoxColumn,
+            this.invoiceDateDataGridViewTextBoxColumn,
+            this.ownerNumDataGridViewTextBoxColumn,
+            this.ownerNameDataGridViewTextBoxColumn,
+            this.ownerAddressDataGridViewTextBoxColumn,
+            this.petNumDataGridViewTextBoxColumn,
+            this.petNameDataGridViewTextBoxColumn,
+            this.treatmentDescriptionDataGridViewTextBoxColumn,
+            this.treatmentQuantityDataGridViewTextBoxColumn,
+            this.dateBeginDataGridViewTextBoxColumn,
+            this.dateEndDataGridViewTextBoxColumn,
+            this.treatmentCostDataGridViewTextBoxColumn,
+            this.invoiceTotalDataGridViewTextBoxColumn,
+            this.methodOfPaymentDataGridViewTextBoxColumn,
+            this.paymentDateDataGridViewTextBoxColumn});
+            this.dataGridViewByDate.DataSource = this.listinvoicesnotpaidbygivendateBindingSource;
+            this.dataGridViewByDate.Location = new System.Drawing.Point(32, 33);
+            this.dataGridViewByDate.Name = "dataGridViewByDate";
+            this.dataGridViewByDate.ReadOnly = true;
+            this.dataGridViewByDate.Size = new System.Drawing.Size(565, 267);
+            this.dataGridViewByDate.TabIndex = 3;
+            // 
             // buttonGoInvBydate
             // 
             this.buttonGoInvBydate.Location = new System.Drawing.Point(469, 317);
@@ -256,6 +305,14 @@
             this.panelDetailsOfUnpaidInvoiceForPetOwner.TabIndex = 162;
             this.panelDetailsOfUnpaidInvoiceForPetOwner.Visible = false;
             // 
+            // dataGridViewPetOwner
+            // 
+            this.dataGridViewPetOwner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPetOwner.Location = new System.Drawing.Point(59, 33);
+            this.dataGridViewPetOwner.Name = "dataGridViewPetOwner";
+            this.dataGridViewPetOwner.Size = new System.Drawing.Size(512, 267);
+            this.dataGridViewPetOwner.TabIndex = 7;
+            // 
             // comboBoxPetOwner
             // 
             this.comboBoxPetOwner.DataSource = this.listnamesofpetownerswithpetdetailsBindingSource;
@@ -266,6 +323,16 @@
             this.comboBoxPetOwner.Size = new System.Drawing.Size(200, 21);
             this.comboBoxPetOwner.TabIndex = 6;
             this.comboBoxPetOwner.ValueMember = "Owner number";
+            // 
+            // listnamesofpetownerswithpetdetailsBindingSource
+            // 
+            this.listnamesofpetownerswithpetdetailsBindingSource.DataMember = "list_names_of_pet_owners_with_pet_details";
+            this.listnamesofpetownerswithpetdetailsBindingSource.DataSource = this.protechDataSet28;
+            // 
+            // protechDataSet28
+            // 
+            this.protechDataSet28.DataSetName = "protechDataSet28";
+            this.protechDataSet28.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonGoInvByPetOwner
             // 
@@ -307,38 +374,128 @@
             this.pictureBox1.TabIndex = 164;
             this.pictureBox1.TabStop = false;
             // 
-            // protechDataSet28
-            // 
-            this.protechDataSet28.DataSetName = "protechDataSet28";
-            this.protechDataSet28.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listnamesofpetownerswithpetdetailsBindingSource
-            // 
-            this.listnamesofpetownerswithpetdetailsBindingSource.DataMember = "list_names_of_pet_owners_with_pet_details";
-            this.listnamesofpetownerswithpetdetailsBindingSource.DataSource = this.protechDataSet28;
-            // 
             // list_names_of_pet_owners_with_pet_detailsTableAdapter
             // 
             this.list_names_of_pet_owners_with_pet_detailsTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewPetOwner
+            // protechDataSet29
             // 
-            this.dataGridViewPetOwner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPetOwner.Location = new System.Drawing.Point(59, 33);
-            this.dataGridViewPetOwner.Name = "dataGridViewPetOwner";
-            this.dataGridViewPetOwner.Size = new System.Drawing.Size(512, 267);
-            this.dataGridViewPetOwner.TabIndex = 7;
+            this.protechDataSet29.DataSetName = "protechDataSet29";
+            this.protechDataSet29.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewByDate
+            // listinvoicesnotpaidbygivendateBindingSource
             // 
-            this.dataGridViewByDate.AllowUserToAddRows = false;
-            this.dataGridViewByDate.AllowUserToDeleteRows = false;
-            this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewByDate.Location = new System.Drawing.Point(32, 33);
-            this.dataGridViewByDate.Name = "dataGridViewByDate";
-            this.dataGridViewByDate.ReadOnly = true;
-            this.dataGridViewByDate.Size = new System.Drawing.Size(565, 267);
-            this.dataGridViewByDate.TabIndex = 3;
+            this.listinvoicesnotpaidbygivendateBindingSource.DataMember = "list_invoices_not_paid_by_given_date";
+            this.listinvoicesnotpaidbygivendateBindingSource.DataSource = this.protechDataSet29;
+            // 
+            // list_invoices_not_paid_by_given_dateTableAdapter
+            // 
+            this.list_invoices_not_paid_by_given_dateTableAdapter.ClearBeforeFill = true;
+            // 
+            // invoiceNumberDataGridViewTextBoxColumn
+            // 
+            this.invoiceNumberDataGridViewTextBoxColumn.DataPropertyName = "Invoice number";
+            this.invoiceNumberDataGridViewTextBoxColumn.HeaderText = "Invoice number";
+            this.invoiceNumberDataGridViewTextBoxColumn.Name = "invoiceNumberDataGridViewTextBoxColumn";
+            this.invoiceNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // invoiceDateDataGridViewTextBoxColumn
+            // 
+            this.invoiceDateDataGridViewTextBoxColumn.DataPropertyName = "Invoice date";
+            this.invoiceDateDataGridViewTextBoxColumn.HeaderText = "Invoice date";
+            this.invoiceDateDataGridViewTextBoxColumn.Name = "invoiceDateDataGridViewTextBoxColumn";
+            this.invoiceDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ownerNumDataGridViewTextBoxColumn
+            // 
+            this.ownerNumDataGridViewTextBoxColumn.DataPropertyName = "Owner num";
+            this.ownerNumDataGridViewTextBoxColumn.HeaderText = "Owner num";
+            this.ownerNumDataGridViewTextBoxColumn.Name = "ownerNumDataGridViewTextBoxColumn";
+            this.ownerNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ownerNameDataGridViewTextBoxColumn
+            // 
+            this.ownerNameDataGridViewTextBoxColumn.DataPropertyName = "Owner name";
+            this.ownerNameDataGridViewTextBoxColumn.HeaderText = "Owner name";
+            this.ownerNameDataGridViewTextBoxColumn.Name = "ownerNameDataGridViewTextBoxColumn";
+            this.ownerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ownerAddressDataGridViewTextBoxColumn
+            // 
+            this.ownerAddressDataGridViewTextBoxColumn.DataPropertyName = "Owner Address";
+            this.ownerAddressDataGridViewTextBoxColumn.HeaderText = "Owner Address";
+            this.ownerAddressDataGridViewTextBoxColumn.Name = "ownerAddressDataGridViewTextBoxColumn";
+            this.ownerAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // petNumDataGridViewTextBoxColumn
+            // 
+            this.petNumDataGridViewTextBoxColumn.DataPropertyName = "Pet num";
+            this.petNumDataGridViewTextBoxColumn.HeaderText = "Pet num";
+            this.petNumDataGridViewTextBoxColumn.Name = "petNumDataGridViewTextBoxColumn";
+            this.petNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // petNameDataGridViewTextBoxColumn
+            // 
+            this.petNameDataGridViewTextBoxColumn.DataPropertyName = "Pet name";
+            this.petNameDataGridViewTextBoxColumn.HeaderText = "Pet name";
+            this.petNameDataGridViewTextBoxColumn.Name = "petNameDataGridViewTextBoxColumn";
+            this.petNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // treatmentDescriptionDataGridViewTextBoxColumn
+            // 
+            this.treatmentDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Treatment Description";
+            this.treatmentDescriptionDataGridViewTextBoxColumn.HeaderText = "Treatment Description";
+            this.treatmentDescriptionDataGridViewTextBoxColumn.Name = "treatmentDescriptionDataGridViewTextBoxColumn";
+            this.treatmentDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // treatmentQuantityDataGridViewTextBoxColumn
+            // 
+            this.treatmentQuantityDataGridViewTextBoxColumn.DataPropertyName = "Treatment quantity";
+            this.treatmentQuantityDataGridViewTextBoxColumn.HeaderText = "Treatment quantity";
+            this.treatmentQuantityDataGridViewTextBoxColumn.Name = "treatmentQuantityDataGridViewTextBoxColumn";
+            this.treatmentQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateBeginDataGridViewTextBoxColumn
+            // 
+            this.dateBeginDataGridViewTextBoxColumn.DataPropertyName = "Date begin";
+            this.dateBeginDataGridViewTextBoxColumn.HeaderText = "Date begin";
+            this.dateBeginDataGridViewTextBoxColumn.Name = "dateBeginDataGridViewTextBoxColumn";
+            this.dateBeginDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateEndDataGridViewTextBoxColumn
+            // 
+            this.dateEndDataGridViewTextBoxColumn.DataPropertyName = "Date end";
+            this.dateEndDataGridViewTextBoxColumn.HeaderText = "Date end";
+            this.dateEndDataGridViewTextBoxColumn.Name = "dateEndDataGridViewTextBoxColumn";
+            this.dateEndDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // treatmentCostDataGridViewTextBoxColumn
+            // 
+            this.treatmentCostDataGridViewTextBoxColumn.DataPropertyName = "Treatment Cost";
+            this.treatmentCostDataGridViewTextBoxColumn.HeaderText = "Treatment Cost";
+            this.treatmentCostDataGridViewTextBoxColumn.Name = "treatmentCostDataGridViewTextBoxColumn";
+            this.treatmentCostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // invoiceTotalDataGridViewTextBoxColumn
+            // 
+            this.invoiceTotalDataGridViewTextBoxColumn.DataPropertyName = "Invoice Total";
+            this.invoiceTotalDataGridViewTextBoxColumn.HeaderText = "Invoice Total";
+            this.invoiceTotalDataGridViewTextBoxColumn.Name = "invoiceTotalDataGridViewTextBoxColumn";
+            this.invoiceTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // methodOfPaymentDataGridViewTextBoxColumn
+            // 
+            this.methodOfPaymentDataGridViewTextBoxColumn.DataPropertyName = "Method of Payment";
+            this.methodOfPaymentDataGridViewTextBoxColumn.HeaderText = "Method of Payment";
+            this.methodOfPaymentDataGridViewTextBoxColumn.Name = "methodOfPaymentDataGridViewTextBoxColumn";
+            this.methodOfPaymentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // paymentDateDataGridViewTextBoxColumn
+            // 
+            this.paymentDateDataGridViewTextBoxColumn.DataPropertyName = "Payment Date";
+            this.paymentDateDataGridViewTextBoxColumn.HeaderText = "Payment Date";
+            this.paymentDateDataGridViewTextBoxColumn.Name = "paymentDateDataGridViewTextBoxColumn";
+            this.paymentDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Invoices
             // 
@@ -374,13 +531,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             this.panelInvoicesNotPaidByGivenDate.ResumeLayout(false);
             this.panelInvoicesNotPaidByGivenDate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).EndInit();
             this.panelDetailsOfUnpaidInvoiceForPetOwner.ResumeLayout(false);
             this.panelDetailsOfUnpaidInvoiceForPetOwner.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listinvoicesnotpaidbygivendateBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +574,23 @@
         private protechDataSet28TableAdapters.list_names_of_pet_owners_with_pet_detailsTableAdapter list_names_of_pet_owners_with_pet_detailsTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewPetOwner;
         private System.Windows.Forms.DataGridView dataGridViewByDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ownerNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ownerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ownerAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn petNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn petNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn treatmentDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn treatmentQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateBeginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateEndDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn treatmentCostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn methodOfPaymentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource listinvoicesnotpaidbygivendateBindingSource;
+        private protechDataSet29 protechDataSet29;
+        private protechDataSet29TableAdapters.list_invoices_not_paid_by_given_dateTableAdapter list_invoices_not_paid_by_given_dateTableAdapter;
     }
 }

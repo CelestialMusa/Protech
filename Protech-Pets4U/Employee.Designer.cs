@@ -126,6 +126,9 @@
             this.pictureBoxInformationDeveloperLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet14TableAdapters.clinicTableAdapter();
+            this.protechDataSet30 = new Protech_Pets4U.protechDataSet30();
+            this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter1 = new Protech_Pets4U.protechDataSet30TableAdapters.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter();
             this.panelClinicInsertEmployee.SuspendLayout();
             this.tabControlInsertEmployee.SuspendLayout();
             this.tabPageStep1Of3.SuspendLayout();
@@ -158,6 +161,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -338,14 +343,14 @@
             // 
             // comboBoxEmployeeToBeMaintained
             // 
+            this.comboBoxEmployeeToBeMaintained.DataSource = this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource1;
+            this.comboBoxEmployeeToBeMaintained.DisplayMember = "Staff name";
             this.comboBoxEmployeeToBeMaintained.FormattingEnabled = true;
-            this.comboBoxEmployeeToBeMaintained.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
             this.comboBoxEmployeeToBeMaintained.Location = new System.Drawing.Point(21, 278);
             this.comboBoxEmployeeToBeMaintained.Name = "comboBoxEmployeeToBeMaintained";
             this.comboBoxEmployeeToBeMaintained.Size = new System.Drawing.Size(186, 21);
             this.comboBoxEmployeeToBeMaintained.TabIndex = 115;
+            this.comboBoxEmployeeToBeMaintained.ValueMember = "Staff number";
             // 
             // radioButtonDelete
             // 
@@ -1085,6 +1090,20 @@
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
             // 
+            // protechDataSet30
+            // 
+            this.protechDataSet30.DataSetName = "protechDataSet30";
+            this.protechDataSet30.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listnamesstaffnumbersforvetsnursesover50yearsBindingSource1
+            // 
+            this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource1.DataMember = "list_names_staff_numbers_for_vets_nurses_over_50_years";
+            this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource1.DataSource = this.protechDataSet30;
+            // 
+            // list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter1
+            // 
+            this.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter1.ClearBeforeFill = true;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1155,6 +1174,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesstaffnumbersforvetsnursesover50yearsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1258,5 +1279,8 @@
         private protechDataSet14 protechDataSet14;
         private System.Windows.Forms.BindingSource clinicBindingSource;
         private protechDataSet14TableAdapters.clinicTableAdapter clinicTableAdapter;
+        private protechDataSet30 protechDataSet30;
+        private System.Windows.Forms.BindingSource listnamesstaffnumbersforvetsnursesover50yearsBindingSource1;
+        private protechDataSet30TableAdapters.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter1;
     }
 }

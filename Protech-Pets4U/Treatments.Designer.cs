@@ -35,8 +35,11 @@
             this.labelBack = new System.Windows.Forms.Label();
             this.labelClinicsActivePanel = new System.Windows.Forms.Label();
             this.panelDetailOfTreatmentToPet = new System.Windows.Forms.Panel();
+            this.dataGridViewtopet = new System.Windows.Forms.DataGridView();
             this.buttonGo = new System.Windows.Forms.Button();
             this.comboBoxPet = new System.Windows.Forms.ComboBox();
+            this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet27 = new Protech_Pets4U.protechDataSet27();
             this.label5 = new System.Windows.Forms.Label();
             this.listmaxminaveragecostoftreatmentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.protechDataSet12 = new Protech_Pets4U.protechDataSet12();
@@ -60,11 +63,11 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.list_max_min_average_cost_of_treatmentsTableAdapter = new Protech_Pets4U.protechDataSet4TableAdapters.list_max_min_average_cost_of_treatmentsTableAdapter();
             this.list_max_min_average_cost_of_treatmentsTableAdapter1 = new Protech_Pets4U.protechDataSet12TableAdapters.list_max_min_average_cost_of_treatmentsTableAdapter();
-            this.dataGridViewtopet = new System.Windows.Forms.DataGridView();
-            this.protechDataSet27 = new Protech_Pets4U.protechDataSet27();
-            this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petTableAdapter = new Protech_Pets4U.protechDataSet27TableAdapters.petTableAdapter();
             this.panelDetailOfTreatmentToPet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtopet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listmaxminaveragecostoftreatmentsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet12)).BeginInit();
             this.panelMinMaxAverageCost.SuspendLayout();
@@ -76,9 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtopet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -135,6 +135,17 @@
             this.panelDetailOfTreatmentToPet.TabIndex = 171;
             this.panelDetailOfTreatmentToPet.Visible = false;
             // 
+            // dataGridViewtopet
+            // 
+            this.dataGridViewtopet.AllowUserToAddRows = false;
+            this.dataGridViewtopet.AllowUserToDeleteRows = false;
+            this.dataGridViewtopet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewtopet.Location = new System.Drawing.Point(59, 33);
+            this.dataGridViewtopet.Name = "dataGridViewtopet";
+            this.dataGridViewtopet.ReadOnly = true;
+            this.dataGridViewtopet.Size = new System.Drawing.Size(519, 258);
+            this.dataGridViewtopet.TabIndex = 3;
+            // 
             // buttonGo
             // 
             this.buttonGo.Location = new System.Drawing.Point(455, 315);
@@ -155,6 +166,16 @@
             this.comboBoxPet.Size = new System.Drawing.Size(230, 21);
             this.comboBoxPet.TabIndex = 1;
             this.comboBoxPet.ValueMember = "pet_num";
+            // 
+            // petBindingSource
+            // 
+            this.petBindingSource.DataMember = "pet";
+            this.petBindingSource.DataSource = this.protechDataSet27;
+            // 
+            // protechDataSet27
+            // 
+            this.protechDataSet27.DataSetName = "protechDataSet27";
+            this.protechDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -363,27 +384,6 @@
             // 
             this.list_max_min_average_cost_of_treatmentsTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewtopet
-            // 
-            this.dataGridViewtopet.AllowUserToAddRows = false;
-            this.dataGridViewtopet.AllowUserToDeleteRows = false;
-            this.dataGridViewtopet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewtopet.Location = new System.Drawing.Point(59, 33);
-            this.dataGridViewtopet.Name = "dataGridViewtopet";
-            this.dataGridViewtopet.ReadOnly = true;
-            this.dataGridViewtopet.Size = new System.Drawing.Size(519, 258);
-            this.dataGridViewtopet.TabIndex = 3;
-            // 
-            // protechDataSet27
-            // 
-            this.protechDataSet27.DataSetName = "protechDataSet27";
-            this.protechDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // petBindingSource
-            // 
-            this.petBindingSource.DataMember = "pet";
-            this.petBindingSource.DataSource = this.protechDataSet27;
-            // 
             // petTableAdapter
             // 
             this.petTableAdapter.ClearBeforeFill = true;
@@ -409,8 +409,8 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelDetailOfTreatmentToPet);
             this.Controls.Add(this.panelMinMaxAverageCost);
+            this.Controls.Add(this.panelDetailOfTreatmentToPet);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Treatments";
@@ -419,6 +419,9 @@
             this.Load += new System.EventHandler(this.Treatments_Load);
             this.panelDetailOfTreatmentToPet.ResumeLayout(false);
             this.panelDetailOfTreatmentToPet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtopet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listmaxminaveragecostoftreatmentsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet12)).EndInit();
             this.panelMinMaxAverageCost.ResumeLayout(false);
@@ -430,9 +433,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtopet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
