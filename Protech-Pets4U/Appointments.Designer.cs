@@ -65,6 +65,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelAppointmentForDate = new System.Windows.Forms.Panel();
+            this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             this.buttonGo = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePickerAppByGivenDate = new System.Windows.Forms.DateTimePicker();
@@ -78,7 +79,6 @@
             this.petTableAdapter = new Protech_Pets4U.protechDataSet23TableAdapters.petTableAdapter();
             this.personTableAdapter = new Protech_Pets4U.protechDataSet24TableAdapters.personTableAdapter();
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet25TableAdapters.clinicTableAdapter();
-            this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             this.panelCreateAppointment.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -93,12 +93,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet23)).BeginInit();
             this.panelAppointmentForDate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -195,10 +195,11 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(0, 33);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(640, 327);
+            this.tabControl1.Size = new System.Drawing.Size(640, 360);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -223,7 +224,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(632, 301);
+            this.tabPage1.Size = new System.Drawing.Size(632, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -445,6 +446,14 @@
             this.panelAppointmentForDate.TabIndex = 179;
             this.panelAppointmentForDate.Visible = false;
             // 
+            // dataGridViewByDate
+            // 
+            this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewByDate.Location = new System.Drawing.Point(46, 24);
+            this.dataGridViewByDate.Name = "dataGridViewByDate";
+            this.dataGridViewByDate.Size = new System.Drawing.Size(553, 269);
+            this.dataGridViewByDate.TabIndex = 5;
+            // 
             // buttonGo
             // 
             this.buttonGo.Location = new System.Drawing.Point(570, 319);
@@ -566,14 +575,6 @@
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewByDate
-            // 
-            this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewByDate.Location = new System.Drawing.Point(46, 24);
-            this.dataGridViewByDate.Name = "dataGridViewByDate";
-            this.dataGridViewByDate.Size = new System.Drawing.Size(553, 269);
-            this.dataGridViewByDate.TabIndex = 5;
-            // 
             // Appointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,8 +594,8 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelAppointmentForDate);
             this.Controls.Add(this.panelCreateAppointment);
+            this.Controls.Add(this.panelAppointmentForDate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Appointments";
@@ -617,12 +618,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet23)).EndInit();
             this.panelAppointmentForDate.ResumeLayout(false);
             this.panelAppointmentForDate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
