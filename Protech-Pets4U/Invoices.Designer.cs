@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoices));
             this.labelHomeProtechSlogan = new System.Windows.Forms.Label();
             this.labelHomeProtech = new System.Windows.Forms.Label();
@@ -51,6 +52,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelClinicsActivePanel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.protechDataSet28 = new Protech_Pets4U.protechDataSet28();
+            this.listnamesofpetownerswithpetdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.list_names_of_pet_owners_with_pet_detailsTableAdapter = new Protech_Pets4U.protechDataSet28TableAdapters.list_names_of_pet_owners_with_pet_detailsTableAdapter();
+            this.dataGridViewPetOwner = new System.Windows.Forms.DataGridView();
+            this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).BeginInit();
@@ -58,6 +64,10 @@
             this.panelInvoicesNotPaidByGivenDate.SuspendLayout();
             this.panelDetailsOfUnpaidInvoiceForPetOwner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -196,6 +206,7 @@
             // 
             // panelInvoicesNotPaidByGivenDate
             // 
+            this.panelInvoicesNotPaidByGivenDate.Controls.Add(this.dataGridViewByDate);
             this.panelInvoicesNotPaidByGivenDate.Controls.Add(this.buttonGoInvBydate);
             this.panelInvoicesNotPaidByGivenDate.Controls.Add(this.dateTimePickerInvoiceDate);
             this.panelInvoicesNotPaidByGivenDate.Controls.Add(this.label4);
@@ -213,13 +224,16 @@
             this.buttonGoInvBydate.TabIndex = 2;
             this.buttonGoInvBydate.Text = "Go";
             this.buttonGoInvBydate.UseVisualStyleBackColor = true;
+            this.buttonGoInvBydate.Click += new System.EventHandler(this.buttonGoInvBydate_Click);
             // 
             // dateTimePickerInvoiceDate
             // 
+            this.dateTimePickerInvoiceDate.CustomFormat = "";
             this.dateTimePickerInvoiceDate.Location = new System.Drawing.Point(263, 320);
             this.dateTimePickerInvoiceDate.Name = "dateTimePickerInvoiceDate";
             this.dateTimePickerInvoiceDate.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerInvoiceDate.TabIndex = 1;
+            this.dateTimePickerInvoiceDate.Value = new System.DateTime(2016, 5, 18, 3, 49, 56, 0);
             // 
             // label4
             // 
@@ -232,6 +246,7 @@
             // 
             // panelDetailsOfUnpaidInvoiceForPetOwner
             // 
+            this.panelDetailsOfUnpaidInvoiceForPetOwner.Controls.Add(this.dataGridViewPetOwner);
             this.panelDetailsOfUnpaidInvoiceForPetOwner.Controls.Add(this.comboBoxPetOwner);
             this.panelDetailsOfUnpaidInvoiceForPetOwner.Controls.Add(this.buttonGoInvByPetOwner);
             this.panelDetailsOfUnpaidInvoiceForPetOwner.Controls.Add(this.label5);
@@ -243,11 +258,14 @@
             // 
             // comboBoxPetOwner
             // 
+            this.comboBoxPetOwner.DataSource = this.listnamesofpetownerswithpetdetailsBindingSource;
+            this.comboBoxPetOwner.DisplayMember = "Onwer name";
             this.comboBoxPetOwner.FormattingEnabled = true;
             this.comboBoxPetOwner.Location = new System.Drawing.Point(232, 319);
             this.comboBoxPetOwner.Name = "comboBoxPetOwner";
             this.comboBoxPetOwner.Size = new System.Drawing.Size(200, 21);
             this.comboBoxPetOwner.TabIndex = 6;
+            this.comboBoxPetOwner.ValueMember = "Owner number";
             // 
             // buttonGoInvByPetOwner
             // 
@@ -257,6 +275,7 @@
             this.buttonGoInvByPetOwner.TabIndex = 5;
             this.buttonGoInvByPetOwner.Text = "Go";
             this.buttonGoInvByPetOwner.UseVisualStyleBackColor = true;
+            this.buttonGoInvByPetOwner.Click += new System.EventHandler(this.buttonGoInvByPetOwner_Click);
             // 
             // label5
             // 
@@ -288,6 +307,39 @@
             this.pictureBox1.TabIndex = 164;
             this.pictureBox1.TabStop = false;
             // 
+            // protechDataSet28
+            // 
+            this.protechDataSet28.DataSetName = "protechDataSet28";
+            this.protechDataSet28.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listnamesofpetownerswithpetdetailsBindingSource
+            // 
+            this.listnamesofpetownerswithpetdetailsBindingSource.DataMember = "list_names_of_pet_owners_with_pet_details";
+            this.listnamesofpetownerswithpetdetailsBindingSource.DataSource = this.protechDataSet28;
+            // 
+            // list_names_of_pet_owners_with_pet_detailsTableAdapter
+            // 
+            this.list_names_of_pet_owners_with_pet_detailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewPetOwner
+            // 
+            this.dataGridViewPetOwner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPetOwner.Location = new System.Drawing.Point(59, 33);
+            this.dataGridViewPetOwner.Name = "dataGridViewPetOwner";
+            this.dataGridViewPetOwner.Size = new System.Drawing.Size(512, 267);
+            this.dataGridViewPetOwner.TabIndex = 7;
+            // 
+            // dataGridViewByDate
+            // 
+            this.dataGridViewByDate.AllowUserToAddRows = false;
+            this.dataGridViewByDate.AllowUserToDeleteRows = false;
+            this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewByDate.Location = new System.Drawing.Point(32, 33);
+            this.dataGridViewByDate.Name = "dataGridViewByDate";
+            this.dataGridViewByDate.ReadOnly = true;
+            this.dataGridViewByDate.Size = new System.Drawing.Size(565, 267);
+            this.dataGridViewByDate.TabIndex = 3;
+            // 
             // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,13 +360,14 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelDetailsOfUnpaidInvoiceForPetOwner);
             this.Controls.Add(this.panelInvoicesNotPaidByGivenDate);
+            this.Controls.Add(this.panelDetailsOfUnpaidInvoiceForPetOwner);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Invoices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "protech technologies";
+            this.Load += new System.EventHandler(this.Invoices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).EndInit();
@@ -324,6 +377,10 @@
             this.panelDetailsOfUnpaidInvoiceForPetOwner.ResumeLayout(false);
             this.panelDetailsOfUnpaidInvoiceForPetOwner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listnamesofpetownerswithpetdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetOwner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +410,10 @@
         private System.Windows.Forms.ComboBox comboBoxPetOwner;
         private System.Windows.Forms.Button buttonGoInvByPetOwner;
         private System.Windows.Forms.Label label5;
+        private protechDataSet28 protechDataSet28;
+        private System.Windows.Forms.BindingSource listnamesofpetownerswithpetdetailsBindingSource;
+        private protechDataSet28TableAdapters.list_names_of_pet_owners_with_pet_detailsTableAdapter list_names_of_pet_owners_with_pet_detailsTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewPetOwner;
+        private System.Windows.Forms.DataGridView dataGridViewByDate;
     }
 }
