@@ -52,8 +52,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dateTimePickerAppDate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxClinic = new System.Windows.Forms.ComboBox();
+            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet25 = new Protech_Pets4U.protechDataSet25();
             this.comboBoxPetOwner = new System.Windows.Forms.ComboBox();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet24 = new Protech_Pets4U.protechDataSet24();
             this.comboBoxPet = new System.Windows.Forms.ComboBox();
+            this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet23 = new Protech_Pets4U.protechDataSet23();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,15 +75,10 @@
             this.pictureBoxTotMonthSal = new System.Windows.Forms.PictureBox();
             this.pictureBoxInformationDeveloperLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.protechDataSet23 = new Protech_Pets4U.protechDataSet23();
-            this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petTableAdapter = new Protech_Pets4U.protechDataSet23TableAdapters.petTableAdapter();
-            this.protechDataSet24 = new Protech_Pets4U.protechDataSet24();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personTableAdapter = new Protech_Pets4U.protechDataSet24TableAdapters.personTableAdapter();
-            this.protechDataSet25 = new Protech_Pets4U.protechDataSet25();
-            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet25TableAdapters.clinicTableAdapter();
+            this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             this.panelCreateAppointment.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,18 +86,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet23)).BeginInit();
             this.panelAppointmentForDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -193,11 +195,10 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 33);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(640, 360);
+            this.tabControl1.Size = new System.Drawing.Size(640, 327);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -222,7 +223,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(632, 334);
+            this.tabPage1.Size = new System.Drawing.Size(632, 301);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -342,6 +343,16 @@
             this.comboBoxClinic.TabIndex = 119;
             this.comboBoxClinic.ValueMember = "clinic_num";
             // 
+            // clinicBindingSource
+            // 
+            this.clinicBindingSource.DataMember = "clinic";
+            this.clinicBindingSource.DataSource = this.protechDataSet25;
+            // 
+            // protechDataSet25
+            // 
+            this.protechDataSet25.DataSetName = "protechDataSet25";
+            this.protechDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBoxPetOwner
             // 
             this.comboBoxPetOwner.DataSource = this.personBindingSource;
@@ -353,6 +364,16 @@
             this.comboBoxPetOwner.TabIndex = 118;
             this.comboBoxPetOwner.ValueMember = "person_id";
             // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.protechDataSet24;
+            // 
+            // protechDataSet24
+            // 
+            this.protechDataSet24.DataSetName = "protechDataSet24";
+            this.protechDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBoxPet
             // 
             this.comboBoxPet.DataSource = this.petBindingSource;
@@ -363,6 +384,16 @@
             this.comboBoxPet.Size = new System.Drawing.Size(200, 21);
             this.comboBoxPet.TabIndex = 117;
             this.comboBoxPet.ValueMember = "pet_num";
+            // 
+            // petBindingSource
+            // 
+            this.petBindingSource.DataMember = "pet";
+            this.petBindingSource.DataSource = this.protechDataSet23;
+            // 
+            // protechDataSet23
+            // 
+            this.protechDataSet23.DataSetName = "protechDataSet23";
+            this.protechDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label8
             // 
@@ -402,6 +433,7 @@
             // 
             // panelAppointmentForDate
             // 
+            this.panelAppointmentForDate.Controls.Add(this.dataGridViewByDate);
             this.panelAppointmentForDate.Controls.Add(this.buttonGo);
             this.panelAppointmentForDate.Controls.Add(this.comboBox1);
             this.panelAppointmentForDate.Controls.Add(this.dateTimePickerAppByGivenDate);
@@ -421,14 +453,18 @@
             this.buttonGo.TabIndex = 4;
             this.buttonGo.Text = "Go";
             this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.clinicBindingSource;
+            this.comboBox1.DisplayMember = "clinic_name";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(389, 321);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(167, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.ValueMember = "clinic_num";
             // 
             // dateTimePickerAppByGivenDate
             // 
@@ -518,47 +554,25 @@
             this.pictureBoxBack.MouseLeave += new System.EventHandler(this.pictureBoxBack_MouseLeave);
             this.pictureBoxBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxBack_MouseMove);
             // 
-            // protechDataSet23
-            // 
-            this.protechDataSet23.DataSetName = "protechDataSet23";
-            this.protechDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // petBindingSource
-            // 
-            this.petBindingSource.DataMember = "pet";
-            this.petBindingSource.DataSource = this.protechDataSet23;
-            // 
             // petTableAdapter
             // 
             this.petTableAdapter.ClearBeforeFill = true;
-            // 
-            // protechDataSet24
-            // 
-            this.protechDataSet24.DataSetName = "protechDataSet24";
-            this.protechDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataMember = "person";
-            this.personBindingSource.DataSource = this.protechDataSet24;
             // 
             // personTableAdapter
             // 
             this.personTableAdapter.ClearBeforeFill = true;
             // 
-            // protechDataSet25
-            // 
-            this.protechDataSet25.DataSetName = "protechDataSet25";
-            this.protechDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clinicBindingSource
-            // 
-            this.clinicBindingSource.DataMember = "clinic";
-            this.clinicBindingSource.DataSource = this.protechDataSet25;
-            // 
             // clinicTableAdapter
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewByDate
+            // 
+            this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewByDate.Location = new System.Drawing.Point(46, 24);
+            this.dataGridViewByDate.Name = "dataGridViewByDate";
+            this.dataGridViewByDate.Size = new System.Drawing.Size(553, 269);
+            this.dataGridViewByDate.TabIndex = 5;
             // 
             // Appointments
             // 
@@ -579,8 +593,8 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelCreateAppointment);
             this.Controls.Add(this.panelAppointmentForDate);
+            this.Controls.Add(this.panelCreateAppointment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Appointments";
@@ -595,6 +609,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet23)).EndInit();
             this.panelAppointmentForDate.ResumeLayout(false);
             this.panelAppointmentForDate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -602,12 +622,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewByDate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -663,5 +678,6 @@
         private protechDataSet25 protechDataSet25;
         private System.Windows.Forms.BindingSource clinicBindingSource;
         private protechDataSet25TableAdapters.clinicTableAdapter clinicTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewByDate;
     }
 }

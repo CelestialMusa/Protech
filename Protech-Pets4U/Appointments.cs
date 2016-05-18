@@ -18,6 +18,7 @@ namespace Protech_Pets4U
         MySqlCommand command;
         MySqlDataReader reader;
         DataTable myDataTable;
+        MySqlDataAdapter adapter;
 
         public Appointments()
         {
@@ -158,7 +159,7 @@ namespace Protech_Pets4U
                 command.Parameters.Add(new MySqlParameter("@appdate", MySqlDbType.Timestamp)).Value = date;
                 command.Parameters.Add(new MySqlParameter("@pet_number", MySqlDbType.Int32)).Value = pet;
                 command.Parameters.Add(new MySqlParameter("@clinic_number", MySqlDbType.Int32)).Value = clinic;
-                command.Parameters.Add(new MySqlParameter("@owner_number", MySqlDbType.Int32)).Value = pet_owner;             
+                command.Parameters.Add(new MySqlParameter("@owner_number", MySqlDbType.Int32)).Value = pet_owner;
 
                 reader = command.ExecuteReader();
                 MessageBox.Show("The appointment has been successfuly been added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -184,6 +185,56 @@ namespace Protech_Pets4U
             this.personTableAdapter.Fill(this.protechDataSet24.person);
             // TODO: This line of code loads data into the 'protechDataSet23.pet' table. You can move, or remove it, as needed.
             this.petTableAdapter.Fill(this.protechDataSet23.pet);
+
+        }
+
+        private void buttonGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string date = dateTimePickerAppByGivenDate.Value.ToShortDateString();
+                int clinic = (int)comboBoxClinic.SelectedValue;
+               
+                String SQLQuery = "call protech.list_appointments_for_clinic_and_date(" + date + "," + clinic + ");";
+                command = new MySqlCommand(SQLQuery, connection);
+                adapter = new MySqlDataAdapter(command);
+                connection.Open();
+
+                command.ExecuteNonQuery();
+                myDataTable = new DataTable();
+                adapter.Fill(myDataTable);
+
+
+
+                dataGridViewByDate.Columns.Add("Examination number", "Examination number");
+                dataGridViewByDate.Columns.Add("Examination date", "Examination date");
+                dataGridViewByDate.Columns.Add("Pet number", "Pet number");
+                dataGridViewByDate.Columns.Add("Pet Name", "Pet Namer");
+                dataGridViewByDate.Columns.Add("Pet Typer", "Pet Typer");
+                dataGridViewByDate.Columns.Add("Treatment Numberr", "Treatment Number");
+                dataGridViewByDate.Columns.Add("Treatment Description", "Treatment Description");
+                dataGridViewByDate.Columns.Add("Treatment Quantity", "Treatment Quantity");
+                dataGridViewByDate.Columns.Add("Start Date", "Start Date");
+                dataGridViewByDate.Columns.Add("End Date", "End Date");
+                dataGridViewByDate.Columns.Add("Treatment Comments", "Treatment Comments");
+
+                for (int i = 0; i < myDataTable.Rows.Count; i++)
+                {
+                    String[] values = { myDataTable.Rows[i][0].ToString(), myDataTable.Rows[i][1].ToString(), myDataTable.Rows[i][2].ToString(), myDataTable.Rows[i][3].ToString(), myDataTable.Rows[i][4].ToString(), myDataTable.Rows[i][5].ToString(), myDataTable.Rows[i][6].ToString(), myDataTable.Rows[i][7].ToString(), myDataTable.Rows[i][8].ToString(), myDataTable.Rows[i][9].ToString(), myDataTable.Rows[i][10].ToString(), };
+                    dataGridViewByDate.Rows.Add(values);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
 
         }
     }
