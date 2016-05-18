@@ -40,6 +40,10 @@
             this.panelinsertExam = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBoxClinic = new System.Windows.Forms.ComboBox();
+            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet26 = new Protech_Pets4U.protechDataSet26();
+            this.label12 = new System.Windows.Forms.Label();
             this.radioButtonInsert = new System.Windows.Forms.RadioButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.comboBoxExamToUpdate = new System.Windows.Forms.ComboBox();
@@ -71,15 +75,12 @@
             this.pictureBoxClinicDetails = new System.Windows.Forms.PictureBox();
             this.pictureBoxTotMonthSal = new System.Windows.Forms.PictureBox();
             this.panelHistExam = new System.Windows.Forms.Panel();
+            this.dataGridViewHist = new System.Windows.Forms.DataGridView();
             this.buttonGo = new System.Windows.Forms.Button();
             this.comboBoxHisPetName = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.personTableAdapter = new Protech_Pets4U.protechDataSet21TableAdapters.personTableAdapter();
             this.petTableAdapter = new Protech_Pets4U.protechDataSet22TableAdapters.petTableAdapter();
-            this.comboBoxClinic = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.protechDataSet26 = new Protech_Pets4U.protechDataSet26();
-            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet26TableAdapters.clinicTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
@@ -87,6 +88,8 @@
             this.panelinsertExam.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -98,8 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClinicDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             this.panelHistExam.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHist)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -228,6 +230,36 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxClinic
+            // 
+            this.comboBoxClinic.DataSource = this.clinicBindingSource;
+            this.comboBoxClinic.DisplayMember = "clinic_name";
+            this.comboBoxClinic.FormattingEnabled = true;
+            this.comboBoxClinic.Location = new System.Drawing.Point(270, 135);
+            this.comboBoxClinic.Name = "comboBoxClinic";
+            this.comboBoxClinic.Size = new System.Drawing.Size(208, 21);
+            this.comboBoxClinic.TabIndex = 135;
+            this.comboBoxClinic.ValueMember = "clinic_num";
+            // 
+            // clinicBindingSource
+            // 
+            this.clinicBindingSource.DataMember = "clinic";
+            this.clinicBindingSource.DataSource = this.protechDataSet26;
+            // 
+            // protechDataSet26
+            // 
+            this.protechDataSet26.DataSetName = "protechDataSet26";
+            this.protechDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(267, 119);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 13);
+            this.label12.TabIndex = 134;
+            this.label12.Text = "Clinic";
             // 
             // radioButtonInsert
             // 
@@ -517,6 +549,7 @@
             // 
             // panelHistExam
             // 
+            this.panelHistExam.Controls.Add(this.dataGridViewHist);
             this.panelHistExam.Controls.Add(this.buttonGo);
             this.panelHistExam.Controls.Add(this.comboBoxHisPetName);
             this.panelHistExam.Controls.Add(this.label11);
@@ -526,6 +559,17 @@
             this.panelHistExam.TabIndex = 173;
             this.panelHistExam.Visible = false;
             // 
+            // dataGridViewHist
+            // 
+            this.dataGridViewHist.AllowUserToAddRows = false;
+            this.dataGridViewHist.AllowUserToDeleteRows = false;
+            this.dataGridViewHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHist.Location = new System.Drawing.Point(79, 31);
+            this.dataGridViewHist.Name = "dataGridViewHist";
+            this.dataGridViewHist.ReadOnly = true;
+            this.dataGridViewHist.Size = new System.Drawing.Size(467, 272);
+            this.dataGridViewHist.TabIndex = 3;
+            // 
             // buttonGo
             // 
             this.buttonGo.Location = new System.Drawing.Point(480, 317);
@@ -534,14 +578,18 @@
             this.buttonGo.TabIndex = 2;
             this.buttonGo.Text = "Go";
             this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
             // 
             // comboBoxHisPetName
             // 
+            this.comboBoxHisPetName.DataSource = this.petBindingSource;
+            this.comboBoxHisPetName.DisplayMember = "pet_name";
             this.comboBoxHisPetName.FormattingEnabled = true;
             this.comboBoxHisPetName.Location = new System.Drawing.Point(274, 319);
             this.comboBoxHisPetName.Name = "comboBoxHisPetName";
             this.comboBoxHisPetName.Size = new System.Drawing.Size(200, 21);
             this.comboBoxHisPetName.TabIndex = 1;
+            this.comboBoxHisPetName.ValueMember = "pet_num";
             // 
             // label11
             // 
@@ -559,36 +607,6 @@
             // petTableAdapter
             // 
             this.petTableAdapter.ClearBeforeFill = true;
-            // 
-            // comboBoxClinic
-            // 
-            this.comboBoxClinic.DataSource = this.clinicBindingSource;
-            this.comboBoxClinic.DisplayMember = "clinic_name";
-            this.comboBoxClinic.FormattingEnabled = true;
-            this.comboBoxClinic.Location = new System.Drawing.Point(270, 135);
-            this.comboBoxClinic.Name = "comboBoxClinic";
-            this.comboBoxClinic.Size = new System.Drawing.Size(208, 21);
-            this.comboBoxClinic.TabIndex = 135;
-            this.comboBoxClinic.ValueMember = "clinic_num";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(267, 119);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 13);
-            this.label12.TabIndex = 134;
-            this.label12.Text = "Clinic";
-            // 
-            // protechDataSet26
-            // 
-            this.protechDataSet26.DataSetName = "protechDataSet26";
-            this.protechDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clinicBindingSource
-            // 
-            this.clinicBindingSource.DataMember = "clinic";
-            this.clinicBindingSource.DataSource = this.protechDataSet26;
             // 
             // clinicTableAdapter
             // 
@@ -629,6 +647,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -641,8 +661,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             this.panelHistExam.ResumeLayout(false);
             this.panelHistExam.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,5 +720,6 @@
         private protechDataSet26 protechDataSet26;
         private System.Windows.Forms.BindingSource clinicBindingSource;
         private protechDataSet26TableAdapters.clinicTableAdapter clinicTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewHist;
     }
 }

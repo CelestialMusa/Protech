@@ -19,6 +19,7 @@ namespace Protech_Pets4U
         MySqlCommand command;
         MySqlDataReader reader;
         DataTable myDataTable;
+        MySqlDataAdapter adapter;
 
         public Examinations()
         {
@@ -256,6 +257,45 @@ namespace Protech_Pets4U
             else if (radioButtonUpdate.Checked == true)
             {
                 comboBoxExamToUpdate.Enabled = true;
+            }
+        }
+
+        private void buttonGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int pet = (int)comboBoxPet.SelectedValue;
+
+                String SQLQuery = "call protech.list_historical_pet_examinations(" + pet + ");";
+                command = new MySqlCommand(SQLQuery, connection);
+                adapter = new MySqlDataAdapter(command);
+                connection.Open();
+
+                command.ExecuteNonQuery();
+                myDataTable = new DataTable();
+                adapter.Fill(myDataTable);
+
+                dataGridViewHist.Columns.Add("Examination number", "Examination number");
+                dataGridViewHist.Columns.Add("Examination date", "Examination date");
+                dataGridViewHist.Columns.Add("Comment", "Comment");
+                dataGridViewHist.Columns.Add("Examiner name", "Examiner name");
+                
+                for (int i = 0; i < myDataTable.Rows.Count; i++)
+                {
+                    String[] values = { myDataTable.Rows[i][0].ToString(), myDataTable.Rows[i][1].ToString(), myDataTable.Rows[i][2].ToString(), myDataTable.Rows[i][3].ToString()/*, myDataTable.Rows[i][4].ToString(), myDataTable.Rows[i][5].ToString() */};
+                    dataGridViewHist.Rows.Add(values);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }

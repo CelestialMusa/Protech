@@ -35,6 +35,9 @@
             this.labelBack = new System.Windows.Forms.Label();
             this.labelClinicsActivePanel = new System.Windows.Forms.Label();
             this.panelDetailOfTreatmentToPet = new System.Windows.Forms.Panel();
+            this.buttonGo = new System.Windows.Forms.Button();
+            this.comboBoxPet = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.listmaxminaveragecostoftreatmentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.protechDataSet12 = new Protech_Pets4U.protechDataSet12();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,9 +60,10 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.list_max_min_average_cost_of_treatmentsTableAdapter = new Protech_Pets4U.protechDataSet4TableAdapters.list_max_min_average_cost_of_treatmentsTableAdapter();
             this.list_max_min_average_cost_of_treatmentsTableAdapter1 = new Protech_Pets4U.protechDataSet12TableAdapters.list_max_min_average_cost_of_treatmentsTableAdapter();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxPet = new System.Windows.Forms.ComboBox();
-            this.buttonGo = new System.Windows.Forms.Button();
+            this.dataGridViewtopet = new System.Windows.Forms.DataGridView();
+            this.protechDataSet27 = new Protech_Pets4U.protechDataSet27();
+            this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petTableAdapter = new Protech_Pets4U.protechDataSet27TableAdapters.petTableAdapter();
             this.panelDetailOfTreatmentToPet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listmaxminaveragecostoftreatmentsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet12)).BeginInit();
@@ -72,6 +76,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtopet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -118,6 +125,7 @@
             // 
             // panelDetailOfTreatmentToPet
             // 
+            this.panelDetailOfTreatmentToPet.Controls.Add(this.dataGridViewtopet);
             this.panelDetailOfTreatmentToPet.Controls.Add(this.buttonGo);
             this.panelDetailOfTreatmentToPet.Controls.Add(this.comboBoxPet);
             this.panelDetailOfTreatmentToPet.Controls.Add(this.label5);
@@ -126,6 +134,36 @@
             this.panelDetailOfTreatmentToPet.Size = new System.Drawing.Size(640, 360);
             this.panelDetailOfTreatmentToPet.TabIndex = 171;
             this.panelDetailOfTreatmentToPet.Visible = false;
+            // 
+            // buttonGo
+            // 
+            this.buttonGo.Location = new System.Drawing.Point(455, 315);
+            this.buttonGo.Name = "buttonGo";
+            this.buttonGo.Size = new System.Drawing.Size(29, 23);
+            this.buttonGo.TabIndex = 2;
+            this.buttonGo.Text = "Go";
+            this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
+            // 
+            // comboBoxPet
+            // 
+            this.comboBoxPet.DataSource = this.petBindingSource;
+            this.comboBoxPet.DisplayMember = "pet_name";
+            this.comboBoxPet.FormattingEnabled = true;
+            this.comboBoxPet.Location = new System.Drawing.Point(219, 317);
+            this.comboBoxPet.Name = "comboBoxPet";
+            this.comboBoxPet.Size = new System.Drawing.Size(230, 21);
+            this.comboBoxPet.TabIndex = 1;
+            this.comboBoxPet.ValueMember = "pet_num";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(190, 320);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Pet";
             // 
             // listmaxminaveragecostoftreatmentsBindingSource1
             // 
@@ -325,31 +363,30 @@
             // 
             this.list_max_min_average_cost_of_treatmentsTableAdapter1.ClearBeforeFill = true;
             // 
-            // label5
+            // dataGridViewtopet
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(190, 320);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Pet";
+            this.dataGridViewtopet.AllowUserToAddRows = false;
+            this.dataGridViewtopet.AllowUserToDeleteRows = false;
+            this.dataGridViewtopet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewtopet.Location = new System.Drawing.Point(59, 33);
+            this.dataGridViewtopet.Name = "dataGridViewtopet";
+            this.dataGridViewtopet.ReadOnly = true;
+            this.dataGridViewtopet.Size = new System.Drawing.Size(519, 258);
+            this.dataGridViewtopet.TabIndex = 3;
             // 
-            // comboBoxPet
+            // protechDataSet27
             // 
-            this.comboBoxPet.FormattingEnabled = true;
-            this.comboBoxPet.Location = new System.Drawing.Point(219, 317);
-            this.comboBoxPet.Name = "comboBoxPet";
-            this.comboBoxPet.Size = new System.Drawing.Size(230, 21);
-            this.comboBoxPet.TabIndex = 1;
+            this.protechDataSet27.DataSetName = "protechDataSet27";
+            this.protechDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // buttonGo
+            // petBindingSource
             // 
-            this.buttonGo.Location = new System.Drawing.Point(455, 315);
-            this.buttonGo.Name = "buttonGo";
-            this.buttonGo.Size = new System.Drawing.Size(29, 23);
-            this.buttonGo.TabIndex = 2;
-            this.buttonGo.Text = "Go";
-            this.buttonGo.UseVisualStyleBackColor = true;
+            this.petBindingSource.DataMember = "pet";
+            this.petBindingSource.DataSource = this.protechDataSet27;
+            // 
+            // petTableAdapter
+            // 
+            this.petTableAdapter.ClearBeforeFill = true;
             // 
             // Treatments
             // 
@@ -372,8 +409,8 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelMinMaxAverageCost);
             this.Controls.Add(this.panelDetailOfTreatmentToPet);
+            this.Controls.Add(this.panelMinMaxAverageCost);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Treatments";
@@ -393,6 +430,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTotMonthSal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtopet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,5 +470,9 @@
         private System.Windows.Forms.Button buttonGo;
         private System.Windows.Forms.ComboBox comboBoxPet;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridViewtopet;
+        private protechDataSet27 protechDataSet27;
+        private System.Windows.Forms.BindingSource petBindingSource;
+        private protechDataSet27TableAdapters.petTableAdapter petTableAdapter;
     }
 }
