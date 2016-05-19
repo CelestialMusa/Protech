@@ -193,10 +193,11 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(0, 31);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(640, 329);
+            this.tabControl1.Size = new System.Drawing.Size(640, 360);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -225,7 +226,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(632, 303);
+            this.tabPage1.Size = new System.Drawing.Size(632, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -293,6 +294,7 @@
             this.comboBoxExamToUpdate.Name = "comboBoxExamToUpdate";
             this.comboBoxExamToUpdate.Size = new System.Drawing.Size(186, 21);
             this.comboBoxExamToUpdate.TabIndex = 131;
+            this.comboBoxExamToUpdate.Visible = false;
             // 
             // radioButtonDelete
             // 
@@ -303,6 +305,7 @@
             this.radioButtonDelete.TabIndex = 130;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.Visible = false;
             this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
             // 
             // radioButtonUpdate
@@ -314,6 +317,7 @@
             this.radioButtonUpdate.TabIndex = 129;
             this.radioButtonUpdate.Text = "Update";
             this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.Visible = false;
             this.radioButtonUpdate.CheckedChanged += new System.EventHandler(this.radioButtonUpdate_CheckedChanged);
             // 
             // pictureBox6
@@ -325,6 +329,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.TabIndex = 128;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // pictureBox5
             // 
@@ -335,6 +340,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(36, 36);
             this.pictureBox5.TabIndex = 127;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // label24
             // 
@@ -631,8 +637,8 @@
             this.Controls.Add(this.pictureBoxInformationDeveloperLogo);
             this.Controls.Add(this.labelBack);
             this.Controls.Add(this.pictureBoxBack);
-            this.Controls.Add(this.panelHistExam);
             this.Controls.Add(this.panelinsertExam);
+            this.Controls.Add(this.panelHistExam);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Examinations";

@@ -37,6 +37,8 @@
             this.panelClinicInsert = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxClinicname = new System.Windows.Forms.TextBox();
             this.radioButtonInsert = new System.Windows.Forms.RadioButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.comboBoxClinicToBeMaintained = new System.Windows.Forms.ComboBox();
@@ -91,8 +93,6 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.view_clinic_managersTableAdapter = new Protech_Pets4U.protechDataSet2TableAdapters.view_clinic_managersTableAdapter();
             this.list_clinic_detailsTableAdapter = new Protech_Pets4U.protechDataSet3TableAdapters.list_clinic_detailsTableAdapter();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxClinicname = new System.Windows.Forms.TextBox();
             this.panelClinicInsert.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -211,6 +211,22 @@
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 126;
+            this.label5.Text = "Clinic name";
+            // 
+            // textBoxClinicname
+            // 
+            this.textBoxClinicname.Location = new System.Drawing.Point(249, 18);
+            this.textBoxClinicname.Name = "textBoxClinicname";
+            this.textBoxClinicname.Size = new System.Drawing.Size(257, 20);
+            this.textBoxClinicname.TabIndex = 125;
+            // 
             // radioButtonInsert
             // 
             this.radioButtonInsert.AutoSize = true;
@@ -243,6 +259,7 @@
             this.comboBoxClinicToBeMaintained.Name = "comboBoxClinicToBeMaintained";
             this.comboBoxClinicToBeMaintained.Size = new System.Drawing.Size(186, 21);
             this.comboBoxClinicToBeMaintained.TabIndex = 122;
+            this.comboBoxClinicToBeMaintained.Visible = false;
             // 
             // radioButtonDelete
             // 
@@ -253,6 +270,7 @@
             this.radioButtonDelete.TabIndex = 121;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.Visible = false;
             // 
             // radioButtonUpdate
             // 
@@ -263,6 +281,7 @@
             this.radioButtonUpdate.TabIndex = 120;
             this.radioButtonUpdate.Text = "Update";
             this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.Visible = false;
             // 
             // pictureBox6
             // 
@@ -273,6 +292,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.TabIndex = 119;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // pictureBox5
             // 
@@ -283,6 +303,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(36, 36);
             this.pictureBox5.TabIndex = 118;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // label24
             // 
@@ -706,22 +727,6 @@
             // list_clinic_detailsTableAdapter
             // 
             this.list_clinic_detailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 126;
-            this.label5.Text = "Clinic name";
-            // 
-            // textBoxClinicname
-            // 
-            this.textBoxClinicname.Location = new System.Drawing.Point(249, 18);
-            this.textBoxClinicname.Name = "textBoxClinicname";
-            this.textBoxClinicname.Size = new System.Drawing.Size(257, 20);
-            this.textBoxClinicname.TabIndex = 125;
             // 
             // Clinics
             // 
