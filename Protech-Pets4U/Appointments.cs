@@ -128,8 +128,7 @@ namespace Protech_Pets4U
             int pet = (int)comboBoxPet.SelectedValue;
             int pet_owner = (int)comboBoxPetOwner.SelectedValue;
             int clinic = (int)comboBoxClinic.SelectedValue;
-            string date = dateTimePickerAppDate.Value.ToShortDateString();
-            int app = (int)comboBoxAppointmentToMaintain.SelectedValue;
+            string date = dateTimePickerAppDate.Value.ToShortDateString();            
 
             if (radioButtonInsert.Checked)
             {
@@ -138,11 +137,13 @@ namespace Protech_Pets4U
             }
             else if (radioButtonUpdate.Checked)
             {
+                int app = (int)comboBoxAppointmentToMaintain.SelectedValue;
                 comboBoxAppointmentToMaintain.Enabled = true;
                 update_appointment(app, pet, pet_owner, clinic, date);
             }
             else if (radioButtonDelete.Checked)
             {
+                int app = (int)comboBoxAppointmentToMaintain.SelectedValue;
                 comboBoxAppointmentToMaintain.Enabled = true;
                 delete_appointment(app);
             }

@@ -390,6 +390,7 @@
             this.radioButtonDelete.TabIndex = 134;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.Visible = false;
             this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
             // 
             // radioButtonUpdate
@@ -412,6 +413,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.TabIndex = 132;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // pictureBox5
             // 

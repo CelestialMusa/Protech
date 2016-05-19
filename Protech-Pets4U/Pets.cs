@@ -186,14 +186,14 @@ namespace Protech_Pets4U
             string status;
             if (comboBoxStatus.SelectedText == "Alive")
             {
-                status = "1";
+                status = "0";
             }
             else
             {
-                status = "0";
+                status = "1";
             }
             string dob = dateTimePickerDateOfBirth.Value.ToShortDateString();
-            string type = comboBoxType.SelectedText;
+            string type = comboBoxType.SelectedItem.ToString();
             int pet_owner = (int)comboBoxPetOwner.SelectedValue;
             string description = textBoxDescription.Text;
 
@@ -265,7 +265,7 @@ namespace Protech_Pets4U
                 textBoxFirstName.Text = "";
                 textBoxDescription.Text = "";                
                 comboBoxPetOwner.SelectedItem = null;
-                comboBoxStatus.SelectedItem = null;
+                //comboBoxStatus.SelectedItem = null;
                 comboBoxType.SelectedItem = null;
             }
             catch (Exception ex)

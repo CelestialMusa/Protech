@@ -61,11 +61,6 @@
             this.labelClinicTell = new System.Windows.Forms.Label();
             this.textBoxClinicTell = new System.Windows.Forms.TextBox();
             this.panelClinicViewClinicDetails = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.clinicNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.managersNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listclinicdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.protechDataSet3 = new Protech_Pets4U.protechDataSet3();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,6 +88,17 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.view_clinic_managersTableAdapter = new Protech_Pets4U.protechDataSet2TableAdapters.view_clinic_managersTableAdapter();
             this.list_clinic_detailsTableAdapter = new Protech_Pets4U.protechDataSet3TableAdapters.list_clinic_detailsTableAdapter();
+            this.protechDataSet35 = new Protech_Pets4U.protechDataSet35();
+            this.listclinicdetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.list_clinic_detailsTableAdapter1 = new Protech_Pets4U.protechDataSet35TableAdapters.list_clinic_detailsTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.protechDataSet36 = new Protech_Pets4U.protechDataSet36();
+            this.listclinicdetailsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.list_clinic_detailsTableAdapter2 = new Protech_Pets4U.protechDataSet36TableAdapters.list_clinic_detailsTableAdapter();
+            this.clinicNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.managersNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelClinicInsert.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -101,7 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelClinicViewClinicDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listclinicdetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet3)).BeginInit();
             this.panelViewClinicManagers.SuspendLayout();
@@ -115,6 +120,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxViewClinicManagers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listclinicdetailsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listclinicdetailsBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHomeProtechSlogan
@@ -436,52 +446,6 @@
             this.panelClinicViewClinicDetails.TabIndex = 98;
             this.panelClinicViewClinicDetails.Visible = false;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clinicNumberDataGridViewTextBoxColumn,
-            this.managersNameDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.telephoneNumberDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.listclinicdetailsBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(96, 30);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(448, 309);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // clinicNumberDataGridViewTextBoxColumn
-            // 
-            this.clinicNumberDataGridViewTextBoxColumn.DataPropertyName = "Clinic number";
-            this.clinicNumberDataGridViewTextBoxColumn.HeaderText = "Clinic number";
-            this.clinicNumberDataGridViewTextBoxColumn.Name = "clinicNumberDataGridViewTextBoxColumn";
-            this.clinicNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // managersNameDataGridViewTextBoxColumn
-            // 
-            this.managersNameDataGridViewTextBoxColumn.DataPropertyName = "Manager\'s name";
-            this.managersNameDataGridViewTextBoxColumn.HeaderText = "Manager\'s name";
-            this.managersNameDataGridViewTextBoxColumn.Name = "managersNameDataGridViewTextBoxColumn";
-            this.managersNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telephoneNumberDataGridViewTextBoxColumn
-            // 
-            this.telephoneNumberDataGridViewTextBoxColumn.DataPropertyName = "Telephone number";
-            this.telephoneNumberDataGridViewTextBoxColumn.HeaderText = "Telephone number";
-            this.telephoneNumberDataGridViewTextBoxColumn.Name = "telephoneNumberDataGridViewTextBoxColumn";
-            this.telephoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // listclinicdetailsBindingSource
             // 
             this.listclinicdetailsBindingSource.DataMember = "list_clinic_details";
@@ -728,6 +692,80 @@
             // 
             this.list_clinic_detailsTableAdapter.ClearBeforeFill = true;
             // 
+            // protechDataSet35
+            // 
+            this.protechDataSet35.DataSetName = "protechDataSet35";
+            this.protechDataSet35.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listclinicdetailsBindingSource1
+            // 
+            this.listclinicdetailsBindingSource1.DataMember = "list_clinic_details";
+            this.listclinicdetailsBindingSource1.DataSource = this.protechDataSet35;
+            // 
+            // list_clinic_detailsTableAdapter1
+            // 
+            this.list_clinic_detailsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clinicNumberDataGridViewTextBoxColumn,
+            this.managersNameDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.telephoneNumberDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.listclinicdetailsBindingSource2;
+            this.dataGridView2.Location = new System.Drawing.Point(102, 37);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(447, 250);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // protechDataSet36
+            // 
+            this.protechDataSet36.DataSetName = "protechDataSet36";
+            this.protechDataSet36.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listclinicdetailsBindingSource2
+            // 
+            this.listclinicdetailsBindingSource2.DataMember = "list_clinic_details";
+            this.listclinicdetailsBindingSource2.DataSource = this.protechDataSet36;
+            // 
+            // list_clinic_detailsTableAdapter2
+            // 
+            this.list_clinic_detailsTableAdapter2.ClearBeforeFill = true;
+            // 
+            // clinicNumberDataGridViewTextBoxColumn
+            // 
+            this.clinicNumberDataGridViewTextBoxColumn.DataPropertyName = "Clinic number";
+            this.clinicNumberDataGridViewTextBoxColumn.HeaderText = "Clinic number";
+            this.clinicNumberDataGridViewTextBoxColumn.Name = "clinicNumberDataGridViewTextBoxColumn";
+            this.clinicNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // managersNameDataGridViewTextBoxColumn
+            // 
+            this.managersNameDataGridViewTextBoxColumn.DataPropertyName = "Manager\'s name";
+            this.managersNameDataGridViewTextBoxColumn.HeaderText = "Manager\'s name";
+            this.managersNameDataGridViewTextBoxColumn.Name = "managersNameDataGridViewTextBoxColumn";
+            this.managersNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephoneNumberDataGridViewTextBoxColumn
+            // 
+            this.telephoneNumberDataGridViewTextBoxColumn.DataPropertyName = "Telephone number";
+            this.telephoneNumberDataGridViewTextBoxColumn.HeaderText = "Telephone number";
+            this.telephoneNumberDataGridViewTextBoxColumn.Name = "telephoneNumberDataGridViewTextBoxColumn";
+            this.telephoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Clinics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,7 +805,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelClinicViewClinicDetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listclinicdetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.protechDataSet3)).EndInit();
             this.panelViewClinicManagers.ResumeLayout(false);
@@ -781,6 +818,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxViewClinicManagers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInformationDeveloperLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listclinicdetailsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listclinicdetailsBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -810,7 +852,6 @@
         private protechDataSet2 protechDataSet2;
         private System.Windows.Forms.BindingSource viewclinicmanagersBindingSource;
         private protechDataSet2TableAdapters.view_clinic_managersTableAdapter view_clinic_managersTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clinictelDataGridViewTextBoxColumn;
@@ -822,10 +863,6 @@
         private protechDataSet3 protechDataSet3;
         private System.Windows.Forms.BindingSource listclinicdetailsBindingSource;
         private protechDataSet3TableAdapters.list_clinic_detailsTableAdapter list_clinic_detailsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clinicNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn managersNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telephoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox textBoxZipCode;
@@ -851,5 +888,16 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxClinicname;
+        private protechDataSet35 protechDataSet35;
+        private System.Windows.Forms.BindingSource listclinicdetailsBindingSource1;
+        private protechDataSet35TableAdapters.list_clinic_detailsTableAdapter list_clinic_detailsTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private protechDataSet36 protechDataSet36;
+        private System.Windows.Forms.BindingSource listclinicdetailsBindingSource2;
+        private protechDataSet36TableAdapters.list_clinic_detailsTableAdapter list_clinic_detailsTableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clinicNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn managersNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telephoneNumberDataGridViewTextBoxColumn;
     }
 }

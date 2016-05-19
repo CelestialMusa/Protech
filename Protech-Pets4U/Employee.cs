@@ -263,9 +263,7 @@ namespace Protech_Pets4U
             string state = textBoxState.Text;
             string city = textBoxCity.Text;
             string street = textBoxStreet.Text;
-            string zip = textBoxZipCode.Text;
-
-            int staff = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+            string zip = textBoxZipCode.Text;            
 
             if (radioButtonInsert.Checked)
             {
@@ -273,12 +271,14 @@ namespace Protech_Pets4U
             }
             else if (radioButtonUpdate.Checked)
             {
-                int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+                int staff = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+                //int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
                 update_employee(name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip, staff);
             }
             else if (radioButtonDelete.Checked)
             {
-                int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+                int staff = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+                //int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
                 delete_staff(staff);
             }
             tabControlInsertEmployee.SelectedTab = tabPageStep1Of3;

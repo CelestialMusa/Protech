@@ -569,7 +569,7 @@
             this.dataGridViewHist.AllowUserToAddRows = false;
             this.dataGridViewHist.AllowUserToDeleteRows = false;
             this.dataGridViewHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHist.Location = new System.Drawing.Point(79, 31);
+            this.dataGridViewHist.Location = new System.Drawing.Point(93, 33);
             this.dataGridViewHist.Name = "dataGridViewHist";
             this.dataGridViewHist.ReadOnly = true;
             this.dataGridViewHist.Size = new System.Drawing.Size(467, 272);

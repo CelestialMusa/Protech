@@ -120,7 +120,7 @@ namespace Protech_Pets4U
             panelClinicInsert.Visible = false;
             panelClinicViewClinicDetails.Visible = true;
             panelViewClinicManagers.Visible = false;
-            labelClinicsActivePanel.Text = "List clinic details";
+            labelClinicsActivePanel.Text = "List clinic details";            
         }
 
         private void pictureBoxViewClinicManagers_Click(object sender, EventArgs e)
@@ -158,8 +158,19 @@ namespace Protech_Pets4U
 
         private void Clinics_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet36.list_clinic_details' table. You can move, or remove it, as needed.
+            try
+            {
+                this.list_clinic_detailsTableAdapter2.Fill(this.protechDataSet36.list_clinic_details);
+            }
+            catch(Exception)
+            {
+
+            }            
+            // TODO: This line of code loads data into the 'protechDataSet35.list_clinic_details' table. You can move, or remove it, as needed.
+            //this.list_clinic_detailsTableAdapter1.Fill(this.protechDataSet35.list_clinic_details);
             // TODO: This line of code loads data into the 'protechDataSet3.list_clinic_details' table. You can move, or remove it, as needed.
-            this.list_clinic_detailsTableAdapter.Fill(this.protechDataSet3.list_clinic_details);
+            //this.list_clinic_detailsTableAdapter.Fill(this.protechDataSet3.list_clinic_details);
             // TODO: This line of code loads data into the 'protechDataSet2.view_clinic_managers' table. You can move, or remove it, as needed.
             this.view_clinic_managersTableAdapter.Fill(this.protechDataSet2.view_clinic_managers);
 
@@ -230,6 +241,7 @@ namespace Protech_Pets4U
                 reader = command.ExecuteReader();
                 MessageBox.Show("The clinic has been successfuly been added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                textBoxClinicname.Text = "";
                 textBoxCity.Text = "";
                 textBoxClinicFax.Text = "";
                 textBoxClinicTell.Text = "";

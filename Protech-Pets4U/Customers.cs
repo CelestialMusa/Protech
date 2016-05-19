@@ -162,20 +162,22 @@ namespace Protech_Pets4U
             string city = textBoxCity.Text;
             string street = textBoxStreet.Text;
             string zip = textBoxZipCode.Text;
-            int owner = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
+            
 
             if (radioButtonInsert.Checked)
-            {
+            {                
                 comboBoxEmployeeToBeMaintained.Enabled = false;
                 insert_Customer(name, last, gender, dob, tel, id, clinic_id, state, city, street, zip);
             }
             else if (radioButtonUpdate.Checked)
             {
+                int owner = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
                 comboBoxEmployeeToBeMaintained.Enabled = true;
                 update_Customer(name, last, gender, dob, tel, id, clinic_id, state, city, street, zip, owner);
             }
             else if (radioButtonDelete.Checked)
             {
+                int owner = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
                 comboBoxEmployeeToBeMaintained.Enabled = true;
                 delete_customer(owner);
             }
