@@ -44,6 +44,8 @@
             this.radioButtonInsert = new System.Windows.Forms.RadioButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.comboBoxAppointmentToMaintain = new System.Windows.Forms.ComboBox();
+            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protechDataSet33 = new Protech_Pets4U.protechDataSet33();
             this.radioButtonDelete = new System.Windows.Forms.RadioButton();
             this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -65,6 +67,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelAppointmentForDate = new System.Windows.Forms.Panel();
+            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewByDate = new System.Windows.Forms.DataGridView();
             this.buttonGo = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -78,11 +81,13 @@
             this.petTableAdapter = new Protech_Pets4U.protechDataSet23TableAdapters.petTableAdapter();
             this.personTableAdapter = new Protech_Pets4U.protechDataSet24TableAdapters.personTableAdapter();
             this.clinicTableAdapter = new Protech_Pets4U.protechDataSet25TableAdapters.clinicTableAdapter();
-            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.appointmentTableAdapter = new Protech_Pets4U.protechDataSet33TableAdapters.appointmentTableAdapter();
             this.panelCreateAppointment.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -228,6 +233,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1 of 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // radioButtonInsert
             // 
@@ -240,6 +246,7 @@
             this.radioButtonInsert.TabStop = true;
             this.radioButtonInsert.Text = "Insert";
             this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
             // 
             // pictureBox7
             // 
@@ -253,14 +260,25 @@
             // 
             // comboBoxAppointmentToMaintain
             // 
+            this.comboBoxAppointmentToMaintain.DataSource = this.appointmentBindingSource;
+            this.comboBoxAppointmentToMaintain.DisplayMember = "appointment_date";
             this.comboBoxAppointmentToMaintain.FormattingEnabled = true;
-            this.comboBoxAppointmentToMaintain.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
             this.comboBoxAppointmentToMaintain.Location = new System.Drawing.Point(23, 226);
             this.comboBoxAppointmentToMaintain.Name = "comboBoxAppointmentToMaintain";
             this.comboBoxAppointmentToMaintain.Size = new System.Drawing.Size(186, 21);
             this.comboBoxAppointmentToMaintain.TabIndex = 129;
+            this.comboBoxAppointmentToMaintain.ValueMember = "appointment_num";
+            this.comboBoxAppointmentToMaintain.SelectedIndexChanged += new System.EventHandler(this.comboBoxAppointmentToMaintain_SelectedIndexChanged);
+            // 
+            // appointmentBindingSource
+            // 
+            this.appointmentBindingSource.DataMember = "appointment";
+            this.appointmentBindingSource.DataSource = this.protechDataSet33;
+            // 
+            // protechDataSet33
+            // 
+            this.protechDataSet33.DataSetName = "protechDataSet33";
+            this.protechDataSet33.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radioButtonDelete
             // 
@@ -271,6 +289,7 @@
             this.radioButtonDelete.TabIndex = 128;
             this.radioButtonDelete.Text = "Delete";
             this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
             // 
             // radioButtonUpdate
             // 
@@ -281,6 +300,7 @@
             this.radioButtonUpdate.TabIndex = 127;
             this.radioButtonUpdate.Text = "Update";
             this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            this.radioButtonUpdate.CheckedChanged += new System.EventHandler(this.radioButtonUpdate_CheckedChanged);
             // 
             // pictureBox6
             // 
@@ -446,6 +466,13 @@
             this.panelAppointmentForDate.TabIndex = 179;
             this.panelAppointmentForDate.Visible = false;
             // 
+            // dateTimePickerDateOfBirth
+            // 
+            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(120, 323);
+            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
+            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDateOfBirth.TabIndex = 8;
+            // 
             // dataGridViewByDate
             // 
             this.dataGridViewByDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -568,12 +595,9 @@
             // 
             this.clinicTableAdapter.ClearBeforeFill = true;
             // 
-            // dateTimePickerDateOfBirth
+            // appointmentTableAdapter
             // 
-            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(120, 323);
-            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
-            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerDateOfBirth.TabIndex = 8;
+            this.appointmentTableAdapter.ClearBeforeFill = true;
             // 
             // Appointments
             // 
@@ -607,6 +631,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protechDataSet33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -680,5 +706,8 @@
         private protechDataSet25TableAdapters.clinicTableAdapter clinicTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewByDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
+        private protechDataSet33 protechDataSet33;
+        private System.Windows.Forms.BindingSource appointmentBindingSource;
+        private protechDataSet33TableAdapters.appointmentTableAdapter appointmentTableAdapter;
     }
 }

@@ -162,23 +162,53 @@ namespace Protech_Pets4U
             string city = textBoxCity.Text;
             string street = textBoxStreet.Text;
             string zip = textBoxZipCode.Text;
+            int owner = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
 
             if (radioButtonInsert.Checked)
             {
+                comboBoxEmployeeToBeMaintained.Enabled = false;
                 insert_Customer(name, last, gender, dob, tel, id, clinic_id, state, city, street, zip);
             }
             else if (radioButtonUpdate.Checked)
             {
-                int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
-                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+                update_Customer(name, last, gender, dob, tel, id, clinic_id, state, city, street, zip, owner);
             }
             else if (radioButtonDelete.Checked)
             {
-                int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
-                //Delete
+                comboBoxEmployeeToBeMaintained.Enabled = true;
+                delete_customer(owner);
             }
 
             tabControlInsertEmployee.SelectedTab = tabPageStep1Of2;
+        }
+
+        private void delete_customer(int app_num)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "delete_pet_owner";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@own_num", MySqlDbType.Int32)).Value = app_num;
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The pet owner has successfuly been deleted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //comboBoxPet.SelectedIndex = null;
+                //comboBoxPetOwner.SelectedIndex = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Pet owner deletion has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void pictureBoxNext_MouseMove(object sender, MouseEventArgs e)
@@ -248,6 +278,56 @@ namespace Protech_Pets4U
             }
             dataGridViewBetweenDates.DataSource = dt;
             //dataGridViewBetweenDates.;*/
+        }
+
+        private void update_Customer(string name, string last, string gender, string dob, string tel,
+                                    string id, int clinic_id, string state,
+                                    string city, string street, string zip, int owner)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "update_pet_owner";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
+                command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
+                command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
+                command.Parameters.Add(new MySqlParameter("@zip_code", MySqlDbType.VarChar)).Value = zip;
+                command.Parameters.Add(new MySqlParameter("@id_num", MySqlDbType.VarChar)).Value = id;
+                command.Parameters.Add(new MySqlParameter("@first_name", MySqlDbType.VarChar)).Value = name;
+                command.Parameters.Add(new MySqlParameter("@last_name", MySqlDbType.VarChar)).Value = last;
+                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.VarChar)).Value = gender;
+                command.Parameters.Add(new MySqlParameter("@dob", MySqlDbType.Date)).Value = dob;
+                command.Parameters.Add(new MySqlParameter("@tel_num", MySqlDbType.VarChar)).Value = tel;
+                command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Int32)).Value = clinic_id;
+                command.Parameters.Add(new MySqlParameter("@owner_number", MySqlDbType.Int32)).Value = owner;
+
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The Pet owner has been successfuly Updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxFirstName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxIDNumber.Text = "";
+                textBoxState.Text = "";
+                textBoxStreet.Text = "";
+                textBoxTelNum.Text = "";
+                textBoxCity.Text = "";
+                textBoxZipCode.Text = "";
+                comboBoxClinicID.SelectedItem = null;
+                comboBoxGender.SelectedItem = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Pet owner update has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void insert_Customer(string name, string last, string gender, string dob, string tel,
@@ -345,6 +425,11 @@ namespace Protech_Pets4U
             {
                 comboBoxEmployeeToBeMaintained.Enabled = true;
             }
+        }
+
+        private void comboBoxEmployeeToBeMaintained_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

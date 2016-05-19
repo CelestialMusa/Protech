@@ -129,20 +129,50 @@ namespace Protech_Pets4U
             int pet_owner = (int)comboBoxPetOwner.SelectedValue;
             int clinic = (int)comboBoxClinic.SelectedValue;
             string date = dateTimePickerAppDate.Value.ToShortDateString();
+            int app = (int)comboBoxAppointmentToMaintain.SelectedValue;
 
             if (radioButtonInsert.Checked)
             {
+                comboBoxAppointmentToMaintain.Enabled = false;
                 insert_appointment(pet, pet_owner, clinic, date);
             }
             else if (radioButtonUpdate.Checked)
             {
-                int staff_num = (int)comboBoxAppointmentToMaintain.SelectedValue;
-                //update_app()
+                comboBoxAppointmentToMaintain.Enabled = true;
+                update_appointment(app, pet, pet_owner, clinic, date);
             }
             else if (radioButtonDelete.Checked)
             {
-                int staff_num = (int)comboBoxAppointmentToMaintain.SelectedValue;
-                //Delete
+                comboBoxAppointmentToMaintain.Enabled = true;
+                delete_appointment(app);
+            }
+        }
+
+        private void delete_appointment(int app_num)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "delete_appointment";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@app_num", MySqlDbType.Int32)).Value = app_num;
+                
+                reader = command.ExecuteReader();
+                MessageBox.Show("The appointment has successfuly been deleted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //comboBoxPet.SelectedIndex = null;
+                //comboBoxPetOwner.SelectedIndex = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Appointment deletion has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -177,8 +207,43 @@ namespace Protech_Pets4U
             }
         }
 
+        private void update_appointment(int app, int pet, int pet_owner, int clinic, string date)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "update_appointment";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@app", MySqlDbType.Int32)).Value = app;
+                command.Parameters.Add(new MySqlParameter("@app_date", MySqlDbType.Timestamp)).Value = date;
+                command.Parameters.Add(new MySqlParameter("@pet_num1", MySqlDbType.Int32)).Value = pet;
+                command.Parameters.Add(new MySqlParameter("@clinic_num1", MySqlDbType.Int32)).Value = clinic;
+                command.Parameters.Add(new MySqlParameter("@owner_num1", MySqlDbType.Int32)).Value = pet_owner;
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The appointment has been successfuly updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //comboBoxPet.SelectedIndex = null;
+                //comboBoxPetOwner.SelectedIndex = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Appointment update has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
         private void Appointments_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet33.appointment' table. You can move, or remove it, as needed.
+            this.appointmentTableAdapter.Fill(this.protechDataSet33.appointment);
             // TODO: This line of code loads data into the 'protechDataSet25.clinic' table. You can move, or remove it, as needed.
             this.clinicTableAdapter.Fill(this.protechDataSet25.clinic);
             // TODO: This line of code loads data into the 'protechDataSet24.person' table. You can move, or remove it, as needed.
@@ -235,6 +300,64 @@ namespace Protech_Pets4U
             {
                 connection.Close();
             }
+
+        }
+
+        private void radioButtonUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = true;
+            }
+        }
+
+        private void radioButtonInsert_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = true;
+            }
+        }
+
+        private void radioButtonDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = false;
+            }
+            else if (radioButtonDelete.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = true;
+            }
+            else if (radioButtonUpdate.Checked == true)
+            {
+                comboBoxAppointmentToMaintain.Enabled = true;
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAppointmentToMaintain_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

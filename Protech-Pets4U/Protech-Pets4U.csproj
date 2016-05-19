@@ -271,6 +271,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protechDataSet32.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protechDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="protechDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protechDataSet34.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protechDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -691,6 +701,28 @@
     </None>
     <None Include="protechDataSet32.xss">
       <DependentUpon>protechDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet33.xsc">
+      <DependentUpon>protechDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet33.xss">
+      <DependentUpon>protechDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet34.xsc">
+      <DependentUpon>protechDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="protechDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protechDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protechDataSet34.xss">
+      <DependentUpon>protechDataSet34.xsd</DependentUpon>
     </None>
     <None Include="protechDataSet4.xsc">
       <DependentUpon>protechDataSet4.xsd</DependentUpon>

@@ -295,14 +295,15 @@
             // 
             // comboBoxEmployeeToBeMaintained
             // 
+            this.comboBoxEmployeeToBeMaintained.DataSource = this.listnamesofpetownerswithpetdetailsBindingSource;
+            this.comboBoxEmployeeToBeMaintained.DisplayMember = "Onwer name";
             this.comboBoxEmployeeToBeMaintained.FormattingEnabled = true;
-            this.comboBoxEmployeeToBeMaintained.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
             this.comboBoxEmployeeToBeMaintained.Location = new System.Drawing.Point(17, 277);
             this.comboBoxEmployeeToBeMaintained.Name = "comboBoxEmployeeToBeMaintained";
             this.comboBoxEmployeeToBeMaintained.Size = new System.Drawing.Size(186, 21);
             this.comboBoxEmployeeToBeMaintained.TabIndex = 122;
+            this.comboBoxEmployeeToBeMaintained.ValueMember = "Owner number";
+            this.comboBoxEmployeeToBeMaintained.SelectedIndexChanged += new System.EventHandler(this.comboBoxEmployeeToBeMaintained_SelectedIndexChanged);
             // 
             // radioButtonDelete
             // 

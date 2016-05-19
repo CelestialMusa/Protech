@@ -274,7 +274,7 @@ namespace Protech_Pets4U
             else if (radioButtonUpdate.Checked)
             {
                 int staff_num = (int)comboBoxEmployeeToBeMaintained.SelectedValue;
-                //update_employee(staff_num, name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip);
+                update_employee(name, last, gender, dob, tel, id, job, salary, clinic_id, state, city, street, zip, staff);
             }
             else if (radioButtonDelete.Checked)
             {
@@ -282,6 +282,61 @@ namespace Protech_Pets4U
                 delete_staff(staff);
             }
             tabControlInsertEmployee.SelectedTab = tabPageStep1Of3;
+        }
+
+        private void update_employee(string name, string last, string gender, string dob, string tel,
+                                    string id, string job, string salary, int clinic_id, string state,
+                                    string city, string street, string zip, int staff)
+        {
+            try
+            {
+                connection.Open();
+                command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "update_Staff_Member";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new MySqlParameter("@street", MySqlDbType.VarChar)).Value = street;
+                command.Parameters.Add(new MySqlParameter("@city", MySqlDbType.VarChar)).Value = city;
+                command.Parameters.Add(new MySqlParameter("@state", MySqlDbType.VarChar)).Value = state;
+                command.Parameters.Add(new MySqlParameter("@zip_code", MySqlDbType.VarChar)).Value = zip;
+                command.Parameters.Add(new MySqlParameter("@id_num", MySqlDbType.VarChar)).Value = id;
+                command.Parameters.Add(new MySqlParameter("@first_name", MySqlDbType.VarChar)).Value = name;
+                command.Parameters.Add(new MySqlParameter("@last_name", MySqlDbType.VarChar)).Value = last;
+                command.Parameters.Add(new MySqlParameter("@gender", MySqlDbType.VarChar)).Value = gender;
+                command.Parameters.Add(new MySqlParameter("@dob", MySqlDbType.Date)).Value = dob;
+                command.Parameters.Add(new MySqlParameter("@tel_num", MySqlDbType.VarChar)).Value = tel;
+                command.Parameters.Add(new MySqlParameter("@clinic", MySqlDbType.Int32)).Value = clinic_id;
+                command.Parameters.Add(new MySqlParameter("@staff_position", MySqlDbType.VarChar)).Value = job;
+                command.Parameters.Add(new MySqlParameter("@staff_salary", MySqlDbType.Double)).Value = salary;
+                command.Parameters.Add(new MySqlParameter("@staff_number", MySqlDbType.Int32)).Value = staff;
+
+
+
+                reader = command.ExecuteReader();
+                MessageBox.Show("The employee has been successfuly updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBoxFirstName.Text = "";
+                textBoxLastName.Text = "";
+                textBoxIDNumber.Text = "";
+                textBoxSalary.Text = "";
+                textBoxState.Text = "";
+                textBoxStreet.Text = "";
+                textBoxTelNum.Text = "";
+                textBoxCity.Text = "";
+                textBoxZipCode.Text = "";
+                comboBoxClinicID.SelectedItem = null;
+                comboBoxGender.SelectedItem = null;
+                comboBoxJobDescription.SelectedItem = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Employee update has failed please try again. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         public void delete_staff(int staff)
@@ -314,6 +369,8 @@ namespace Protech_Pets4U
 
         private void Employee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protechDataSet34.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protechDataSet34.person);
             // TODO: This line of code loads data into the 'protechDataSet30.list_names_staff_numbers_for_vets_nurses_over_50_years' table. You can move, or remove it, as needed.
             this.list_names_staff_numbers_for_vets_nurses_over_50_yearsTableAdapter1.Fill(this.protechDataSet30.list_names_staff_numbers_for_vets_nurses_over_50_years);
             // TODO: This line of code loads data into the 'protechDataSet14.clinic' table. You can move, or remove it, as needed.
